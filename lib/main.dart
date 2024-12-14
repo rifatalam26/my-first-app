@@ -2,11 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 main(){
-
   runApp(const myApp());
-
 }
-
 class myApp extends StatelessWidget{
   const myApp({super.key});
 
@@ -27,7 +24,7 @@ class HomeActivity extends StatelessWidget{
     return Scaffold(
 
     appBar: AppBar(title: Text("My App"),),
-    body: Text("Hello"),
+    body: Text("Hello \n This is my App"""),
 
     );
   }
