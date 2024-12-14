@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 main(){
-  runApp(const myApp());
+  runApp( myApp());
 }
 class myApp extends StatelessWidget{
-  const myApp({super.key});
+ // const myApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,14 @@ class myApp extends StatelessWidget{
 
 class HomeActivity extends StatelessWidget{
   const HomeActivity({super.key});
+  MySnackBar(massage,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content:Text(massage))
+    );
+  }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +42,12 @@ class HomeActivity extends StatelessWidget{
       //centerTitle: true,
       toolbarHeight: 60,
       toolbarOpacity: 1,
-     // backgroundColor: Colors.amber,
+      backgroundColor: Colors.amber,
       actions: [
-        IconButton(onPressed: (){}, icon: Icon(Icons.comment))
+        IconButton(onPressed: (){MySnackBar("im coment", context);}, icon: Icon(Icons.comment,color: Colors.white,)),
+        IconButton(onPressed: (){MySnackBar("im call", context);}, icon: Icon(Icons.video_call,color: Colors.deepOrange,)),
+        IconButton(onPressed: (){MySnackBar("im audio", context);}, icon: Icon(Icons.audio_file,color:Colors.blue)),
+        IconButton(onPressed: (){MySnackBar("im setings", context);}, icon: Icon(Icons.settings,color: Colors.green,)),
       ],
 
     ),
