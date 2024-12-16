@@ -44,10 +44,10 @@ class HomeActivity extends StatelessWidget{
       toolbarOpacity: 1,
       backgroundColor: Colors.amber,
       actions: [
-        IconButton(onPressed: (){MySnackBar("im coment", context);}, icon: Icon(Icons.comment,color: Colors.white,)),
-        IconButton(onPressed: (){MySnackBar("im call", context);}, icon: Icon(Icons.video_call,color: Colors.deepOrange,)),
-        IconButton(onPressed: (){MySnackBar("im audio", context);}, icon: Icon(Icons.audio_file,color:Colors.blue)),
-        IconButton(onPressed: (){MySnackBar("im setings", context);}, icon: Icon(Icons.settings,color: Colors.green,)),
+        IconButton(onPressed: (){MySnackBar("no coment", context);}, icon: Icon(Icons.comment,color: Colors.white,)),
+        IconButton(onPressed: (){MySnackBar("no vide call", context);}, icon: Icon(Icons.video_call,color: Colors.deepOrange,)),
+        IconButton(onPressed: (){MySnackBar("no audio", context);}, icon: Icon(Icons.audio_file,color:Colors.blue)),
+        IconButton(onPressed: (){MySnackBar("no setings", context);}, icon: Icon(Icons.settings,color: Colors.green,)),
       ],
 
     ),
