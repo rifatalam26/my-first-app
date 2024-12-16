@@ -46,8 +46,22 @@ class HomeActivity extends StatelessWidget{
         IconButton(onPressed: (){MySnackBar("no audio", context);}, icon: Icon(Icons.audio_file,color:Colors.blue)),
         IconButton(onPressed: (){MySnackBar("no setings", context);}, icon: Icon(Icons.settings,color: Colors.green,)),
       ],
+    ),
+    floatingActionButton: FloatingActionButton(
+      elevation: 10,
+    child: Icon(Icons.add),
+    backgroundColor: Colors.green,
+    onPressed: (){
+      MySnackBar("I am floatingAction button",context);
+    }
+
 
     ),
+
+
+
+
+
     body: Text("Hello \n This is my App"""),
 
 
