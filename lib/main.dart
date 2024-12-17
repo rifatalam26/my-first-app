@@ -122,43 +122,69 @@ class _HomeActivityState extends State<HomeActivity> {
         },
       ),
       drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-                padding: EdgeInsets.all(0),
-                child: UserAccountsDrawerHeader(
-                    //  decoration: BoxDecoration(color: Colors.deepPurpleAccent),
-                    accountName: Text("Md Rifat Alam"),
-                    accountEmail: Text("mdrftlm@gmail.com"))),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              onTap: () {
-                MySnackBar("This is Home", context);
-              },
-            ),
-            ListTile(
+          child: ListView(
+        children: [
+          DrawerHeader(
+              padding: EdgeInsets.all(0),
+              child: UserAccountsDrawerHeader(
+                accountName: Text("Md Rifat Alam"),
+                accountEmail: Text("mdrftlm@gmail.com"),
+                currentAccountPicture: Image.network(
+                    "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"),
+              )),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text("Home"),
+            onTap: () {
+              MySnackBar("This is Home", context);
+            },
+          ),
+          ListTile(
               leading: Icon(Icons.person),
               title: Text("Profile"),
               onTap: () {
                 MySnackBar("This is Profile", context);
-              },
-            ),
-            ListTile(
-                leading: Icon(Icons.email),
-                title: Text("Email"),
+              }),
+          ListTile(
+              leading: Icon(Icons.email),
+              title: Text("Email"),
+              onTap: () {
+                MySnackBar("This is Email", context);
+              })
+        ],
+      )),
+      endDrawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  padding: EdgeInsets.all(0),
+                  child: UserAccountsDrawerHeader(
+                    accountName: Text("Md Rifat Alam"),
+                    accountEmail: Text("mdrftlm@gmail.com"),
+                    currentAccountPicture: Image.network(
+                        "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp"),
+                  )),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
                 onTap: () {
-                  MySnackBar("This is Email", context);
-                }),
-            ListTile(
-                leading: Icon(Icons.phone),
-                title: Text("Phone"),
-                onTap: () {
-                  MySnackBar("This is Phone", context);
-                })
-          ],
-        ),
-      ),
+                  MySnackBar("This is Home", context);
+                },
+              ),
+              ListTile(
+                  leading: Icon(Icons.person),
+                  title: Text("Profile"),
+                  onTap: () {
+                    MySnackBar("This is Profile", context);
+                  }),
+              ListTile(
+                  leading: Icon(Icons.email),
+                  title: Text("Email"),
+                  onTap: () {
+                    MySnackBar("This is Email", context);
+                  })
+            ],
+          )),
       body: Text("Hello \n This is my App" ""),
     );
   }
