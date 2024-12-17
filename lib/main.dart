@@ -28,7 +28,6 @@ class HomeActivity extends StatefulWidget {
 class _HomeActivityState extends State<HomeActivity> {
   int selectedIndex = 0;
 
-
   MySnackBar(massage, context) {
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(massage)));
@@ -89,12 +88,11 @@ class _HomeActivityState extends State<HomeActivity> {
           onPressed: () {
             MySnackBar("I am floatingAction button", context);
           }),
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex, // Active tab index
         selectedItemColor: Colors.blue, // Active item color
-       // unselectedItemColor: Colors.grey, // Inactive item color
-        items:const [
+        // unselectedItemColor: Colors.grey, // Inactive item color
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -126,15 +124,41 @@ class _HomeActivityState extends State<HomeActivity> {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(child: Text("RIFAT")),
-            ListTile(leading :Icon(Icons.home), title: Text('Home'),),
-            ListTile(leading: Icon(Icons.person), title: Text("Profile"),),
-            ListTile(leading: Icon(Icons.email), title: Text("Email"),),
-            ListTile(leading: Icon(Icons.phone), title: Text("Phone"),)
+            DrawerHeader(
+                padding: EdgeInsets.all(0),
+                child: UserAccountsDrawerHeader(
+                    //  decoration: BoxDecoration(color: Colors.deepPurpleAccent),
+                    accountName: Text("Md Rifat Alam"),
+                    accountEmail: Text("mdrftlm@gmail.com"))),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+                MySnackBar("This is Home", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: () {
+                MySnackBar("This is Profile", context);
+              },
+            ),
+            ListTile(
+                leading: Icon(Icons.email),
+                title: Text("Email"),
+                onTap: () {
+                  MySnackBar("This is Email", context);
+                }),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text("Phone"),
+                onTap: () {
+                  MySnackBar("This is Phone", context);
+                })
           ],
         ),
       ),
-
       body: Text("Hello \n This is my App" ""),
     );
   }
