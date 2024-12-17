@@ -27,6 +27,8 @@ class HomeActivity extends StatefulWidget {
 
 class _HomeActivityState extends State<HomeActivity> {
   int selectedIndex = 0;
+
+
   MySnackBar(massage, context) {
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(massage)));
@@ -92,7 +94,7 @@ class _HomeActivityState extends State<HomeActivity> {
         currentIndex: selectedIndex, // Active tab index
         selectedItemColor: Colors.blue, // Active item color
        // unselectedItemColor: Colors.grey, // Inactive item color
-        items: const [
+        items:const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -114,41 +116,24 @@ class _HomeActivityState extends State<HomeActivity> {
             MySnackBar("I am contact menu", context);
           }
           if (index == 2) {
-            MySnackBar("I am profile menue", context);
+            MySnackBar("I am profile menu", context);
           }
           setState(() {
             selectedIndex = index; // Update the selected tab index
           });
         },
       ),
-
-      // bottomNavigationBar:BottomNavigationBar(
-      //
-      //   selectedItemColor: Colors.red,
-      //   unselectedItemColor: Colors.grey,
-      //   currentIndex: selectedIndex,
-      //   items:const [
-      //     BottomNavigationBarItem(icon: Icon(Icons.home),label:"Home"),
-      //     BottomNavigationBarItem(icon: Icon(Icons.mail),label:"Contact"),
-      //     BottomNavigationBarItem(icon: Icon(Icons.person),label:"Profile")
-      //
-      //   ],
-      //   onTap: (index){
-      //     if(index==0){
-      //       MySnackBar("I am Home menu",context);
-      //     }
-      //     if(index==1){
-      //       MySnackBar("I am contact menu",context);
-      //     }
-      //     if(index==2){
-      //       MySnackBar("I am profile menue",context);
-      //     }
-      //     setState(() {
-      //       selectedIndex == index;
-      //     });
-      //   },
-      //
-      // ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text("RIFAT")),
+            ListTile(leading :Icon(Icons.home), title: Text('Home'),),
+            ListTile(leading: Icon(Icons.person), title: Text("Profile"),),
+            ListTile(leading: Icon(Icons.email), title: Text("Email"),),
+            ListTile(leading: Icon(Icons.phone), title: Text("Phone"),)
+          ],
+        ),
+      ),
 
       body: Text("Hello \n This is my App" ""),
     );
