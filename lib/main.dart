@@ -192,13 +192,14 @@ class _HomeActivityState extends State<HomeActivity> {
         height: 250,
         width: 250,
         alignment: Alignment.topCenter,
-        child: Text("ALAM"),
+
         margin: EdgeInsets.fromLTRB(30, 60, 50, 10),
         padding: EdgeInsets.all(60),
         decoration: BoxDecoration(
           color: Colors.blue,
           border: Border.all(color: Colors.black,width: 10)
         ),
+        child: Text("ALAM"),
       ),
     );
   }
