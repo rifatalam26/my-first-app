@@ -185,7 +185,10 @@ class _HomeActivityState extends State<HomeActivity> {
                   })
             ],
           )),
-      body: Text("Hello \n This is my App" ""),
+
+      body: Center(
+    child: Text("Hello \n This is my App" ""),
+    )
     );
   }
 }
