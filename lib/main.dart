@@ -35,6 +35,14 @@ class _HomeActivityState extends State<HomeActivity> {
 
   @override
   Widget build(BuildContext context) {
+    ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+      padding: EdgeInsets.all(25),
+          backgroundColor: Colors.green,
+      foregroundColor: Colors.red,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20))
+        )
+    );
     return Scaffold(
         appBar: AppBar(
           title: Text("My App"),
@@ -221,7 +229,7 @@ class _HomeActivityState extends State<HomeActivity> {
                   MySnackBar("This is Elevated Button", context);
                   MySnackBar("This is Elevated Button", context);
                 },
-                child: Text("Elevated Button")),
+                child: Text("Elevated Button"),style: buttonStyle,),
             OutlinedButton(
                 onPressed: () {
                   MySnackBar("This is Outlined Button", context);
