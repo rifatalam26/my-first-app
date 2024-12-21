@@ -1,40 +1,17 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-main(){
-
-  runApp(const MyApp());
-
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.menu,color: Colors.blue,),
+      title: Text("RIFAT ALAM"),
+      elevation: 0,
+      shadowColor: Colors.red,
+      backgroundColor: Colors.purple,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
+    )),
+  ));
 }
-
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(home: HomeActivity(),);
-}
-}
-
-class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
-
-
-
-  @override
-  Widget build(BuildContext context) {
-   return Scaffold(
-
-     appBar: AppBar(title: Text("AppBar"),),
-
-
-   );
-  }
-
-
-}
-
-
-
