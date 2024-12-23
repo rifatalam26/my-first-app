@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,7 +30,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-        title: const Text("Home"),
+        title: Text("Home",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize:25
+            )),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
