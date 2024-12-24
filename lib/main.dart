@@ -46,8 +46,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         body: Container(
-         color:  Colors.purple,
-          child: Row(
+          color: Colors.purple,
+          child:const Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -55,8 +55,7 @@ class _HomePageState extends State<HomePage> {
               Text("Alam"),
               Icon(Icons.account_circle_sharp)
             ],
-          )
-          ,
+          ),
         ));
   }
 }
