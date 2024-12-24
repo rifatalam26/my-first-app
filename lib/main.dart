@@ -46,14 +46,31 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         body: Container(
-          padding: EdgeInsets.all(20),
-          margin: EdgeInsets.all(20),
-          height: 150,
-          width: 150,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black, width: 10),
-            color: Colors.deepPurple,
-          ),
+            padding: EdgeInsets.all(20),
+            margin: EdgeInsets.all(20),
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              border: Border(
+                  top: BorderSide(color: Colors.red, width: 15),
+                  bottom: BorderSide(color: Colors.blue, width: 15),
+                  right: BorderSide(color: Colors.green, width: 15),
+                  left: BorderSide(color: Colors.amber, width: 15)),
+              color: Colors.deepPurple,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Center(
+                //   child: Icon(Icons.account_circle_sharp),
+                // ),
+                Icon(Icons.add_a_photo_sharp),
+                Icon(Icons.ac_unit_outlined),
+                Icon(Icons.access_alarm),
+                Icon(Icons.accessible),
+              ],
+            )
         ));
   }
 }
