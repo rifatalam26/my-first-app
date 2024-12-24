@@ -46,9 +46,14 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         body: Container(
-          color: Colors.purple,
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.all(20),
           height: 150,
           width: 150,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 10),
+            color: Colors.deepPurple,
+          ),
         ));
   }
 }
