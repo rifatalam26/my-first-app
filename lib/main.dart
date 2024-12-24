@@ -47,15 +47,8 @@ class _HomePageState extends State<HomePage> {
         ),
         body: Container(
           color: Colors.purple,
-          child:const Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Riiiiiiiiiiiiiiiiiiifat"),
-              Text("Alam"),
-              Icon(Icons.account_circle_sharp)
-            ],
-          ),
+          height: 150,
+          width: 150,
         ));
   }
 }
