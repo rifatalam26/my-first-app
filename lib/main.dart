@@ -78,24 +78,13 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: 250,
         height: 250,
+        color: Colors.black12,
         child: Stack(
           children: [
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurpleAccent,
-            ),
-            Positioned(
-              top: 20,
-              bottom: 20,
-              left: 20,
-              right: 20,
-              child: Container(
-                height: 150,
-                width: 150,
-                color: Colors.cyanAccent,
-              ),
-            )
+            Positioned(bottom: 20,right: 20, child: Icon(Icons.account_circle_sharp)),
+            Positioned(bottom: 20,left: 20, child: Icon(Icons.accessible)),
+            Positioned(top: 20,right: 20, child: Icon(Icons.add_a_photo_sharp)),
+            Positioned(top: 20,left: 20, child: Icon(Icons.ac_unit_outlined)),
           ],
         ),
       ),
