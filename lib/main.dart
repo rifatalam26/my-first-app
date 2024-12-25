@@ -81,13 +81,13 @@ class _HomePageState extends State<HomePage> {
         // color: Colors.black12,
         margin: EdgeInsets.all(40),
         decoration: BoxDecoration(
-          border: Border(top: BorderSide(color: Colors.cyanAccent,width: 30),
-          bottom: BorderSide(color: Colors.deepPurpleAccent,width: 30),
-            left: BorderSide(color: Colors.red,width: 30),
-            right: BorderSide(color: Colors.green,width: 30),
-          ),
-color: Colors.amberAccent
-        ),
+            border: Border(
+              top: BorderSide(color: Colors.cyanAccent, width: 30),
+              bottom: BorderSide(color: Colors.deepPurpleAccent, width: 30),
+              left: BorderSide(color: Colors.red, width: 30),
+              right: BorderSide(color: Colors.green, width: 30),
+            ),
+            color: Colors.amberAccent),
         child: Stack(
           children: [
             Positioned(
@@ -96,7 +96,11 @@ color: Colors.amberAccent
             Positioned(
                 top: 20, right: 20, child: Icon(Icons.add_a_photo_sharp)),
             Positioned(top: 20, left: 20, child: Icon(Icons.ac_unit_outlined)),
-          ],
+         Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           crossAxisAlignment: CrossAxisAlignment.center,
+           children: [Center(child: Icon(Icons.access_time_filled))],
+         ) ],
         ),
       ),
     );
