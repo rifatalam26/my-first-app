@@ -45,36 +45,60 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
         ),
       ),
-      body: Stack(
-        children: [
-          Container(
-              padding: EdgeInsets.all(20),
-              margin: EdgeInsets.all(20),
-              height: 300,
-              width: 300,
-              decoration: BoxDecoration(
-                border: Border(
-                    top: BorderSide(color: Colors.red, width: 15),
-                    bottom: BorderSide(color: Colors.blue, width: 15),
-                    right: BorderSide(color: Colors.green, width: 15),
-                    left: BorderSide(color: Colors.amber, width: 15)),
-                color: Colors.deepPurple,
+      // body: Stack(
+      //   children: [
+      //     Container(
+      //         padding: EdgeInsets.all(20),
+      //         margin: EdgeInsets.all(20),
+      //         height: 300,
+      //         width: 300,
+      //         decoration: BoxDecoration(
+      //           border: Border(
+      //               top: BorderSide(color: Colors.red, width: 15),
+      //               bottom: BorderSide(color: Colors.blue, width: 15),
+      //               right: BorderSide(color: Colors.green, width: 15),
+      //               left: BorderSide(color: Colors.amber, width: 15)),
+      //           color: Colors.deepPurple,
+      //         ),
+      //         child: const Column(
+      //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //           crossAxisAlignment: CrossAxisAlignment.start,
+      //           children: [
+      //             // Center(
+      //             //   child: Icon(Icons.account_circle_sharp),
+      //             // ),
+      //           ],
+      //         )),
+      //     Positioned(left: 60, top: 60, child: Icon(Icons.add_a_photo_sharp)),
+      //     Positioned(left: 60, bottom: 60, child: Icon(Icons.ac_unit_outlined)),
+      //     Positioned(bottom: 60, right: 60, child: Icon(Icons.access_alarm)),
+      //     Positioned(top: 60, right: 60, child: Icon(Icons.accessible)),
+      //   ],
+      // )
+      body: Container(
+        width: 250,
+        height: 250,
+        child: Stack(
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurpleAccent,
+            ),
+            Positioned(
+              top: 20,
+              bottom: 20,
+              left: 20,
+              right: 20,
+              child: Container(
+                height: 150,
+                width: 150,
+                color: Colors.cyanAccent,
               ),
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Center(
-                  //   child: Icon(Icons.account_circle_sharp),
-                  // ),
-                ],
-              )),
-          Positioned(left: 60, top: 60, child: Icon(Icons.add_a_photo_sharp)),
-          Positioned(left: 60, bottom: 60, child: Icon(Icons.ac_unit_outlined)),
-          Positioned(bottom: 60, right: 60, child: Icon(Icons.access_alarm)),
-          Positioned(top: 60, right: 60, child: Icon(Icons.accessible)),
-        ],
-      )
+            )
+          ],
+        ),
+      ),
     );
   }
 }
