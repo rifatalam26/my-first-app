@@ -45,32 +45,36 @@ class _HomePageState extends State<HomePage> {
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
           ),
         ),
-        body: Container(
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(20),
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              border: Border(
-                  top: BorderSide(color: Colors.red, width: 15),
-                  bottom: BorderSide(color: Colors.blue, width: 15),
-                  right: BorderSide(color: Colors.green, width: 15),
-                  left: BorderSide(color: Colors.amber, width: 15)),
-              color: Colors.deepPurple,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Center(
-                //   child: Icon(Icons.account_circle_sharp),
-                // ),
-                Icon(Icons.add_a_photo_sharp),
-                Icon(Icons.ac_unit_outlined),
-                Icon(Icons.access_alarm),
-                Icon(Icons.accessible),
-              ],
-            )
+        body: Stack(
+          children: [
+            Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(20),
+                height: 300,
+                width: 300,
+                decoration: BoxDecoration(
+                  border: Border(
+                      top: BorderSide(color: Colors.red, width: 15),
+                      bottom: BorderSide(color: Colors.blue, width: 15),
+                      right: BorderSide(color: Colors.green, width: 15),
+                      left: BorderSide(color: Colors.amber, width: 15)),
+                  color: Colors.deepPurple,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                      child: Icon(Icons.account_circle_sharp),
+                    ),
+                  ],
+                )),
+            Positioned(left: 60, top: 60, child: Icon(Icons.add_a_photo_sharp)),
+            Positioned(
+                left: 60, bottom: 60, child: Icon(Icons.ac_unit_outlined)),
+            Positioned(bottom: 60, right: 60, child: Icon(Icons.access_alarm)),
+            Positioned(top: 60, right: 60, child: Icon(Icons.accessible)),
+          ],
         ));
   }
 }
