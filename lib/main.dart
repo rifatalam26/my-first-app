@@ -64,9 +64,9 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Center(
-                    child: Icon(Icons.account_circle_sharp),
-                  ),
+                  // Center(
+                  //   child: Icon(Icons.account_circle_sharp),
+                  // ),
                 ],
               )),
           Positioned(left: 60, top: 60, child: Icon(Icons.add_a_photo_sharp)),
