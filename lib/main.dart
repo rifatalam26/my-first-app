@@ -96,11 +96,15 @@ class _HomePageState extends State<HomePage> {
             Positioned(
                 top: 20, right: 20, child: Icon(Icons.add_a_photo_sharp)),
             Positioned(top: 20, left: 20, child: Icon(Icons.ac_unit_outlined)),
-         Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-           crossAxisAlignment: CrossAxisAlignment.center,
-           children: [Center(child: Icon(Icons.access_time_filled))],
-         ) ],
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   crossAxisAlignment: CrossAxisAlignment.center,
+            //   children: [Center(child: Icon(Icons.access_time_filled))],
+            // ),
+            Center(
+              child: IconButton(onPressed: (){},icon: const Icon(Icons.add),),
+            )
+          ],
         ),
       ),
     );
