@@ -75,38 +75,46 @@ class _HomePageState extends State<HomePage> {
       //     Positioned(top: 60, right: 60, child: Icon(Icons.accessible)),
       //   ],
       // )
+      // body: Container(
+      //   width: 250,
+      //   height: 250,
+      //   // color: Colors.black12,
+      //   margin: EdgeInsets.all(40),
+      //   decoration: BoxDecoration(
+      //       border: Border(
+      //         top: BorderSide(color: Colors.cyanAccent, width: 30),
+      //         bottom: BorderSide(color: Colors.deepPurpleAccent, width: 30),
+      //         left: BorderSide(color: Colors.red, width: 30),
+      //         right: BorderSide(color: Colors.green, width: 30),
+      //       ),
+      //       color: Colors.amberAccent),
+      //   child: Stack(
+      //     children: [
+      //       Positioned(
+      //           bottom: 20, right: 20, child: Icon(Icons.account_circle_sharp)),
+      //       Positioned(bottom: 20, left: 20, child: Icon(Icons.accessible)),
+      //       Positioned(
+      //           top: 20, right: 20, child: Icon(Icons.add_a_photo_sharp)),
+      //       Positioned(top: 20, left: 20, child: Icon(Icons.ac_unit_outlined)),
+      //       // Column(
+      //       //   mainAxisAlignment: MainAxisAlignment.center,
+      //       //   crossAxisAlignment: CrossAxisAlignment.center,
+      //       //   children: [Center(child: Icon(Icons.access_time_filled))],
+      //       // ),
+      //       Center(
+      //         child: IconButton(onPressed: (){},icon: const Icon(Icons.add),),
+      //       )
+      //     ],
+      //   ),
+      // ),
+
       body: Container(
-        width: 250,
-        height: 250,
-        // color: Colors.black12,
-        margin: EdgeInsets.all(40),
-        decoration: BoxDecoration(
-            border: Border(
-              top: BorderSide(color: Colors.cyanAccent, width: 30),
-              bottom: BorderSide(color: Colors.deepPurpleAccent, width: 30),
-              left: BorderSide(color: Colors.red, width: 30),
-              right: BorderSide(color: Colors.green, width: 30),
-            ),
-            color: Colors.amberAccent),
-        child: Stack(
-          children: [
-            Positioned(
-                bottom: 20, right: 20, child: Icon(Icons.account_circle_sharp)),
-            Positioned(bottom: 20, left: 20, child: Icon(Icons.accessible)),
-            Positioned(
-                top: 20, right: 20, child: Icon(Icons.add_a_photo_sharp)),
-            Positioned(top: 20, left: 20, child: Icon(Icons.ac_unit_outlined)),
-            // Column(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   crossAxisAlignment: CrossAxisAlignment.center,
-            //   children: [Center(child: Icon(Icons.access_time_filled))],
-            // ),
-            Center(
-              child: IconButton(onPressed: (){},icon: const Icon(Icons.add),),
-            )
-          ],
-        ),
-      ),
+          width: 400,
+          height: 100,
+          color: Colors.blueGrey,
+          margin: EdgeInsets.all(10),
+          child: Image.network(
+              "https://cdn-icons-png.flaticon.com/512/6858/6858504.png")),
     );
   }
 }
