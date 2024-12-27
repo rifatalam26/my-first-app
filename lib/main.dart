@@ -108,13 +108,18 @@ class _HomePageState extends State<HomePage> {
       //   ),
       // ),
 
-      body: Container(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
           width: 400,
           height: 100,
           color: Colors.blueGrey,
-          margin: EdgeInsets.all(10),
+          //margin: EdgeInsets.all(10),
+          // padding: EdgeInsets.all(10),
           child: Image.network(
-              "https://cdn-icons-png.flaticon.com/512/6858/6858504.png")),
+              "https://cdn-icons-png.flaticon.com/512/6858/6858504.png"),
+        ),
+      ),
     );
   }
 }
