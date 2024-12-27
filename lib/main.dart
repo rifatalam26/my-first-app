@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -29,109 +29,154 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-        title:
-            Text("Home", style: TextStyle(color: Colors.white, fontSize: 25)),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.menu),
+        ),
+        title: Text("Home"),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.shopping_cart),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+          ),
         ],
-        centerTitle: true,
         backgroundColor: Colors.purple,
         foregroundColor: Colors.white,
         shadowColor: Colors.red,
         elevation: 5,
+        centerTitle: true,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
-        ),
-      ),
-      // body: Stack(
-      //   children: [
-      //     Container(
-      //         padding: EdgeInsets.all(20),
-      //         margin: EdgeInsets.all(20),
-      //         height: 300,
-      //         width: 300,
-      //         decoration: BoxDecoration(
-      //           border: Border(
-      //               top: BorderSide(color: Colors.red, width: 15),
-      //               bottom: BorderSide(color: Colors.blue, width: 15),
-      //               right: BorderSide(color: Colors.green, width: 15),
-      //               left: BorderSide(color: Colors.amber, width: 15)),
-      //           color: Colors.deepPurple,
-      //         ),
-      //         child: const Column(
-      //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //           crossAxisAlignment: CrossAxisAlignment.start,
-      //           children: [
-      //             // Center(
-      //             //   child: Icon(Icons.account_circle_sharp),
-      //             // ),
-      //           ],
-      //         )),
-      //     Positioned(left: 60, top: 60, child: Icon(Icons.add_a_photo_sharp)),
-      //     Positioned(left: 60, bottom: 60, child: Icon(Icons.ac_unit_outlined)),
-      //     Positioned(bottom: 60, right: 60, child: Icon(Icons.access_alarm)),
-      //     Positioned(top: 60, right: 60, child: Icon(Icons.accessible)),
-      //   ],
-      // )
-      // body: Container(
-      //   width: 250,
-      //   height: 250,
-      //   // color: Colors.black12,
-      //   margin: EdgeInsets.all(40),
-      //   decoration: BoxDecoration(
-      //       border: Border(
-      //         top: BorderSide(color: Colors.cyanAccent, width: 30),
-      //         bottom: BorderSide(color: Colors.deepPurpleAccent, width: 30),
-      //         left: BorderSide(color: Colors.red, width: 30),
-      //         right: BorderSide(color: Colors.green, width: 30),
-      //       ),
-      //       color: Colors.amberAccent),
-      //   child: Stack(
-      //     children: [
-      //       Positioned(
-      //           bottom: 20, right: 20, child: Icon(Icons.account_circle_sharp)),
-      //       Positioned(bottom: 20, left: 20, child: Icon(Icons.accessible)),
-      //       Positioned(
-      //           top: 20, right: 20, child: Icon(Icons.add_a_photo_sharp)),
-      //       Positioned(top: 20, left: 20, child: Icon(Icons.ac_unit_outlined)),
-      //       // Column(
-      //       //   mainAxisAlignment: MainAxisAlignment.center,
-      //       //   crossAxisAlignment: CrossAxisAlignment.center,
-      //       //   children: [Center(child: Icon(Icons.access_time_filled))],
-      //       // ),
-      //       Center(
-      //         child: IconButton(onPressed: (){},icon: const Icon(Icons.add),),
-      //       )
-      //     ],
-      //   ),
-      // ),
-
-      body: Container(
-        width: 400,
-        height: 100,
-        margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(40), bottomRight: Radius.circular(40)),
-          border: Border(
-            top: BorderSide(color: Color(0xff1b7d4f), width: 10),
-            bottom: BorderSide(color: Color(0xff1b7d4f), width: 10),
-          ),
-          color: Color(0xffb916fa),
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            opacity: .5,
-            image: NetworkImage(
-                "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(30),
           ),
         ),
-        // child: Image.network(
-        //   "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
       ),
-      //margin: EdgeInsets.all(10),
-      // padding: EdgeInsets.all(10),
+      body: Padding(
+          padding: EdgeInsets.all(8),
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                color: Colors.blueGrey,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    )
+                  ]),
+                  Column(children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    )
+                  ]),
+                  Column(children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blueGrey,
+                    ),
+                    // SizedBox(
+                    //   height: 10,
+                    // ) // SizedBox(
+                    //   height: 10,
+                    // )
+                  ]),
+                ],
+              )
+            ],
+          )),
     );
   }
 }
