@@ -109,13 +109,27 @@ class _HomePageState extends State<HomePage> {
       // ),
 
       body: Container(
-          width: 400,
-          height: 100,
-          margin: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(30),bottomRight: Radius.circular(30)),
-            color: Color(0xffb916fa),
-          )),
+        width: 400,
+        height: 100,
+        margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40), bottomRight: Radius.circular(40)),
+          border: Border(
+            top: BorderSide(color: Color(0xff1b7d4f), width: 10),
+            bottom: BorderSide(color: Color(0xff1b7d4f), width: 10),
+          ),
+          color: Color(0xffb916fa),
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            opacity: .5,
+            image: NetworkImage(
+                "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+          ),
+        ),
+        // child: Image.network(
+        //   "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+      ),
       //margin: EdgeInsets.all(10),
       // padding: EdgeInsets.all(10),
     );
