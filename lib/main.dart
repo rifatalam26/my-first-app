@@ -61,7 +61,12 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 height: 100,
-                color: Color(0xff4c5885),
+               // color: Color(0xff4c5885),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage("https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg")
+                  )
+                ),
               ),
               SizedBox(
                 height: 10,
@@ -167,7 +172,6 @@ class _HomePageState extends State<HomePage> {
                       width: 100,
                       color: Color(0xff4c5885),
                     ),
-
                   ]),
                 ],
               )
