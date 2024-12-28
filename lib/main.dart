@@ -167,11 +167,7 @@ class _HomePageState extends State<HomePage> {
                       width: 100,
                       color: Color(0xff4c5885),
                     ),
-                    // SizedBox(
-                    //   height: 10,
-                    // ) // SizedBox(
-                    //   height: 10,
-                    // )
+
                   ]),
                 ],
               )
