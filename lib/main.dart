@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 height: 100,
-                color: Colors.blueGrey,
+                color: Color(0xff4c5885),
               ),
               SizedBox(
                 height: 10,
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -97,41 +97,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    )
-                  ]),
-                  Column(children: [
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.blueGrey,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.blueGrey,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.blueGrey,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -141,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -149,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -157,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
                     ),
                     SizedBox(
                       height: 10,
@@ -165,7 +131,41 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.blueGrey,
+                      color: Color(0xff4c5885),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    )
+                  ]),
+                  Column(children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Color(0xff4c5885),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Color(0xff4c5885),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Color(0xff4c5885),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Color(0xff4c5885),
                     ),
                     // SizedBox(
                     //   height: 10,
