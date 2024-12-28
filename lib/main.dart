@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> {
                // color: Color(0xff4c5885),
                 decoration: BoxDecoration(
                   image: DecorationImage(
+                    fit: BoxFit.fill,
                       image: NetworkImage("https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg")
                   )
                 ),
