@@ -190,6 +190,9 @@ class _HomePageState extends State<HomePage> {
             labelText: "First Name",
             filled: true,
             fillColor: Colors.blueGrey,
+            border:OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30),
+            )
           ),
         ),
       ),
