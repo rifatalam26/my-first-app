@@ -184,7 +184,8 @@ class _HomePageState extends State<HomePage> {
       child:Center(
         child: TextField(
           decoration: InputDecoration(
-            border: InputBorder.none,
+           // border: InputBorder.none,
+            labelText: "First Name",
           ),
         ),
       ),
