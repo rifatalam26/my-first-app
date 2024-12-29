@@ -183,6 +183,7 @@ class _HomePageState extends State<HomePage> {
       body: Padding(padding: EdgeInsets.symmetric(horizontal: 30),
       child:Center(
         child: TextField(
+          keyboardType: TextInputType.number,
           decoration: InputDecoration(
            // border: InputBorder.none,
             labelText: "First Name",
