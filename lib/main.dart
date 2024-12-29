@@ -183,10 +183,13 @@ class _HomePageState extends State<HomePage> {
       body: Padding(padding: EdgeInsets.symmetric(horizontal: 30),
       child:Center(
         child: TextField(
-          keyboardType: TextInputType.number,
+         // keyboardType: TextInputType.multiline,
+
           decoration: InputDecoration(
            // border: InputBorder.none,
             labelText: "First Name",
+            filled: true,
+            fillColor: Colors.blueGrey,
           ),
         ),
       ),
