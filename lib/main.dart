@@ -120,33 +120,33 @@ class _HomePageState extends State<HomePage> {
             Container(
               height: 80,
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.blue, width: 4),
-                borderRadius: const BorderRadius.all(Radius.circular(40)),
+                border: Border.all(color: Colors.orangeAccent, width: 4),
+                borderRadius: const BorderRadius.all(Radius.circular(15)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Icon(
-                    Icons.shop,
+                    Icons.light,
                     size: 50,
-                    color: Colors.blue,
+                    color: Colors.orangeAccent,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Item One",
+                        "Item Three",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
-                      Text("Border Station"),
+                      Text("BeveledRactangleBorder"),
                     ],
                   ),
                   Icon(
                     Icons.play_arrow,
                     size: 50,
-                    color: Colors.blue,
+                    color: Colors.orangeAccent,
                   )
                 ],
               ),
