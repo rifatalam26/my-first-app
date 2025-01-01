@@ -44,17 +44,174 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
         ),
       ),
-      body:Card(
-        color: Colors.orangeAccent,
-        shape:OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-          borderSide: BorderSide(color: Colors.black,width: 3),
-        ) ,
-margin: EdgeInsets.all(30),
-        child: Padding(
-          padding: const EdgeInsets.all(50.0),
-          child: Text("data"),
-        ),
+      body:Column(
+        children: [
+          Card(elevation: 20.0,
+            //color: Colors.orangeAccent,
+            // shape:OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(30)),
+            //  // borderSide: BorderSide(color: Colors.black,width: 3),
+            // ) ,
+          margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+           child: Column(
+             children: [
+               Row(mainAxisAlignment: MainAxisAlignment.start,
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+                 SizedBox(width: 20,),
+                   Column(
+                     children: [
+                       Text("1257937300",),
+                       Text("Incoming"),
+                     ],
+
+                   )
+                 ],
+               ),
+               SizedBox(height: 2,),
+               Row(mainAxisAlignment: MainAxisAlignment.end,
+                 crossAxisAlignment: CrossAxisAlignment.end,
+                 children: [
+                   TextButton(onPressed: (){}, child: Text("Dail")),
+                   TextButton(onPressed: (){}, child: Text("Call History")),
+                 ],
+               )
+             ],
+           ),
+          ),
+          Card(elevation: 20.0,
+            //color: Colors.orangeAccent,
+            // shape:OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(30)),
+            //  // borderSide: BorderSide(color: Colors.black,width: 3),
+            // ) ,
+            margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+                    SizedBox(width: 20,),
+                    Column(
+                      children: [
+                        Text("01355737300",),
+                        Text("Outgoing"),
+                      ],
+
+                    )
+                  ],
+                ),
+                SizedBox(height: 2,),
+                Row(mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextButton(onPressed: (){}, child: Text("Dail")),
+                    TextButton(onPressed: (){}, child: Text("Call History")),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Card(elevation: 20.0,
+            //color: Colors.orangeAccent,
+            // shape:OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(30)),
+            //  // borderSide: BorderSide(color: Colors.black,width: 3),
+            // ) ,
+            margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+                    SizedBox(width: 20,),
+                    Column(
+                      children: [
+                        Text("33333333333",),
+                        Text("Missed"),
+                      ],
+
+                    )
+                  ],
+                ),
+                SizedBox(height: 2,),
+                Row(mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextButton(onPressed: (){}, child: Text("Dail")),
+                    TextButton(onPressed: (){}, child: Text("Call History")),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Card(elevation: 20.0,
+            //color: Colors.orangeAccent,
+            // shape:OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(30)),
+            //  // borderSide: BorderSide(color: Colors.black,width: 3),
+            // ) ,
+            margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+                    SizedBox(width: 20,),
+                    Column(
+                      children: [
+                        Text("66666666666",),
+                        Text("Incoming"),
+                      ],
+
+                    )
+                  ],
+                ),
+                SizedBox(height: 2,),
+                Row(mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextButton(onPressed: (){}, child: Text("Dail")),
+                    TextButton(onPressed: (){}, child: Text("Call History")),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Card(elevation: 20.0,
+            //color: Colors.orangeAccent,
+            // shape:OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(30)),
+            //  // borderSide: BorderSide(color: Colors.black,width: 3),
+            // ) ,
+            margin: EdgeInsets.only(top: 10,left: 10,right: 10),
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [IconButton(onPressed: (){}, icon: Icon(Icons.call)),
+                    SizedBox(width: 20,),
+                    Column(
+                      children: [
+                        Text("10101010101",),
+                        Text("Outgoing"),
+                      ],
+
+                    )
+                  ],
+                ),
+                SizedBox(height: 2,),
+                Row(mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextButton(onPressed: (){}, child: Text("Dail")),
+                    TextButton(onPressed: (){}, child: Text("Call History")),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
       )
     );
   }
