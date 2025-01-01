@@ -30,9 +30,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-        title: Text("Home"),
+        title: Text("Card Design"),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
+        //  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
         ],
         backgroundColor: Colors.purple,
@@ -61,8 +61,8 @@ class _HomePageState extends State<HomePage> {
                  SizedBox(width: 20,),
                    Column(
                      children: [
-                       Text("1257937300",),
-                       Text("Incoming"),
+                       Text("1257937300",style: TextStyle(color: Colors.green,fontSize: 15.0),),
+                       Text("Incoming",style: TextStyle(color: Colors.orange),),
                      ],
 
                    )
@@ -72,8 +72,8 @@ class _HomePageState extends State<HomePage> {
                Row(mainAxisAlignment: MainAxisAlignment.end,
                  crossAxisAlignment: CrossAxisAlignment.end,
                  children: [
-                   TextButton(onPressed: (){}, child: Text("Dail")),
-                   TextButton(onPressed: (){}, child: Text("Call History")),
+                   TextButton(onPressed: (){}, child: Text("Dail",style: TextStyle(color: Colors.blue),)),
+                   TextButton(onPressed: (){}, child: Text("Call History",style: TextStyle(color: Colors.blue))),
                  ],
                )
              ],
@@ -94,8 +94,8 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(width: 20,),
                     Column(
                       children: [
-                        Text("01355737300",),
-                        Text("Outgoing"),
+                        Text("01355737300",style: TextStyle(color: Colors.green,fontSize: 15.0),),
+                        Text("Outgoing",style: TextStyle(color: Colors.orange),),
                       ],
 
                     )
@@ -105,8 +105,8 @@ class _HomePageState extends State<HomePage> {
                 Row(mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    TextButton(onPressed: (){}, child: Text("Dail")),
-                    TextButton(onPressed: (){}, child: Text("Call History")),
+                    TextButton(onPressed: (){}, child: Text("Dail",style: TextStyle(color: Colors.blue))),
+                    TextButton(onPressed: (){}, child: Text("Call History",style: TextStyle(color: Colors.blue))),
                   ],
                 )
               ],
@@ -127,8 +127,8 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(width: 20,),
                     Column(
                       children: [
-                        Text("33333333333",),
-                        Text("Missed"),
+                        Text("33333333333",style: TextStyle(color: Colors.green,fontSize: 15.0)),
+                        Text("Missed",style: TextStyle(color: Colors.orange)),
                       ],
 
                     )
@@ -138,8 +138,8 @@ class _HomePageState extends State<HomePage> {
                 Row(mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    TextButton(onPressed: (){}, child: Text("Dail")),
-                    TextButton(onPressed: (){}, child: Text("Call History")),
+                    TextButton(onPressed: (){}, child: Text("Dail",style: TextStyle(color: Colors.blue))),
+                    TextButton(onPressed: (){}, child: Text("Call History",style: TextStyle(color: Colors.blue))),
                   ],
                 )
               ],
@@ -160,8 +160,8 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(width: 20,),
                     Column(
                       children: [
-                        Text("66666666666",),
-                        Text("Incoming"),
+                        Text("66666666666",style: TextStyle(color: Colors.green,fontSize: 15.0)),
+                        Text("Incoming",style: TextStyle(color: Colors.orange)),
                       ],
 
                     )
@@ -171,8 +171,8 @@ class _HomePageState extends State<HomePage> {
                 Row(mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    TextButton(onPressed: (){}, child: Text("Dail")),
-                    TextButton(onPressed: (){}, child: Text("Call History")),
+                    TextButton(onPressed: (){}, child: Text("Dail",style: TextStyle(color: Colors.blue))),
+                    TextButton(onPressed: (){}, child: Text("Call History",style: TextStyle(color: Colors.blue))),
                   ],
                 )
               ],
@@ -193,8 +193,8 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(width: 20,),
                     Column(
                       children: [
-                        Text("10101010101",),
-                        Text("Outgoing"),
+                        Text("10101010101",style: TextStyle(color: Colors.green,fontSize: 15.0)),
+                        Text("Outgoing",style: TextStyle(color: Colors.orange)),
                       ],
 
                     )
@@ -204,8 +204,8 @@ class _HomePageState extends State<HomePage> {
                 Row(mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    TextButton(onPressed: (){}, child: Text("Dail")),
-                    TextButton(onPressed: (){}, child: Text("Call History")),
+                    TextButton(onPressed: (){}, child: Text("Dail",style: TextStyle(color: Colors.blue))),
+                    TextButton(onPressed: (){}, child: Text("Call History",style: TextStyle(color: Colors.blue))),
                   ],
                 )
               ],
