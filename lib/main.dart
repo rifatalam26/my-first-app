@@ -44,121 +44,13 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Column(
-          children: [
-            Container(
-              height: 80,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.blue, width: 4),
-                borderRadius: const BorderRadius.all(Radius.circular(40)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    Icons.shop,
-                    size: 50,
-                    color: Colors.blue,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Item One",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text("Border Station"),
-                    ],
-                  ),
-                  Icon(
-                    Icons.play_arrow,
-                    size: 50,
-                    color: Colors.blue,
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Container(
-              height: 80,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.green, width: 4),
-                // borderRadius: const BorderRadius.all(Radius.circular(40)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    Icons.run_circle,
-                    size: 50,
-                    color: Colors.blue,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Item two",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text("BeveledRactangleBorder"),
-                    ],
-                  ),
-                  Icon(
-                    Icons.play_arrow,
-                    size: 50,
-                    color: Colors.green,
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Container(
-              height: 80,
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.orangeAccent, width: 4),
-                borderRadius: const BorderRadius.all(Radius.circular(15)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    Icons.light,
-                    size: 50,
-                    color: Colors.orangeAccent,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Item Three",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text("BeveledRactangleBorder"),
-                    ],
-                  ),
-                  Icon(
-                    Icons.play_arrow,
-                    size: 50,
-                    color: Colors.orangeAccent,
-                  )
-                ],
-              ),
-            ),
-          ],
+      body: Container(
+        height: 200,width: 200,
+        child: Card(
+          color: Colors.orangeAccent,
+          shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)) ,
         ),
-      ),
+      )
     );
   }
 }
