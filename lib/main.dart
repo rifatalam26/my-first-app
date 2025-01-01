@@ -50,8 +50,11 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.all(Radius.circular(30)),
           borderSide: BorderSide(color: Colors.black,width: 3),
         ) ,
-
-        child: Text("data"),
+margin: EdgeInsets.all(30),
+        child: Padding(
+          padding: const EdgeInsets.all(50.0),
+          child: Text("data"),
+        ),
       )
     );
   }
