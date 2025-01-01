@@ -44,12 +44,13 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
         ),
       ),
-      body: Container(
-        height: 200,width: 200,
-        child: Card(
-          color: Colors.orangeAccent,
-          shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)) ,
-        ),
+      body:Card(
+        color: Colors.orangeAccent,
+        shape:OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+          borderSide: BorderSide(color: Colors.black,width: 3),
+        ) ,
+        child: Text("data"),
       )
     );
   }
