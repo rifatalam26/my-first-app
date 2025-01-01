@@ -37,7 +37,9 @@ class _HomePageState extends State<HomePage> {
         ],
         backgroundColor: Colors.purple,
         centerTitle: true,
+
         foregroundColor: Colors.white,
+
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
         ),
@@ -80,12 +82,14 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               height: 80,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.green, width: 4),
-               // borderRadius: const BorderRadius.all(Radius.circular(40)),
+                // borderRadius: const BorderRadius.all(Radius.circular(40)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -106,7 +110,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Text("BeveledRactangleBorder"),
                     ],
-
                   ),
                   Icon(
                     Icons.play_arrow,
@@ -116,7 +119,9 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               height: 80,
               decoration: BoxDecoration(
