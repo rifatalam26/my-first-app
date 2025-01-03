@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          title: Text("Home Page"),
+          title: Text("My App"),
           actions: [
             //  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
             IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
@@ -38,9 +38,9 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.blueAccent,
           centerTitle: true,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30)),
-          ),
+          // shape: RoundedRectangleBorder(
+          //   borderRadius: BorderRadius.all(Radius.circular(20)),
+          // ),
         ),
         body: Center(
           child: Padding(
@@ -50,6 +50,10 @@ class _HomePageState extends State<HomePage> {
               children: [
                 TextField(
                   decoration: InputDecoration(
+                      suffixIcon: Icon(
+                        Icons.email,
+                        color: Colors.blue,
+                      ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: BorderSide(color: Colors.green, width: 4),
@@ -66,6 +70,7 @@ class _HomePageState extends State<HomePage> {
                 TextField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.remove_red_eye,color: Colors.blue,),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30),
                       borderSide: BorderSide(color: Colors.green, width: 4),
@@ -77,14 +82,23 @@ class _HomePageState extends State<HomePage> {
                     hintText: "Password",
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
+                SizedBox(
+                  height: 8,
+                ),
+                ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(height: 50, width: 200),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                    ),
                   ),
                 )
               ],
