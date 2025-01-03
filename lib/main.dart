@@ -45,12 +45,49 @@ class _HomePageState extends State<HomePage> {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
-            child: TextField(
-              decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
-                borderSide: BorderSide(color: Colors.deepOrange, width: 3),
-              )),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: BorderSide(color: Colors.green, width: 4),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: BorderSide(color: Colors.blue, width: 4),
+                      ),
+                      hintText: "Email"),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide(color: Colors.green, width: 4),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: BorderSide(color: Colors.blue, width: 4),
+                    ),
+                    hintText: "Password",
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
             ),
           ),
         ));
