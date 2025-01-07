@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
