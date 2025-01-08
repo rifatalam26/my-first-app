@@ -27,10 +27,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    var arr_names = [
+      "Md: Rifat ",
+      "Md Siddik",
+      "Md: Abusaid",
+      "Md: Alam",
+      "Md: Jomil",
+      "Md: Jolol",
+      "Md: Julfikar",
+      "Md: Rakib",
+      "Ms: Shanur"
+    ];
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          title: Text("My App"),
+          title: Text("ListView.builder"),
           actions: [
             //  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
             IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
@@ -38,14 +49,28 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.blueAccent,
           centerTitle: true,
           foregroundColor: Colors.white,
-          // shape: RoundedRectangleBorder(
-          //   borderRadius: BorderRadius.all(Radius.circular(20)),
-          // ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
         ),
-
-        body: ListView.builder( itemCount: 5,itemBuilder: (context, index) {
-          return Text("alam",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),);
-        },)
-        );
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Text(
+                  arr_names[index],
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                );
+              },
+              itemCount: arr_names.length,
+              itemExtent: 100,
+              // separatorBuilder: (context, index) {
+              //   return Divider(height: 50, thickness: 3);
+              // },
+              scrollDirection: Axis.vertical,
+            ),
+          ),
+        ));
   }
 }
