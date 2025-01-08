@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          title: Text("ListView.builder"),
+          title: Text("ListView.separated"),
           actions: [
             //  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
             IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: ListView.builder(
+            child: ListView.separated(
               itemBuilder: (context, index) {
                 return Text(
                   arr_names[index],
@@ -64,10 +64,10 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               itemCount: arr_names.length,
-              itemExtent: 100,
-              // separatorBuilder: (context, index) {
-              //   return Divider(height: 50, thickness: 3);
-              // },
+             // itemExtent: 100,
+              separatorBuilder: (context, index) {
+                return Divider(height: 50, thickness: 3);
+              },
               scrollDirection: Axis.vertical,
             ),
           ),
