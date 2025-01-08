@@ -45,37 +45,53 @@ class _HomePageState extends State<HomePage> {
         body: ListView(
           scrollDirection: Axis.horizontal,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+              ),
             ),
           ],
         )
