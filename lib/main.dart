@@ -42,68 +42,43 @@ class _HomePageState extends State<HomePage> {
           //   borderRadius: BorderRadius.all(Radius.circular(20)),
           // ),
         ),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextField(
-                  decoration: InputDecoration(
-                      suffixIcon: Icon(
-                        Icons.email,
-                        color: Colors.blue,
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(color: Colors.green, width: 4),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(color: Colors.blue, width: 4),
-                      ),
-                      hintText: "Email"),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                TextField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.remove_red_eye,color: Colors.blue,),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(color: Colors.green, width: 4),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(color: Colors.blue, width: 4),
-                    ),
-                    hintText: "Password",
-                  ),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(height: 50, width: 200),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                    ),
-                  ),
-                )
-              ],
+        body: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
             ),
-          ),
-        ));
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
+            ),
+          ],
+        )
+        );
   }
 }
