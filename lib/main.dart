@@ -42,59 +42,10 @@ class _HomePageState extends State<HomePage> {
           //   borderRadius: BorderRadius.all(Radius.circular(20)),
           // ),
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text("One", style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
-              ),
-            ),
-          ],
-        )
+
+        body: ListView.builder( itemCount: 5,itemBuilder: (context, index) {
+          return Text("alam",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),);
+        },)
         );
   }
 }
