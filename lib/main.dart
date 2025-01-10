@@ -46,44 +46,87 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               SizedBox(
-                  height: 100,
-                  child: ListView.builder(
-                      itemCount: 30,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: CircleAvatar(
-                            // backgroundImage:
-                            //     AssetImage("assets/images/my picture.jpg"),
-                            radius: 30,
-                            backgroundColor: Colors.blueGrey,
-                          ),
-                        );
-                      })),
-              ListView.builder(
-                  physics: BouncingScrollPhysics(),
-                  shrinkWrap: true,
+                height: 100,
+                child: ListView.builder(
                   itemCount: 30,
-                  scrollDirection: Axis.vertical,
+                  scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: CircleAvatar(
-                        // backgroundImage:
-                        //     AssetImage("assets/images/my picture.jpg"),
+                    return Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: CircleAvatar(
                         radius: 30,
                         backgroundColor: Colors.blueGrey,
                       ),
-                      title: Text(
-                        "Rifat Alam",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w500),
-                      ),
-                      subtitle: Text("Flutter App Developer"),
                     );
-                  }),
+                  },
+                ),
+              ),
+              ListView.builder(
+                physics: BouncingScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 30,
+                scrollDirection: Axis.vertical,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    title: Text(
+                      "Md Rifat Alam",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                    subtitle: Text("Flutter App developer"),
+                  );
+                },
+              )
             ],
           ),
-        ));
+        )
+        // SingleChildScrollView(
+        //   child: Column(
+        //     children: [
+        //       SizedBox(
+        //           height: 100,
+        //           child: ListView.builder(
+        //               itemCount: 30,
+        //               scrollDirection: Axis.horizontal,
+        //               itemBuilder: (context, index) {
+        //                 return Padding(
+        //                   padding: const EdgeInsets.all(5.0),
+        //                   child: CircleAvatar(
+        //                     // backgroundImage:
+        //                     //     AssetImage("assets/images/my picture.jpg"),
+        //                     radius: 30,
+        //                     backgroundColor: Colors.blueGrey,
+        //                   ),
+        //                 );
+        //               })),
+        //       ListView.builder(
+        //           physics: BouncingScrollPhysics(),
+        //           shrinkWrap: true,
+        //           itemCount: 30,
+        //           scrollDirection: Axis.vertical,
+        //           itemBuilder: (context, index) {
+        //             return ListTile(
+        //               leading: CircleAvatar(
+        //                 // backgroundImage:
+        //                 //     AssetImage("assets/images/my picture.jpg"),
+        //                 radius: 30,
+        //                 backgroundColor: Colors.blueGrey,
+        //               ),
+        //               title: Text(
+        //                 "Rifat Alam",
+        //                 style: TextStyle(
+        //                     fontSize: 20, fontWeight: FontWeight.w500),
+        //               ),
+        //               subtitle: Text("Flutter App Developer"),
+        //             );
+        //           }),
+        //     ],
+        //   ),
+        // )
+        );
   }
 }
