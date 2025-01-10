@@ -27,21 +27,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    var arr_names = [
-      "Md: Rifat ",
-      "Md Siddik",
-      "Md: Abusaid",
-      "Md: Alam",
-      "Md: Jomil",
-      "Md: Jolol",
-      "Md: Julfikar",
-      "Md: Rakib",
-      "Ms: Shanur"
-    ];
     return Scaffold(
         appBar: AppBar(
           leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          title: Text("ListView.separated"),
+          title: Text("Massenger demo"),
           actions: [
             //  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
             IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
@@ -53,23 +42,47 @@ class _HomePageState extends State<HomePage> {
             borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
         ),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: ListView.separated(
-              itemBuilder: (context, index) {
-                return Text(
-                  arr_names[index],
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
-                );
-              },
-              itemCount: arr_names.length,
-             // itemExtent: 100,
-              separatorBuilder: (context, index) {
-                return Divider(height: 50, thickness: 3);
-              },
-              scrollDirection: Axis.vertical,
-            ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                  height: 100,
+                  child: ListView.builder(
+                      itemCount: 30,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: CircleAvatar(
+                            // backgroundImage:
+                            //     AssetImage("assets/images/my picture.jpg"),
+                            radius: 30,
+                            backgroundColor: Colors.blueGrey,
+                          ),
+                        );
+                      })),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 30,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      leading: CircleAvatar(
+                        // backgroundImage:
+                        //     AssetImage("assets/images/my picture.jpg"),
+                        radius: 30,
+                        backgroundColor: Colors.blueGrey,
+                      ),
+                      title: Text(
+                        "Rifat Alam",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
+                      subtitle: Text("Flutter App Developer"),
+                    );
+                  }),
+            ],
           ),
         ));
   }
