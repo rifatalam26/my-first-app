@@ -16,12 +16,16 @@ class second_screen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          "Hello Brooo",
-          style: TextStyle(
-              color: Colors.cyanAccent,
-              fontSize: 50,
-              fontWeight: FontWeight.bold),
+        child: Column(
+          children: [
+            Text(
+              "Hello Brooo ",
+              style: TextStyle(
+                  color: Colors.cyanAccent,
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
       ),
     );
