@@ -113,7 +113,8 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
-              Divider(height: 1.5,color: Colors.white,),
+              Divider(
+                height: 1.5,color: Colors.white,),
             ],
           )),
     );
