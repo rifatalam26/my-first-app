@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/view/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -72,7 +73,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Divider(
-                height: 1.5,color: Colors.white,
+                height: 1.5,
+                color: Colors.white,
               ),
               ListTile(
                 leading: Icon(
@@ -86,7 +88,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Divider(
-                height: 1.5,color: Colors.white,
+                height: 1.5,
+                color: Colors.white,
               ),
               ListTile(
                 leading: Icon(
@@ -100,7 +103,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Divider(
-                height: 1.5,color: Colors.white,
+                height: 1.5,
+                color: Colors.white,
               ),
               ListTile(
                 leading: Icon(
@@ -114,9 +118,27 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Divider(
-                height: 1.5,color: Colors.white,),
+                height: 1.5,
+                color: Colors.white,
+              ),
             ],
           )),
+      body: Center(
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Welcome",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => home_screen()));
+                  },
+                  child: Text("Next")),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
