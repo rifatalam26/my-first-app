@@ -28,105 +28,94 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          title: Text("Massenger demo"),
-          actions: [
-            //  IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-          ],
-          backgroundColor: Colors.blueAccent,
-          centerTitle: true,
-          foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-          ),
-        ),
-        body: SingleChildScrollView(
-          child: Column(
+      appBar: AppBar(
+        // leading: Icon(Icons.account_circle),
+        title: Text("Appbar"),
+        actions: [Icon(Icons.settings)],
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        centerTitle: true,
+      ),
+      drawer: Drawer(
+          backgroundColor: Colors.blueGrey,
+          width: 250,
+          child: ListView(
             children: [
-              SizedBox(
-                height: 100,
-                child: ListView.builder(
-                  itemCount: 30,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: CircleAvatar(
-                        radius: 30,
-                        backgroundColor: Colors.blueGrey,
-                      ),
-                    );
-                  },
+              DrawerHeader(
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.blue,
+                    ),
+                    Text(
+                      "Drayer Heder",
+                      style: TextStyle(color: Colors.black, fontSize: 20),
+                    ),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(100),
+                        bottomRight: Radius.circular(100)),
+                    color: Colors.greenAccent),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  color: Colors.greenAccent,
+                  size: 40,
+                ),
+                title: Text(
+                  "Setings",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
-              ListView.builder(
-                physics: BouncingScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: 30,
-                scrollDirection: Axis.vertical,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.blueGrey,
-                    ),
-                    title: Text(
-                      "Md Rifat Alam",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                    ),
-                    subtitle: Text("Flutter App developer"),
-                  );
-                },
-              )
+              Divider(
+                height: 1.5,color: Colors.white,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.person,
+                  color: Colors.greenAccent,
+                  size: 40,
+                ),
+                title: Text(
+                  "Person",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
+              Divider(
+                height: 1.5,color: Colors.white,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.account_box,
+                  color: Colors.greenAccent,
+                  size: 40,
+                ),
+                title: Text(
+                  "Account_box",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
+              Divider(
+                height: 1.5,color: Colors.white,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.logout,
+                  color: Colors.greenAccent,
+                  size: 40,
+                ),
+                title: Text(
+                  "Logout",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
+              Divider(height: 1.5,color: Colors.white,),
             ],
-          ),
-        )
-        // SingleChildScrollView(
-        //   child: Column(
-        //     children: [
-        //       SizedBox(
-        //           height: 100,
-        //           child: ListView.builder(
-        //               itemCount: 30,
-        //               scrollDirection: Axis.horizontal,
-        //               itemBuilder: (context, index) {
-        //                 return Padding(
-        //                   padding: const EdgeInsets.all(5.0),
-        //                   child: CircleAvatar(
-        //                     // backgroundImage:
-        //                     //     AssetImage("assets/images/my picture.jpg"),
-        //                     radius: 30,
-        //                     backgroundColor: Colors.blueGrey,
-        //                   ),
-        //                 );
-        //               })),
-        //       ListView.builder(
-        //           physics: BouncingScrollPhysics(),
-        //           shrinkWrap: true,
-        //           itemCount: 30,
-        //           scrollDirection: Axis.vertical,
-        //           itemBuilder: (context, index) {
-        //             return ListTile(
-        //               leading: CircleAvatar(
-        //                 // backgroundImage:
-        //                 //     AssetImage("assets/images/my picture.jpg"),
-        //                 radius: 30,
-        //                 backgroundColor: Colors.blueGrey,
-        //               ),
-        //               title: Text(
-        //                 "Rifat Alam",
-        //                 style: TextStyle(
-        //                     fontSize: 20, fontWeight: FontWeight.w500),
-        //               ),
-        //               subtitle: Text("Flutter App Developer"),
-        //             );
-        //           }),
-        //     ],
-        //   ),
-        // )
-        );
+          )),
+    );
   }
 }
