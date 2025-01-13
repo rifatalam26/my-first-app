@@ -19,8 +19,8 @@ class second_screen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("counter : 0"),
-              ElevatedButton(onPressed: (){}, child: Text("count"))
+              Text("counter : 0",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+              ElevatedButton(onPressed: (){}, child: Text("count",style: TextStyle(fontWeight: FontWeight.bold),))
             ],
           ),
         )
