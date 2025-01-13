@@ -124,19 +124,28 @@ class _HomePageState extends State<HomePage> {
             ],
           )),
       body: Center(
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Welcome",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => home_screen()));
-                  },
-                  child: Text("Next")),
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Welcome",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => home_screen()));
+                },
+                child: Text("Next")),
+            SizedBox(height: 10,),
+            Text(
+              "counter : 0",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  "count",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ))
+          ],
         ),
       ),
     );
