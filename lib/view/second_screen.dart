@@ -6,28 +6,24 @@ class second_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        foregroundColor: Colors.white,
-        leading: Icon(Icons.account_circle_outlined),
-        title: Text(
-          "Second Screen",
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
+          leading: Icon(Icons.account_circle_outlined),
+          title: Text(
+            "Second Screen",
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              "Hello Brooo ",
-              style: TextStyle(
-                  color: Colors.cyanAccent,
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-      ),
+        body:Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("counter : 0"),
+              ElevatedButton(onPressed: (){}, child: Text("count"))
+            ],
+          ),
+        )
     );
   }
 }
