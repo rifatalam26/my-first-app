@@ -53,13 +53,18 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    c+=5;
+                    c++;
                   });
                 },
                 child: Text(
-                  "Count",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  "+",
+                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),
                 )),
+            ElevatedButton(onPressed: (){
+              setState(() {
+                c--;
+              });
+            }, child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),))
           ],
         ),
       ),
