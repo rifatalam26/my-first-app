@@ -26,9 +26,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int c=0;
-  void counter(){
-    c+=5;
-  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    counter();
+                    c+=5;
                   });
                 },
                 child: Text(
