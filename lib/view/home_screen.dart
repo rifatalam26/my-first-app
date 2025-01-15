@@ -18,17 +18,24 @@ class home_screen extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            //   mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(
+                "SIGN UP",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 30,),
               TextField(
                 enabled: true,
                 decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(width: 5)),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide:
-                            BorderSide(width: 5, color: Colors.purpleAccent)),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(width: 2)),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide:
+                          BorderSide(width: 2, color: Colors.grey)),
                 ),
               ),
               SizedBox(
@@ -36,12 +43,14 @@ class home_screen extends StatelessWidget {
               ),
               TextField(
                 decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(color: Colors.purpleAccent, width: 5),
-                        borderRadius: BorderRadius.circular(30)),
-                    enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.red, width: 5),borderRadius: BorderRadius.circular(30)),),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: Colors.purpleAccent, width: 2),
+                      borderRadius: BorderRadius.circular(10)),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey, width: 2),
+                      borderRadius: BorderRadius.circular(10)),
+                ),
               )
             ],
           ),
