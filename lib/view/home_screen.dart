@@ -31,7 +31,7 @@ class home_screen extends StatelessWidget {
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(width: 2)),
+                      borderSide: BorderSide(width: 2,color: Colors.blue)),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide:
@@ -45,7 +45,7 @@ class home_screen extends StatelessWidget {
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                       borderSide:
-                          BorderSide(color: Colors.purpleAccent, width: 2),
+                          BorderSide(color: Colors.blue, width: 2),
                       borderRadius: BorderRadius.circular(10)),
                   enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.grey, width: 2),
