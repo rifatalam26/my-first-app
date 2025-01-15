@@ -7,45 +7,44 @@ class home_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        foregroundColor: Colors.white,
-        leading: Icon(Icons.account_circle),
-        title: Text("Home_Screen"),
-        centerTitle: true,
-        actions: [Icon(Icons.settings)],
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.blueGrey,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Home Screen",
-                    style: TextStyle(
-                        color: Colors.purpleAccent,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  CircleAvatar(radius: 30,
-                    backgroundColor: Colors.green,),
-                  SizedBox(height: 5,),
-                  ElevatedButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>second_screen()));
-                  }, child: Text("login"))
-                ],
-              ),
-            )
-          ],
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          leading: Icon(Icons.account_circle),
+          title: Text("Home_Screen"),
+          centerTitle: true,
+          actions: [Icon(Icons.settings)],
         ),
-      ),
-    );
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              TextField(
+                enabled: true,
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: BorderSide(width: 5)),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide:
+                            BorderSide(width: 5, color: Colors.purpleAccent)),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.purpleAccent, width: 5),
+                        borderRadius: BorderRadius.circular(30)),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red, width: 5),borderRadius: BorderRadius.circular(30)),),
+              )
+            ],
+          ),
+        ));
   }
 }
-

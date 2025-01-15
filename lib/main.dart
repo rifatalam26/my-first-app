@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/view/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,8 +26,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int c=0;
-
+  int c = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +40,10 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.indigoAccent,
         foregroundColor: Colors.white,
         centerTitle: true,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30))),
       ),
       drawer: Drawer(),
       body: Center(
@@ -50,6 +54,7 @@ class _HomePageState extends State<HomePage> {
               "Counter : $c",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
+            SizedBox(height: 15,),
             ElevatedButton(
                 onPressed: () {
                   setState(() {
@@ -58,13 +63,29 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text(
                   "+",
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 )),
-            ElevatedButton(onPressed: (){
-              setState(() {
-                c--;
-              });
-            }, child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),))
+            SizedBox(height: 15,),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    c--;
+                  });
+                },
+                child: Text(
+                  "-",
+                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                )),
+            SizedBox(height: 15,),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => home_screen()));
+                },
+                child: Text(
+                  "Next",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ))
           ],
         ),
       ),
