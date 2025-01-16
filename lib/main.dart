@@ -31,64 +31,57 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Appber",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        appBar: AppBar(
+          title: Text(
+            "Appber",
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          actions: [Icon(Icons.account_circle_outlined)],
+          backgroundColor: Colors.indigoAccent,
+          foregroundColor: Colors.white,
+          centerTitle: true,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30))),
         ),
-        actions: [Icon(Icons.account_circle_outlined)],
-        backgroundColor: Colors.indigoAccent,
-        foregroundColor: Colors.white,
-        centerTitle: true,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30))),
-      ),
-      drawer: Drawer(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Counter : $c",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 15,),
-            ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    c++;
-                  });
-                },
-                child: Text(
-                  "+",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                )),
-            SizedBox(height: 15,),
-            ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    c--;
-                  });
-                },
-                child: Text(
-                  "-",
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-                )),
-            SizedBox(height: 15,),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => home_screen()));
-                },
-                child: Text(
-                  "Next",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ))
-          ],
-        ),
-      ),
-    );
+        drawer: Drawer(),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Counter : $c",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      c++;
+                    });
+                  },
+                  child: Text(
+                    "+",
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  )),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      c--;
+                    });
+                  },
+                  child: Text(
+                    '-',
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  )),
+            ],
+          ),
+        ));
   }
 }
