@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/view/home_screen.dart';
+import 'package:my_app/view/second_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: SizedBox(
-                  height: 50,width: 100,
+                  height: 50,width: 200,
                   child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
                     color: Colors.blue,
                     child: Center(child: Text("+",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
@@ -82,13 +83,17 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: SizedBox(
                   height: 60,
-                  width: 100,
+                  width: 200,
                   child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
                     color: Colors.blue,
                     child: Center(child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)),
                   ),
                 ),
               ),
+              SizedBox(height: 10,),
+              ElevatedButton(onPressed: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => home_screen()));
+              }, child: Text("Next",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),))
             ],
           ),
         ));
