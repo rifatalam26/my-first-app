@@ -27,7 +27,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int c = 0;
+  String c = "hello Developer";
 
   @override
   Widget build(BuildContext context) {
@@ -52,48 +52,39 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Counter : $c",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                " $c",
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              GestureDetector(
-                onTap: (){
-                  setState(() {
-                    c++;
-                  });
-                },
-                child: SizedBox(
-                  height: 50,width: 200,
-                  child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-                    color: Colors.blue,
-                    child: Center(child: Text("+",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
-                  ),
+              Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: TextField(
+                  onChanged: (value) => setState(() {
+                    c=value;
+                  }),
+                  decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide:
+                            BorderSide(color: Colors.lightBlueAccent, width: 4),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide:
+                              BorderSide(color: Colors.blueGrey, width: 4))),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              GestureDetector(
-                onTap: (){
-                  setState(() {
-                    c--;
-                  });
-                },
-                child: SizedBox(
-                  height: 60,
-                  width: 200,
-                  child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-                    color: Colors.blue,
-                    child: Center(child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10,),
-              ElevatedButton(onPressed: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => home_screen()));
-              }, child: Text("Next",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),))
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => home_screen()));
+                  },
+                  child: Text(
+                    "Next",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ))
             ],
           ),
         ));
