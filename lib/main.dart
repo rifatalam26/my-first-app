@@ -63,17 +63,12 @@ class _HomePageState extends State<HomePage> {
                     c++;
                   });
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      color: Colors.blue,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text("+",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ),
-                    ),
-                  ],
+                child: SizedBox(
+                  height: 50,width: 100,
+                  child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                    color: Colors.blue,
+                    child: Center(child: Text("+",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
+                  ),
                 ),
               ),
               SizedBox(
@@ -85,17 +80,13 @@ class _HomePageState extends State<HomePage> {
                     c--;
                   });
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Card(
-                      color: Colors.blue,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),),
-                      ),
-                    ),
-                  ],
+                child: SizedBox(
+                  height: 60,
+                  width: 100,
+                  child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                    color: Colors.blue,
+                    child: Center(child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),)),
+                  ),
                 ),
               ),
             ],
