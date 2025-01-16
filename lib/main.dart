@@ -57,29 +57,47 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10,
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      c++;
-                    });
-                  },
-                  child: Text(
-                    "+",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                  )),
+              GestureDetector(
+                onTap: (){
+                  setState(() {
+                    c++;
+                  });
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Card(
+                      color: Colors.blue,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text("+",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 10,
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      c--;
-                    });
-                  },
-                  child: Text(
-                    '-',
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-                  )),
+              GestureDetector(
+                onTap: (){
+                  setState(() {
+                    c--;
+                  });
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Card(
+                      color: Colors.blue,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text("-",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ));
