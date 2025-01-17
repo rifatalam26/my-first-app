@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_app/view/second_screen.dart';
 
 class home_screen extends StatefulWidget {
@@ -24,8 +24,9 @@ class _home_screenState extends State<home_screen> {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => second_screen()));
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => second_screen()));
+             Get.to(second_screen());
             },
             child: Text(
               "Next",
