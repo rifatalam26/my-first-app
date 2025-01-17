@@ -28,8 +28,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
- TextEditingController emailControler= TextEditingController();
- TextEditingController passwordControler= TextEditingController();
+  TextEditingController emailControler = TextEditingController();
+  TextEditingController passwordControler = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -93,13 +93,15 @@ class _HomePageState extends State<HomePage> {
             ),
             GestureDetector(
               onTap: () {
-               if(emailControler.text.isNotEmpty && passwordControler.text.isNotEmpty){
-                 // Navigator.push(context,
-                 //     MaterialPageRoute(builder: (context) => home_screen()));
-                 Get.to(home_screen());
-               }else{
-                 print("-------- Empty");
-               }
+                if (emailControler.text.isNotEmpty &&
+                    passwordControler.text.isNotEmpty) {
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => home_screen()));
+                  Get.to(home_screen());
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("Please fill up all proses")));
+                }
               },
               child: Card(
                 color: Colors.blue,
