@@ -92,10 +92,11 @@ class _HomePageState extends State<HomePage> {
             ),
             GestureDetector(
               onTap: () {
-               if(emailControler.text.isEmpty || passwordControler.text.isEmpty){
-                 print("---------Empty");
+               if(emailControler.text.isNotEmpty && passwordControler.text.isNotEmpty){
+                 Navigator.push(context,
+                     MaterialPageRoute(builder: (context) => home_screen()));
                }else{
-                 print("--------Not Empty");
+                 print("-------- Empty");
                }
               },
               child: Card(
