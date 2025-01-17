@@ -27,66 +27,99 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String c = "hello Developer";
+ TextEditingController emailControler= TextEditingController();
+ TextEditingController passwordControler= TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Appber",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          actions: [Icon(Icons.account_circle_outlined)],
-          backgroundColor: Colors.indigoAccent,
-          foregroundColor: Colors.white,
-          centerTitle: true,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30))),
-        ),
-        drawer: Drawer(),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                " $c",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: TextField(
-                  onChanged: (value) => setState(() {
-                    c=value;
-                  }),
-                  decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide:
-                            BorderSide(color: Colors.lightBlueAccent, width: 4),
+        // appBar: AppBar(
+        //   title: Text(
+        //     "Appber",
+        //     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        //   ),
+        //   actions: [Icon(Icons.account_circle_outlined)],
+        //   backgroundColor: Colors.indigoAccent,
+        //   foregroundColor: Colors.white,
+        //   centerTitle: true,
+        //   shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.only(
+        //           bottomLeft: Radius.circular(30),
+        //           bottomRight: Radius.circular(30))),
+        // ),
+        // drawer: Drawer(),
+        body: Padding(
+      padding: const EdgeInsets.all(30.0),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: emailControler,
+              decoration: InputDecoration(
+                  labelText: "Email",
+                  hintText: "abcd.@gmail.com",
+                  suffixIcon: Icon(Icons.email),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.lightBlue, width: 3),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide:
+                          BorderSide(color: Colors.blueGrey, width: 3))),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            TextField(
+              controller: passwordControler,
+              decoration: InputDecoration(
+                  labelText: "Password",
+                  hintText: "********",
+                  suffixIcon: Icon(Icons.remove_red_eye),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.lightBlue, width: 3),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide:
+                          BorderSide(color: Colors.blueGrey, width: 3))),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            GestureDetector(
+              onTap: () {
+               if(emailControler.text.isEmpty || passwordControler.text.isEmpty){
+                 print("---------Empty");
+               }else{
+                 print("--------Not Empty");
+               }
+              },
+              child: Card(
+                color: Colors.blue,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide:
-                              BorderSide(color: Colors.blueGrey, width: 4))),
+                    )
+                  ],
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => home_screen()));
-                  },
-                  child: Text(
-                    "Next",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ))
-            ],
-          ),
-        ));
+            )
+          ],
+        ),
+      ),
+    ));
   }
 }
