@@ -98,6 +98,7 @@ class _HomePageState extends State<HomePage> {
                   // Navigator.push(context,
                   //     MaterialPageRoute(builder: (context) => home_screen()));
                   Get.to(home_screen());
+
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text("Please fill up all proses")));
