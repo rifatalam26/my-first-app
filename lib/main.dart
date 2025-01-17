@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_app/view/home_screen.dart';
 import 'package:my_app/view/second_screen.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
@@ -93,8 +94,9 @@ class _HomePageState extends State<HomePage> {
             GestureDetector(
               onTap: () {
                if(emailControler.text.isNotEmpty && passwordControler.text.isNotEmpty){
-                 Navigator.push(context,
-                     MaterialPageRoute(builder: (context) => home_screen()));
+                 // Navigator.push(context,
+                 //     MaterialPageRoute(builder: (context) => home_screen()));
+                 Get.to(home_screen());
                }else{
                  print("-------- Empty");
                }
