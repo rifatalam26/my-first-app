@@ -28,9 +28,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  TextEditingController emailControler = TextEditingController();
-  TextEditingController passwordControler = TextEditingController();
-
+  TextEditingController emailController=TextEditingController();
+  TextEditingController passwordController=TextEditingController();
+ String email = "mdrftlm@gmail.com";
+ String password ="12345";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
-              controller: emailControler,
+              controller: emailController,
               decoration: InputDecoration(
                   labelText: "Email",
                   hintText: "abcd.@gmail.com",
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
               height: 15,
             ),
             TextField(
-              controller: passwordControler,
+              controller: passwordController,
               decoration: InputDecoration(
                   labelText: "Password",
                   hintText: "********",
@@ -93,15 +94,15 @@ class _HomePageState extends State<HomePage> {
             ),
             GestureDetector(
               onTap: () {
-                if (emailControler.text.isNotEmpty &&
-                    passwordControler.text.isNotEmpty) {
+                if (emailController.text==email &&
+                   passwordController.text==password) {
                   // Navigator.push(context,
                   //     MaterialPageRoute(builder: (context) => home_screen()));
                   Get.to(home_screen());
 
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Please fill up all proses")));
+                      SnackBar(content: Text("wrong information")));
                 }
               },
               child: Card(
@@ -129,3 +130,5 @@ class _HomePageState extends State<HomePage> {
     ));
   }
 }
+
+
