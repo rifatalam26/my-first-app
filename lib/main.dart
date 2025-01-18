@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController emailController=TextEditingController();
   TextEditingController passwordController=TextEditingController();
  String email = "mdrftlm@gmail.com";
- String password ="12345";
+ int password =12345;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
             GestureDetector(
               onTap: () {
                 if (emailController.text==email &&
-                   passwordController.text==password) {
+                   int.parse(passwordController.text)==password) {
                   // Navigator.push(context,
                   //     MaterialPageRoute(builder: (context) => home_screen()));
                   Get.to(home_screen());
