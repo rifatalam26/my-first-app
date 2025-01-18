@@ -34,25 +34,25 @@ class _second_screenState extends State<second_screen> {
                 bottomRight: Radius.circular(30))),
       ),
       drawer: Drawer(),
-      body: Center(
-        child: Container(
-          height: 200,
-          width: 200,
-          color: Colors.greenAccent,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                widget.email.toString(),
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                widget.password.toString(),
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
+      body: ListView.builder(
+          itemCount: 30,
+          itemBuilder: (context, index) {
+            return Center(
+              child: Card(
+                  color: Colors.blueGrey,
+                  child: Padding(
+                    padding: const EdgeInsets.all(40.0),
+                    child: Text("Index :$index"),
+                  )),
+            );
+          }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          size: 40,
         ),
+        backgroundColor: Colors.blue,
       ),
     );
   }

@@ -13,8 +13,8 @@ class _home_screenState extends State<home_screen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  String email = "mdrftlm@gmail.com";
-  int password = 12345;
+  String email = "abcd";
+  int password = 1234;
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,10 @@ class _home_screenState extends State<home_screen> {
                 children: [
                   TextButton(
                       onPressed: () {
-                        Get.to(second_screen(email: '', password: '',));
+                        Get.to(second_screen(
+                          email: '',
+                          password: '',
+                        ));
                       },
                       child: Text(
                         "skip",
