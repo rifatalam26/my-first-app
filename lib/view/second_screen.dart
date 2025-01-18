@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class second_screen extends StatefulWidget {
-   second_screen({Key? key,required this.email,required this.password}) : super(key: key);
+  second_screen({Key? key, required this.email, required this.password})
+      : super(key: key);
   String? email;
   String? password;
 
@@ -42,7 +43,7 @@ class _second_screenState extends State<second_screen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-               widget.email.toString(),
+                widget.email.toString(),
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Text(
@@ -56,6 +57,3 @@ class _second_screenState extends State<second_screen> {
     );
   }
 }
-
-
-

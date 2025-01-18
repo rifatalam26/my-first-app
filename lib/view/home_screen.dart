@@ -10,12 +10,11 @@ class home_screen extends StatefulWidget {
 }
 
 class _home_screenState extends State<home_screen> {
-
-  TextEditingController emailController=TextEditingController();
-  TextEditingController passwordController=TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   String email = "mdrftlm@gmail.com";
-  int password =12345;
+  int password = 12345;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class _home_screenState extends State<home_screen> {
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                        BorderSide(color: Colors.blueGrey, width: 3))),
+                            BorderSide(color: Colors.blueGrey, width: 3))),
               ),
               SizedBox(
                 height: 15,
@@ -57,19 +56,22 @@ class _home_screenState extends State<home_screen> {
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                        BorderSide(color: Colors.blueGrey, width: 3))),
+                            BorderSide(color: Colors.blueGrey, width: 3))),
               ),
               SizedBox(
                 height: 15,
               ),
               GestureDetector(
                 onTap: () {
-                  if (emailController.text==email &&
-                    int.parse ( passwordController.text.toString())==password) {
+                  if (emailController.text == email &&
+                      int.parse(passwordController.text.toString()) ==
+                          password) {
                     // Navigator.push(context,
                     //     MaterialPageRoute(builder: (context) => home_screen()));
-                    Get.to(second_screen(email: emailController.text, password: passwordController.text,));
-
+                    Get.to(second_screen(
+                      email: emailController.text,
+                      password: passwordController.text,
+                    ));
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text("wrong information")));
@@ -93,6 +95,19 @@ class _home_screenState extends State<home_screen> {
                     ],
                   ),
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Get.to(second_screen(email: '', password: '',));
+                      },
+                      child: Text(
+                        "skip",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                ],
               )
             ],
           ),
@@ -101,7 +116,3 @@ class _home_screenState extends State<home_screen> {
     );
   }
 }
-
-
-
-
