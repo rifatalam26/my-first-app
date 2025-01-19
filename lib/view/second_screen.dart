@@ -48,20 +48,50 @@ class _second_screenState extends State<second_screen> {
         drawer: Drawer(),
         body: Center(
           child: Stack(
-            alignment: Alignment.topRight,
+            alignment: Alignment.topLeft,
+            textDirection:TextDirection.rtl,
+            clipBehavior: Clip.none,
             children: [
-              Card(
-                color: Colors.orange,
-                child: SizedBox(
+              Container(
+                height: 250,
+                width: 250,
+                color: Colors.red,
+                child: Positioned(
+                    top: 2,
+                    right: 4,
+                    child: Text("Container: 1")),
+              ),
+              Positioned(
+                 bottom: -54,
+                right: -40,
+                child: Container(
                   height: 200,
                   width: 200,
+                  color: Colors.orange,
+                  child: Positioned(
+                      top: 2,
+                      right: 4,
+                      child: Text("Container: 2")),
                 ),
               ),
               Container(
                 height: 150,
                 width: 150,
-                color: Colors.red,
-              )
+                color: Colors.blue,
+                child: Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Text("Container: 3")),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.deepPurple,
+                child: Positioned(
+                    bottom: 2,
+                    right: 2,
+                    child: Text("Container: 4")),
+              ),
             ],
           ),
         ));
