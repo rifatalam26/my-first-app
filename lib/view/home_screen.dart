@@ -68,10 +68,7 @@ class _home_screenState extends State<home_screen> {
                           password) {
                     // Navigator.push(context,
                     //     MaterialPageRoute(builder: (context) => home_screen()));
-                    Get.to(second_screen(
-                      email: emailController.text,
-                      password: passwordController.text,
-                    ));
+                    Get.to(second_screen());
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text("wrong information")));
@@ -101,10 +98,7 @@ class _home_screenState extends State<home_screen> {
                 children: [
                   TextButton(
                       onPressed: () {
-                        Get.to(second_screen(
-                          email: '',
-                          password: '',
-                        ));
+                        Get.to(second_screen());
                       },
                       child: Text(
                         "skip",
