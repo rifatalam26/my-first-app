@@ -21,17 +21,21 @@ class _second_screenState extends State<second_screen> {
           ),
           actions: [
             Stack(
-              alignment: Alignment.topCenter,
+              alignment: Alignment.topRight,
               children: [
-                Icon(Icons.shopping_cart,size: 25,),
+                Icon(
+                  Icons.shopping_cart,
+                  size: 25,
+                ),
                 CircleAvatar(
                   radius: 5,
                   backgroundColor: Colors.red,
                 )
-                
               ],
             ),
-            SizedBox(width: 20,)
+            SizedBox(
+              width: 20,
+            )
           ],
           backgroundColor: Colors.indigoAccent,
           foregroundColor: Colors.white,
@@ -42,7 +46,24 @@ class _second_screenState extends State<second_screen> {
                   bottomRight: Radius.circular(30))),
         ),
         drawer: Drawer(),
-        body: Center()
-    );
+        body: Center(
+          child: Stack(
+            alignment: Alignment.topRight,
+            children: [
+              Card(
+                color: Colors.orange,
+                child: SizedBox(
+                  height: 200,
+                  width: 200,
+                ),
+              ),
+              Container(
+                height: 150,
+                width: 150,
+                color: Colors.red,
+              )
+            ],
+          ),
+        ));
   }
 }
