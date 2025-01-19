@@ -14,46 +14,35 @@ class _second_screenState extends State<second_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Appber",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        appBar: AppBar(
+          title: Text(
+            "Appber",
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          actions: [
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Icon(Icons.shopping_cart,size: 25,),
+                CircleAvatar(
+                  radius: 5,
+                  backgroundColor: Colors.red,
+                )
+                
+              ],
+            ),
+            SizedBox(width: 20,)
+          ],
+          backgroundColor: Colors.indigoAccent,
+          foregroundColor: Colors.white,
+          centerTitle: true,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30))),
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Icon(Icons.account_circle_outlined),
-          )
-        ],
-        backgroundColor: Colors.indigoAccent,
-        foregroundColor: Colors.white,
-        centerTitle: true,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30))),
-      ),
-      drawer: Drawer(),
-      body: ListView.builder(
-          itemCount: 30,
-          itemBuilder: (context, index) {
-            return Center(
-              child: Card(
-                  color: Colors.blueGrey,
-                  child: Padding(
-                    padding: const EdgeInsets.all(40.0),
-                    child: Text("Index :$index"),
-                  )),
-            );
-          }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.add,
-          size: 40,
-        ),
-        backgroundColor: Colors.blue,
-      ),
+        drawer: Drawer(),
+        body: Center()
     );
   }
 }
