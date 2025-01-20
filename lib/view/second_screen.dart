@@ -46,43 +46,45 @@ class _second_screenState extends State<second_screen> {
       body: Column(
         children: [
           Stack(
-            alignment: Alignment.center,
+            alignment: Alignment.topLeft,
             clipBehavior: Clip.none,
             children: [
               Container(
-                height: 300,
+                height: 250,
                 // width: 500,
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(100),
-                        bottomRight: Radius.circular(100))),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                        bottomLeft: Radius.circular(30),
+                        bottomRight: Radius.circular(30))),
+                child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Icon(
-                        Icons.menu,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Text(
-                      "DASHBOARD",
-                      style: TextStyle(
+                    SizedBox(height: 70,),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.menu,
+                          size: 40,
                           color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(width: 7,),
+                        Text(
+                          "DASHBOARD",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          width: 65,
+                        ),
+                        Icon(
+                          Icons.notifications_active_outlined,
+                          size: 40,
+                          color: Colors.white,
+                        )
+                      ],
                     ),
-                    SizedBox(
-                      width: 65,
-                    ),
-                    Icon(
-                      Icons.notifications_active_outlined,
-                      size: 40,
-                      color: Colors.white,
-                    )
                   ],
                 ),
               ),
