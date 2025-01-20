@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_app/view/second_screen.dart';
 
-class home_screen extends StatefulWidget {
-  const home_screen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<home_screen> createState() => _home_screenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _home_screenState extends State<home_screen> {
+class _HomeScreenState extends State<HomeScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -68,7 +68,7 @@ class _home_screenState extends State<home_screen> {
                           password) {
                     // Navigator.push(context,
                     //     MaterialPageRoute(builder: (context) => home_screen()));
-                    Get.to(second_screen());
+                    //Get.to(second_screen());
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text("wrong information")));
@@ -98,7 +98,7 @@ class _home_screenState extends State<home_screen> {
                 children: [
                   TextButton(
                       onPressed: () {
-                        Get.to(second_screen());
+                        //Get.to(second_screen());
                       },
                       child: Text(
                         "skip",
