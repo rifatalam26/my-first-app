@@ -47,51 +47,51 @@ class _second_screenState extends State<second_screen> {
       alignment: Alignment.topLeft,
       clipBehavior: Clip.none,
       children: [
-        Column(
-          children: [
-            Container(
-              height: 300,
-              width: 500,
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(100),
-                      bottomRight: Radius.circular(100))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Icon(
-                      Icons.menu,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Text(
-                    "DASHBOARD",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    width: 65,
-                  ),
-                  Icon(
-                    Icons.notifications_active_outlined,
-                    size: 40,
-                    color: Colors.white,
-                  )
-                ],
+        Container(
+          height: 300,
+          width: 500,
+          decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(100),
+                  bottomRight: Radius.circular(100))),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Icon(
+                  Icons.menu,
+                  size: 40,
+                  color: Colors.white,
+                ),
               ),
-
-            ),
-            Positioned(
-                bottom: -300,
-                child: Container(height: 200,width: 200,color: Colors.deepPurple,))
-          ],
+              Text(
+                "DASHBOARD",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                width: 65,
+              ),
+              Icon(
+                Icons.notifications_active_outlined,
+                size: 40,
+                color: Colors.white,
+              )
+            ],
+          ),
         ),
+        Positioned(
+            bottom: -100,
+            left: 100,
+            child: Container(
+              height: 200,
+              width: 300,
+              color: Colors.white,
+            )),
       ],
     ));
   }
