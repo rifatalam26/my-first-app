@@ -84,7 +84,7 @@ class NotificationScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "Dont forget to complete\n your task today",
+                        "Your meeting start in \n fivetin minutes",
                         style: TextStyle(fontWeight: FontWeight.bold,),
                       ),
                       Column(
