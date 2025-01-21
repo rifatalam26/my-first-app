@@ -121,7 +121,7 @@ class NotificationScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "Dont forget to complete\n your task today",
+                        "New massage received.\n Top to view",
                         style: TextStyle(fontWeight: FontWeight.bold,),
                       ),
                       Column(
