@@ -202,7 +202,7 @@ class _ProfileState extends State<Profile> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    color: Colors.blue.shade200,
+                    color: Colors.blue.shade500,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text("Posts",
