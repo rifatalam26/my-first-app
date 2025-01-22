@@ -247,9 +247,12 @@ class _ProfileState extends State<Profile> {
                     color: Colors.blue.shade50,
                   borderRadius: BorderRadius.circular(10)
                 ),
-                child: Center(
-                  child: Text("Edit piblic details"
-                    ,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Text("Edit piblic details"
+                      ,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                  ),
                 ),
               ),
             )
