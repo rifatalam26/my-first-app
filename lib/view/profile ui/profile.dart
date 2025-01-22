@@ -202,7 +202,7 @@ class _ProfileState extends State<Profile> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
-                    color: Colors.blue.shade500,
+                    color: Colors.blue.shade50,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text("Posts",
@@ -244,7 +244,7 @@ class _ProfileState extends State<Profile> {
                 height: 40,
                 width: 330,
                 decoration: BoxDecoration(
-                    color: Colors.blue.shade200,
+                    color: Colors.blue.shade50,
                   borderRadius: BorderRadius.circular(10)
                 ),
                 child: Center(
