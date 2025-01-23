@@ -45,18 +45,24 @@ class _ListItemAddState extends State<ListItemAdd> {
           ),
           Divider(
             thickness: 3,
-          color: Colors.grey,),
-
+            color: Colors.grey,
+          ),
+          ListView.builder(
+            itemCount: 1,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+            return Center(
+              child: Card(
+                color: Colors.blue,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Rifat"),
+                ),
+              ),
+            );
+          })
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
