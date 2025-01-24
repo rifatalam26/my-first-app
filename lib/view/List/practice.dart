@@ -9,6 +9,9 @@ class practice extends StatefulWidget {
 }
 
 class _practiceState extends State<practice> {
+
+  List<String> list=["alam","akter"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,17 +31,37 @@ class _practiceState extends State<practice> {
               ),
             ),
             SizedBox(height: 10,),
-            Card(
-              color: Colors.blue,
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Text(
-                  "Input data",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: (){},
+              child: Card(
+                color: Colors.blue,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    "Input data",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ),
-
+            Divider(
+              color: Colors.grey,
+              thickness: 3,
+            ),
+            ListView.builder(
+                shrinkWrap: true,
+                itemCount:list.length ,
+                itemBuilder: (context,index){
+              return Center(
+                child: Card(
+                  color: Colors.blue,
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Text("${list[index]}"),
+                  ),
+                ),
+              );
+            })
           ],
         ),
       ),
