@@ -9,8 +9,9 @@ class practice extends StatefulWidget {
 }
 
 class _practiceState extends State<practice> {
+  TextEditingController dataController=TextEditingController();
 
-  List<String> list=["alam","akter"];
+  List<String> list=[];
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class _practiceState extends State<practice> {
         child: Column(
           children: [
             TextField(
+              controller: dataController,
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
@@ -32,7 +34,12 @@ class _practiceState extends State<practice> {
             ),
             SizedBox(height: 10,),
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                setState(() {
+                  list.add("${dataController.text}");
+                  
+                });
+              },
               child: Card(
                 color: Colors.blue,
                 child: Padding(
