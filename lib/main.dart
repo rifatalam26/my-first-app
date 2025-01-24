@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
+import 'package:my_app/view/List/practice.dart';
 import 'package:my_app/view/notification/notification_screen.dart';
 import 'package:my_app/view/ui%20design/first_ui.dart';
 import 'package:my_app/view/profile%20ui/profile.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ListItemAdd(),
+      home: practice(),
     );
   }
 }

@@ -9,9 +9,9 @@ class ListItemAdd extends StatefulWidget {
 }
 
 class _ListItemAddState extends State<ListItemAdd> {
-  TextEditingController datacontroller=TextEditingController();
+  TextEditingController datacontroller = TextEditingController();
 
-  List<String> list=[];
+  List<String> list = [];
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +40,10 @@ class _ListItemAddState extends State<ListItemAdd> {
               ),
             ),
             GestureDetector(
-              onTap: (){
-               setState(() {
-                 list.add(datacontroller.text);
-               });
+              onTap: () {
+                setState(() {
+                  list.add(datacontroller.text);
+                });
               },
               child: Card(
                 color: Colors.blue,
@@ -61,19 +61,19 @@ class _ListItemAddState extends State<ListItemAdd> {
               color: Colors.grey,
             ),
             ListView.builder(
-              itemCount: list.length,
+                itemCount: list.length,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-              return Center(
-                child: Card(
-                  color: Colors.blue,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(list[index]),
-                  ),
-                ),
-              );
-            })
+                  return Center(
+                    child: Card(
+                      color: Colors.blue,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(list[index]),
+                      ),
+                    ),
+                  );
+                })
           ],
         ),
       ),
