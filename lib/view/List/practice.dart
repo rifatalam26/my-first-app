@@ -9,9 +9,9 @@ class practice extends StatefulWidget {
 }
 
 class _practiceState extends State<practice> {
-  TextEditingController dataController=TextEditingController();
+  TextEditingController dataController = TextEditingController();
 
-  List<String> list=[];
+  List<String> list = [];
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +32,13 @@ class _practiceState extends State<practice> {
                     borderSide: BorderSide(color: Colors.blue, width: 3)),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 setState(() {
                   list.add("${dataController.text}");
-                  
                 });
               },
               child: Card(
@@ -57,18 +58,18 @@ class _practiceState extends State<practice> {
             ),
             ListView.builder(
                 shrinkWrap: true,
-                itemCount:list.length ,
-                itemBuilder: (context,index){
-              return Center(
-                child: Card(
-                  color: Colors.blue,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Text("${list[index]}"),
-                  ),
-                ),
-              );
-            })
+                itemCount: list.length,
+                itemBuilder: (context, index) {
+                  return Center(
+                    child: Card(
+                      color: Colors.blue,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Text("${list[index]}"),
+                      ),
+                    ),
+                  );
+                })
           ],
         ),
       ),
