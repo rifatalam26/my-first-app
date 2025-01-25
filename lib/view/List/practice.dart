@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
+import 'package:animated_text_kit/animated_text_kit.dart';
 import '../profile ui/profile.dart';
 
 class practice extends StatefulWidget {
@@ -125,14 +125,19 @@ class _practiceState extends State<practice> {
                 color: Colors.grey,
                 thickness: 3,
               ),
-              SizedBox(
-                height: 200,
-                width: 200,
-                child:Card(
-                 // color: Colors.blue,
-                  child: Image.asset("asset/image/FB_IMG.jpg")
-                ) ,
-              )
+          SizedBox(
+            width: 250.0,
+            child: TextLiquidFill(
+              text: 'LIQUIDY',
+              waveColor: Colors.blueAccent,
+              boxBackgroundColor: Colors.redAccent,
+              textStyle: TextStyle(
+                fontSize: 80.0,
+                fontWeight: FontWeight.bold,
+              ),
+              boxHeight: 300.0,
+            ),
+          ),
             ],
           ),
         ),
