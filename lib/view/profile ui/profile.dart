@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../List/practice.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -14,10 +18,9 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back_ios_new_outlined,
-          size: 25,
-        ),
+        leading: IconButton(onPressed: (){
+          Get.to(practice());
+        }, icon: Icon(Icons.arrow_back_ios_new_outlined)),
         title: Text(
           "Md Rifat Alam",
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
