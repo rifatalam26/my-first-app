@@ -117,9 +117,22 @@ class _practiceState extends State<practice> {
                           padding: const EdgeInsets.all(15.0),
                           child: Text("${list[index]}"),
                         ),
+
                       ),
                     );
-                  })
+                  }),
+              Divider(
+                color: Colors.grey,
+                thickness: 3,
+              ),
+              SizedBox(
+                height: 200,
+                width: 200,
+                child:Card(
+                 // color: Colors.blue,
+                  child: Image.asset("asset/image/FB_IMG.jpg")
+                ) ,
+              )
             ],
           ),
         ),
