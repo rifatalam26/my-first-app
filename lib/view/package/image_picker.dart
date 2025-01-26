@@ -10,6 +10,8 @@ class ImagePic extends StatefulWidget {
 }
 
 class _ImagePicState extends State<ImagePic> {
+  XFile? image;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +32,14 @@ class _ImagePicState extends State<ImagePic> {
               width: 200,
               color: Colors.grey,
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () async {
+                  ImagePicker p = ImagePicker();
+                  p.pickImage(source: ImageSource.camera);
+                },
                 child: Text(
                   "Camera",
                   style: TextStyle(fontWeight: FontWeight.bold),
