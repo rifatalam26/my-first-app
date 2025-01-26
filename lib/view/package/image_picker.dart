@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -27,11 +29,7 @@ class _ImagePicState extends State<ImagePic> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.grey,
-            ),
+           // Image(height: 200, width: 200, image: FileImage(File(image!.path))),
             SizedBox(
               height: 20,
             ),
@@ -42,6 +40,21 @@ class _ImagePicState extends State<ImagePic> {
                 },
                 child: Text(
                   "Camera",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () async {
+                  ImagePicker p = ImagePicker();
+                  p.pickImage(source: ImageSource.gallery);
+                  setState(() {
+
+                  });
+                },
+                child: Text(
+                  "Gallery",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 )),
           ],
