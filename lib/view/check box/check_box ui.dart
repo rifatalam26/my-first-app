@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +14,10 @@ class _CheckBoxState extends State<CheckBox> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text("Check Box",style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(
+          "Check Box",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
