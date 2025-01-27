@@ -19,6 +19,17 @@ class _CheckBoxState extends State<CheckBox> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Are you a student",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
