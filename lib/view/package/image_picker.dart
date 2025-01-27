@@ -28,6 +28,7 @@ class _ImagePicState extends State<ImagePic> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
            // Image(height: 200, width: 200, image: FileImage(File(image!.path))),
             SizedBox(
