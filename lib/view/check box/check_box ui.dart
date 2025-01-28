@@ -37,12 +37,12 @@ class _CheckBoxState extends State<CheckBox> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Checkbox(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(7)),
                     value: check,
-                    onChanged: (c){
-                      check =c!;
-                      setState(() {
-
-                      });
+                    onChanged: (c) {
+                      check = c!;
+                      setState(() {});
                     }),
                 SizedBox(
                   width: 10,
@@ -60,12 +60,12 @@ class _CheckBoxState extends State<CheckBox> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Checkbox(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(7)),
                     value: check1,
-                    onChanged: (k){
-                      check1 =k!;
-                      setState(() {
-
-                      });
+                    onChanged: (k) {
+                      check1 = k!;
+                      setState(() {});
                     }),
                 SizedBox(
                   width: 10,
