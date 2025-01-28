@@ -17,6 +17,7 @@ class _CheckBoxState extends State<CheckBox> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        centerTitle: true,
         title: Text(
           "Check Box",
           style: TextStyle(fontWeight: FontWeight.bold),
@@ -37,6 +38,8 @@ class _CheckBoxState extends State<CheckBox> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Checkbox(
+                    activeColor: Colors.blue,
+                    checkColor: Colors.black,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(7)),
                     value: check,
@@ -60,6 +63,8 @@ class _CheckBoxState extends State<CheckBox> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Checkbox(
+                    activeColor: Colors.blue,
+                    checkColor: Colors.black,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(7)),
                     value: check1,
