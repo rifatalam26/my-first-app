@@ -39,7 +39,10 @@ class _CheckBoxState extends State<CheckBox> {
                 Checkbox(
                     value: check,
                     onChanged: (c){
+                      check =c!;
+                      setState(() {
 
+                      });
                     }),
                 SizedBox(
                   width: 10,
@@ -56,6 +59,17 @@ class _CheckBoxState extends State<CheckBox> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Checkbox(
+                    value: check1,
+                    onChanged: (k){
+                      check1 =k!;
+                      setState(() {
+
+                      });
+                    }),
+                SizedBox(
+                  width: 10,
+                ),
                 Text(
                   "Yes",
                   style: TextStyle(fontWeight: FontWeight.bold),
