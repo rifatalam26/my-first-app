@@ -9,6 +9,9 @@ class CheckBox extends StatefulWidget {
 }
 
 class _CheckBoxState extends State<CheckBox> {
+  bool check = false;
+  bool check1 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +29,38 @@ class _CheckBoxState extends State<CheckBox> {
             Text(
               "Are you a student",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Checkbox(
+                    value: check,
+                    onChanged: (c){
+
+                    }),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Yes",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Yes",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
             )
           ],
         ),
