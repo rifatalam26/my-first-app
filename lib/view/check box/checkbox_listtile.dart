@@ -88,46 +88,46 @@ class _CheckBoxListtileState extends State<CheckBoxListtile> {
             subtitle: Text("day4"),
           ),
           CheckboxListTile(
-            value: sun,
+            value: thu,
             onChanged: (val) {
               setState(() {
-                sun = val!;
+                thu = val!;
               });
             },
             activeColor: Colors.deepPurple,
             title: Text(
-              "Sun Day",
+              "Thurs Day",
               style: TextStyle(fontSize: 20),
             ),
-            subtitle: Text("day1"),
+            subtitle: Text("day5"),
           ),
           CheckboxListTile(
-            value: sun,
+            value: fri,
             onChanged: (val) {
               setState(() {
-                sun = val!;
+                fri = val!;
               });
             },
             activeColor: Colors.deepPurple,
             title: Text(
-              "Sun Day",
+              "Fri Day",
               style: TextStyle(fontSize: 20),
             ),
-            subtitle: Text("day1"),
+            subtitle: Text("day6"),
           ),
           CheckboxListTile(
-            value: sun,
+            value: sat,
             onChanged: (val) {
               setState(() {
-                sun = val!;
+                sat = val!;
               });
             },
             activeColor: Colors.deepPurple,
             title: Text(
-              "Sun Day",
+              "Sater Day",
               style: TextStyle(fontSize: 20),
             ),
-            subtitle: Text("day1"),
+            subtitle: Text("day7"),
           ),
         ],
       ),
