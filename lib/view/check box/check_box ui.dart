@@ -80,7 +80,7 @@ class _CheckBoxState extends State<CheckBox> {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 )
               ],
-            )
+            ),
           ],
         ),
       ),
