@@ -26,7 +26,7 @@ class _ColorTextPageState extends State<ColorTextPage> {
             return Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                tileColor: Colors.orange,
+                tileColor:index % 2==0 ?  Colors.orange:Colors.green,
                 title: Text("Flutter--------$index"),
               ),
             );
