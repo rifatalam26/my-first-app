@@ -11,6 +11,9 @@ class CheckboxlisttileDemo extends StatefulWidget {
 class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
   bool android = false;
   bool flutter = false;
+  bool ios = false;
+  bool php = false;
+  bool node = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,18 +37,47 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                    backgroundImage:
+                        AssetImage("assets/image/android_image.png"),
                   ),
                 ),
                 title: Text(
                   "Android",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                trailing: Checkbox(value: android, onChanged: (val) {
-                  setState(() {
-                    android=val!;
-                  });
-                }),
+                trailing: Checkbox(
+                    value: android,
+                    onChanged: (val) {
+                      setState(() {
+                        android = val!;
+                      });
+                    }),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                      height: 40.0,
+                      width: 40.0, // fixed width and height
+                      child: Image.asset("assets/image/flutter-icon.png")),
+                ),
+                title: Text(
+                  "Flutter",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                trailing: Checkbox(
+                    value: flutter,
+                    onChanged: (val) {
+                      setState(() {
+                        flutter = val!;
+                      });
+                    }),
               ),
             ),
           ),
@@ -58,18 +90,21 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                    backgroundImage:
+                        AssetImage("assets/image/android_image.png"),
                   ),
                 ),
                 title: Text(
                   "Android",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                trailing: Checkbox(value: android, onChanged: (val) {
-                  setState(() {
-                    android=val!;
-                  });
-                }),
+                trailing: Checkbox(
+                    value: android,
+                    onChanged: (val) {
+                      setState(() {
+                        android = val!;
+                      });
+                    }),
               ),
             ),
           ),
@@ -82,18 +117,21 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                    backgroundImage:
+                        AssetImage("assets/image/android_image.png"),
                   ),
                 ),
                 title: Text(
                   "Android",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                trailing: Checkbox(value: android, onChanged: (val) {
-                  setState(() {
-                    android=val!;
-                  });
-                }),
+                trailing: Checkbox(
+                    value: android,
+                    onChanged: (val) {
+                      setState(() {
+                        android = val!;
+                      });
+                    }),
               ),
             ),
           ),
@@ -106,42 +144,21 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
                   padding: const EdgeInsets.all(8.0),
                   child: CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                    backgroundImage:
+                        AssetImage("assets/image/android_image.png"),
                   ),
                 ),
                 title: Text(
                   "Android",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                trailing: Checkbox(value: android, onChanged: (val) {
-                  setState(() {
-                    android=val!;
-                  });
-                }),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              color: Colors.white,
-              child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage("assets/image/android_image.png"),
-                  ),
-                ),
-                title: Text(
-                  "Android",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                trailing: Checkbox(value: android, onChanged: (val) {
-                  setState(() {
-                    android=val!;
-                  });
-                }),
+                trailing: Checkbox(
+                    value: android,
+                    onChanged: (val) {
+                      setState(() {
+                        android = val!;
+                      });
+                    }),
               ),
             ),
           ),
