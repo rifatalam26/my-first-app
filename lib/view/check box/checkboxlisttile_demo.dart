@@ -25,18 +25,130 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
       ),
       body: Column(
         children: [
-          ListTile(
-              leading: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              radius: 30,
-              backgroundImage: AssetImage("assets/image/android_image.png"),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                  ),
+                ),
+                title: Text(
+                  "Android",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                trailing: Checkbox(value: android, onChanged: (val) {
+                  setState(() {
+                    android=val!;
+                  });
+                }),
+              ),
             ),
           ),
-          title: Text("Android",style: TextStyle(fontWeight: FontWeight.bold),),
-            trailing: Checkbox(value: false, onChanged: (val){}),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                  ),
+                ),
+                title: Text(
+                  "Android",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                trailing: Checkbox(value: android, onChanged: (val) {
+                  setState(() {
+                    android=val!;
+                  });
+                }),
+              ),
+            ),
           ),
-          
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                  ),
+                ),
+                title: Text(
+                  "Android",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                trailing: Checkbox(value: android, onChanged: (val) {
+                  setState(() {
+                    android=val!;
+                  });
+                }),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                  ),
+                ),
+                title: Text(
+                  "Android",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                trailing: Checkbox(value: android, onChanged: (val) {
+                  setState(() {
+                    android=val!;
+                  });
+                }),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white,
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/image/android_image.png"),
+                  ),
+                ),
+                title: Text(
+                  "Android",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                trailing: Checkbox(value: android, onChanged: (val) {
+                  setState(() {
+                    android=val!;
+                  });
+                }),
+              ),
+            ),
+          ),
+          // Divider(
+          //   thickness: 2,
+          //   color: Colors.grey,
+          // )
         ],
       ),
     );
