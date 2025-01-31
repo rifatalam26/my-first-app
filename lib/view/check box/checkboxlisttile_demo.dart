@@ -87,16 +87,15 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
               color: Colors.white,
               child: ListTile(
                 leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundImage:
-                        AssetImage("assets/image/android_image.png"),
-                  ),
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset("assets/image/ios_image.png"),
                 ),
-                title: Text(
-                  "IOS",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                title: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    "IOS",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
                 trailing: Checkbox(
                     value: ios,
