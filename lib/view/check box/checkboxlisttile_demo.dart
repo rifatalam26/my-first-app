@@ -61,15 +61,15 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
               color: Colors.white,
               child: ListTile(
                 leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                      height: 40.0,
-                      width: 40.0, // fixed width and height
-                      child: Image.asset("assets/image/flutter-icon.png")),
+                  padding: const EdgeInsets.all(11.0),
+                  child: Image.asset("assets/image/transparent-flutter.png"),
                 ),
-                title: Text(
-                  "Flutter",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                title: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    "Flutter",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
                 trailing: Checkbox(
                     value: flutter,
@@ -95,14 +95,14 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
                   ),
                 ),
                 title: Text(
-                  "Android",
+                  "IOS",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 trailing: Checkbox(
-                    value: android,
+                    value: ios,
                     onChanged: (val) {
                       setState(() {
-                        android = val!;
+                        ios = val!;
                       });
                     }),
               ),
