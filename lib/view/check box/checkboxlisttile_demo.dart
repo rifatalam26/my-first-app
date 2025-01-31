@@ -33,13 +33,10 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
             child: Container(
               color: Colors.white,
               child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundImage:
-                        AssetImage("assets/image/android_image.png"),
-                  ),
+                leading: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: Image.asset("assets/image/android_image.png"),
                 ),
                 title: Text(
                   "Android",
@@ -60,16 +57,17 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
             child: Container(
               color: Colors.white,
               child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.all(11.0),
-                  child: Image.asset("assets/image/transparent-flutter.png"),
-                ),
-                title: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    "Flutter",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                leading: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset("assets/image/transparent-flutter.png"),
                   ),
+                ),
+                title: Text(
+                  "Flutter",
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 trailing: Checkbox(
                     value: flutter,
@@ -86,10 +84,14 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
             child: Container(
               color: Colors.white,
               child: ListTile(
-                leading: SizedBox(
-                    height: 40,
-                    width: 40,
-                    child: Image.asset("assets/image/ios_image.png")),
+                leading:  SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset("assets/image/ios_image.png"),
+                  ),
+                ),
                 title: Text(
                   "IOS",
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -109,9 +111,13 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
             child: Container(
               color: Colors.white,
               child: ListTile(
-                leading: CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage("assets/image/php_images.png"),
+                leading: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Image.asset("assets/image/php_images.png"),
+                  ),
                 ),
                 title: Text(
                   "PHP",
@@ -132,9 +138,13 @@ class _CheckboxlisttileDemoState extends State<CheckboxlisttileDemo> {
             child: Container(
               color: Colors.white,
               child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset("assets/image/download.png"),
+                leading: SizedBox(
+                  height: 60,
+                  width: 60,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Image.asset("assets/image/download.png"),
+                  ),
                 ),
                 title: Text(
                   "Node",
