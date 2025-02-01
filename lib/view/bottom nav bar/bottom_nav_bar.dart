@@ -36,7 +36,12 @@ class _BotomNavBarState extends State<BottomNavBar> {
         ),
       ),
        bottomNavigationBar:AnimatedBottomNavigationBar(
-           icons: [],
+           icons:<IconData> [
+             Icons.settings,
+             Icons.home,
+             Icons.account_circle,
+             Icons.photo
+           ],
            activeIndex: 4,
            onTap: (int){}),
     );
