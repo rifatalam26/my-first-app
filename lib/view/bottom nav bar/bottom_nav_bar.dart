@@ -11,6 +11,12 @@ class BottomNavBar extends StatefulWidget {
 
 class _BotomNavBarState extends State<BottomNavBar> {
   int index =0;
+  List<IconData> l=[
+    Icons.home,
+    Icons.account_circle,
+    Icons.photo,
+    Icons.settings
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,13 +47,7 @@ class _BotomNavBarState extends State<BottomNavBar> {
           inactiveColor: Colors.white,
           activeColor: Colors.orange,
           gapLocation: GapLocation.none,
-          icons: <IconData>[
-            Icons.home,
-            Icons.add_a_photo,
-            Icons.account_circle,
-            Icons.photo,
-            Icons.settings
-          ],
+          icons: l,
           activeIndex: index,
           onTap: (i) {
             setState(() {
