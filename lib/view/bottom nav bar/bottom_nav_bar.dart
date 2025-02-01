@@ -10,6 +10,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BotomNavBarState extends State<BottomNavBar> {
+  int index =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,15 +36,24 @@ class _BotomNavBarState extends State<BottomNavBar> {
           ),
         ),
       ),
-       bottomNavigationBar:AnimatedBottomNavigationBar(
-           icons:<IconData> [
-             Icons.settings,
-             Icons.home,
-             Icons.account_circle,
-             Icons.photo
-           ],
-           activeIndex: 4,
-           onTap: (int){}),
+      bottomNavigationBar: AnimatedBottomNavigationBar(
+          backgroundColor: Colors.black,
+          inactiveColor: Colors.white,
+          activeColor: Colors.orange,
+          gapLocation: GapLocation.none,
+          icons: <IconData>[
+            Icons.home,
+            Icons.add_a_photo,
+            Icons.account_circle,
+            Icons.photo,
+            Icons.settings
+          ],
+          activeIndex: index,
+          onTap: (i) {
+            setState(() {
+              index=i;
+            });
+          }),
     );
   }
 }
