@@ -16,7 +16,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BotomNavBarState extends State<BottomNavBar> {
   int index =0;
-  List<IconData> bottomlist=[
+  List<IconData> iconlist=[
     Icons.home,
     Icons.account_circle,
     Icons.photo,
@@ -59,7 +59,7 @@ class _BotomNavBarState extends State<BottomNavBar> {
           inactiveColor: Colors.white,
           activeColor: Colors.orange,
           gapLocation: GapLocation.none,
-          icons: bottomlist,
+          icons: iconlist,
           activeIndex: index,
           onTap: (i) {
             setState(() {
