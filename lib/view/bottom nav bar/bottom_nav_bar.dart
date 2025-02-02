@@ -15,7 +15,8 @@ class _BotomNavBarState extends State<BottomNavBar> {
     Icons.home,
     Icons.account_circle,
     Icons.photo,
-    Icons.settings
+    Icons.settings,
+    Icons.camera_alt
   ];
   @override
   Widget build(BuildContext context) {
