@@ -14,9 +14,17 @@ class _CustomFontPageState extends State<CustomFontPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        centerTitle: true,
+        title: Text(
+          "Google Font",
+          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: "F"),
+        ),
       ),
       body: Center(
-        child: Text("This is Alam",style: TextStyle(fontFamily: "F"),),
+        child: Text(
+          "This is Alam",
+          style: TextStyle(fontFamily: "F"),
+        ),
       ),
     );
   }
