@@ -11,6 +11,7 @@ import 'package:my_app/view/check%20box/check_box%20ui.dart';
 import 'package:my_app/view/check%20box/checkbox_listtile.dart';
 import 'package:my_app/view/check%20box/checkboxlisttile_demo.dart';
 import 'package:my_app/view/color%20test/color_test.dart';
+import 'package:my_app/view/google%20font/custom_font.dart';
 import 'package:my_app/view/notification/notification_screen.dart';
 import 'package:my_app/view/package/animated_text.dart';
 import 'package:my_app/view/package/image_picker.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SettingScreen(),
+      home: CustomFontPage(),
     );
   }
 }
