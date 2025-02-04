@@ -17,13 +17,13 @@ class _CustomFontPageState extends State<CustomFontPage> {
         centerTitle: true,
         title: Text(
           "Google Font",
-          style: TextStyle(fontWeight: FontWeight.bold, fontFamily: "F"),
+          style: TextStyle(fontWeight: FontWeight.bold, fontFamily:'F'),
         ),
       ),
       body: Center(
         child: Text(
           "This is Alam",
-          style: TextStyle(fontFamily: "F",fontWeight: FontWeight.bold),
+          style: TextStyle(fontFamily: 'F',fontWeight: FontWeight.bold),
         ),
       ),
     );
