@@ -23,7 +23,7 @@ class _CustomFontPageState extends State<CustomFontPage> {
       body: Center(
         child: Text(
           "This is Alam",
-          style: TextStyle(fontFamily: 'F',fontWeight: FontWeight.bold),
+          style: TextStyle(fontFamily: 'T',fontWeight: FontWeight.bold),
         ),
       ),
     );

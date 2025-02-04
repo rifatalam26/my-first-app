@@ -82,6 +82,8 @@ flutter:
     - family: F
       fonts:
         - asset: assets/fonts/PlaywriteNGModernGuides-Regular.ttf
+    - family: T
+      fonts:
         - asset: assets/fonts/ShadowsIntoLight-Regular.ttf
   # fonts:
   #   - family: Schyler
