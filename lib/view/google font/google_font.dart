@@ -29,7 +29,13 @@ class _GoogleFontScreenState extends State<GoogleFontScreen> {
             height: 200,
             width: 500,
             color: Colors.grey,
-            child: Text(""),
+            child: Center(
+              child: Text(
+                "In Flutter, a dialog is a small pop-up window that appears in front of the app’s content to capture user attention. The most commonly used dialogs are AlertDialog, SimpleDialog, and Custom Dialogs.",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, fontFamily: "FontName"),
+              ),
+            ),
           )
         ],
       ),
