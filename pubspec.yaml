@@ -85,6 +85,9 @@ flutter:
     - family: T
       fonts:
         - asset: assets/fonts/ShadowsIntoLight-Regular.ttf
+    - family: FontName
+      fonts:
+        - asset: assets/fonts/Tapestry-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
