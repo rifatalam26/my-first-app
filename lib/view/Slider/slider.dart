@@ -36,16 +36,32 @@ class _SliserScreenState extends State<SliserScreen> {
               fontFamily: "FontName"),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            CarouselSlider(items: image[0],
-                options: CarouselOptions(
-                  initialPage: 0,
-                  autoPlay: true
-                ))
-          ],
-        ),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 200,
+            width: double.infinity,
+            child: CarouselSlider(
+                items: [
+                  Image.network(
+                      "https://marketingweek.imgix.net/content/uploads/2016/07/29160619/internet-ad.png"),
+                  Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0HvAKzyg3o-LEUV-X702v_bAqMR8uAgwwSQ&s"),
+                  Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlQgBYHc-oK1CtI_SeIkYNHT0UWkIaPLQCQ&s"),
+                  Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOknol9nRFtMWUZL1P9e6doSf7FMHNTqXM4gDkm7RyEZEsGSEE7j_5e34c-bcHcZ0fgQE&usqp=CAU"),
+                  Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwfqWaTQAcRg52Gu0TbpQQJ99qNc75Is-ZjQ&s"),
+                  Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRepqXJOe1XyqbdHfeJrXICrjevdUv3jsasfQKV1VEgtxmw-6OxRriD4zbNiHlQ6KDagw&usqp=CAU"),
+                  Image.network(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqs4W_9BHPMJI_c6hfgAlgbeE1HuzLo9VV-E5mLCwZRfTIAaKf8NKhQRSppZMBdATI1zo&usqp=CAU"),
+                ],
+                options:
+                    CarouselOptions(autoPlay: true, enlargeCenterPage: true)),
+          )
+        ],
       ),
     );
   }
