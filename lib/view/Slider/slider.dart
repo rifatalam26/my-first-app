@@ -39,7 +39,7 @@ class _SliserScreenState extends State<SliserScreen> {
       body: Column(
         children: [
           SizedBox(
-            height: 200,
+            height:400,
             width: double.infinity,
             child: CarouselSlider(
                 items: [
@@ -55,11 +55,10 @@ class _SliserScreenState extends State<SliserScreen> {
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwfqWaTQAcRg52Gu0TbpQQJ99qNc75Is-ZjQ&s"),
                   Image.network(
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRepqXJOe1XyqbdHfeJrXICrjevdUv3jsasfQKV1VEgtxmw-6OxRriD4zbNiHlQ6KDagw&usqp=CAU"),
-                  Image.network(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqs4W_9BHPMJI_c6hfgAlgbeE1HuzLo9VV-E5mLCwZRfTIAaKf8NKhQRSppZMBdATI1zo&usqp=CAU"),
                 ],
                 options:
                     CarouselOptions(autoPlay: true,
+                        disableCenter: false,
                         //enlargeCenterPage: true,
                       autoPlayInterval: Duration(seconds: 2,)
                     )),
