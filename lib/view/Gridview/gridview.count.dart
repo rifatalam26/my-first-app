@@ -33,6 +33,8 @@ class _GridViewCountState extends State<GridViewCount> {
         ),
       ),
       body: GridView.count(crossAxisCount:2,
+      crossAxisSpacing: 20,
+      mainAxisSpacing: 20,
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
