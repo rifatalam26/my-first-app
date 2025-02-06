@@ -10,18 +10,18 @@ class SliserScreen extends StatefulWidget {
 }
 
 class _SliserScreenState extends State<SliserScreen> {
-  List image = [
-    Image.network(
-        "https://thumbs.dreamstime.com/b/generated-image-country-road-mountains-summer-foggy-morning-nature-background-landscape-green-trees-grass-hill-330706557.jpg"),
-    Image.network(
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s"),
-    Image.network(
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkqiYUmvFaIwvoBs0vU2cJLRk8qWZAhZ165w&s"),
-    Image.network(
-        "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80"),
-    Image.network(
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcjGWJ4e1djpMb9txVS_52mTZH3GsXspI9Q&s"),
-  ];
+  // List image = [
+  //   Image.network(
+  //       "https://thumbs.dreamstime.com/b/generated-image-country-road-mountains-summer-foggy-morning-nature-background-landscape-green-trees-grass-hill-330706557.jpg"),
+  //   Image.network(
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s"),
+  //   Image.network(
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkqiYUmvFaIwvoBs0vU2cJLRk8qWZAhZ165w&s"),
+  //   Image.network(
+  //       "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80"),
+  //   Image.network(
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvcjGWJ4e1djpMb9txVS_52mTZH3GsXspI9Q&s"),
+  // ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +59,10 @@ class _SliserScreenState extends State<SliserScreen> {
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqs4W_9BHPMJI_c6hfgAlgbeE1HuzLo9VV-E5mLCwZRfTIAaKf8NKhQRSppZMBdATI1zo&usqp=CAU"),
                 ],
                 options:
-                    CarouselOptions(autoPlay: true, enlargeCenterPage: true)),
+                    CarouselOptions(autoPlay: true,
+                        //enlargeCenterPage: true,
+                      autoPlayInterval: Duration(seconds: 2,)
+                    )),
           )
         ],
       ),
