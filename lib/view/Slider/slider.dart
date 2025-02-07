@@ -39,7 +39,7 @@ class _SliserScreenState extends State<SliserScreen> {
       body: Column(
         children: [
           SizedBox(
-            height:400,
+            height:100,
             width: double.infinity,
             child: CarouselSlider(
                 items: [
@@ -62,7 +62,7 @@ class _SliserScreenState extends State<SliserScreen> {
                         //enlargeCenterPage: true,
                       autoPlayInterval: Duration(seconds: 2,)
                     )),
-          )
+          ),
         ],
       ),
     );
