@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:my_app/view/Gridview/gridview.builder.dart';
+import 'package:my_app/view/Gridview/gridview.builder_ui.dart';
 import 'package:my_app/view/Gridview/gridview.count.dart';
 import 'package:my_app/view/Gridview/gridview.extent.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GridviewBuilder (),
+      home: GridViewBuilderUI (),
     );
   }
 }
