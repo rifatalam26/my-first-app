@@ -10,6 +10,7 @@ import 'package:my_app/view/Gridview/gridview.extent.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
 import 'package:my_app/view/List/practice.dart';
 import 'package:my_app/view/Slider/slider.dart';
+import 'package:my_app/view/Stack/stack.dart';
 import 'package:my_app/view/botom%20nav%20bar/bottom_nav_bar.dart';
 import 'package:my_app/view/bottom%20nav%20bar/bottom_nav_bar.dart';
 import 'package:my_app/view/check%20box/check_box%20ui.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ShoppingUiDisigne (),
+      home: StackScreen (),
     );
   }
 }

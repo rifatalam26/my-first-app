@@ -250,10 +250,6 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
                   )
                 ],
               ),
-              Text(
-                "LOREM IPSUM DOLOR SIT",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
               Row(
                 children: [
                   Padding(
@@ -315,6 +311,10 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
                   //     }
                   // )
                 ],
+              ),
+              Text(
+                "LOREM IPSUM DOLOR SIT",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               )
             ],
           ),
