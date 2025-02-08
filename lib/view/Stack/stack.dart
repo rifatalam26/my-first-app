@@ -17,6 +17,24 @@ class _StuckScreenState extends State<StackScreen> {
         centerTitle: true,
         title: Text("Stack"),
       ),
+      body: Center(
+        child: Stack(clipBehavior:Clip.none,alignment: Alignment.topRight,
+          children: [
+            CircleAvatar(
+              radius: 100,
+              backgroundColor: Colors.orange,
+            ),
+            Positioned(
+              top: -30,
+              right: -30,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.cyan,
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
