@@ -13,7 +13,7 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-      //  backgroundColor: Colors.teal.shade200,
+        //  backgroundColor: Colors.teal.shade200,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
                   ],
                 ),
                 SizedBox(
-                  width: 23,
+                  width: 40,
                 ),
                 Stack(
                   clipBehavior: Clip.none,
@@ -85,10 +85,10 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(17.0),
+              padding: const EdgeInsets.all(15.0),
               child: Container(
                 height: 70,
-                width: 310,
+                width: 330,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.orange,
@@ -100,35 +100,80 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         "Total:",
-                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text("5437",
-                          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)
-                      ),
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold)),
                     ),
                   ],
                 ),
               ),
             ),
-           Padding(
-             padding: const EdgeInsets.all(15.0),
-             child: Container(
-               height: 150,
-               width: 150,
-              decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(10)
-              ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Container(
+                    height: 130,
+                    width: 130,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)),
 
-               child: Padding(
-                 padding: const EdgeInsets.all(25.0),
-                 child: Image.asset("assets/image/Gallery icon.webp",fit: BoxFit.cover),
-               ),
-               //child: Icon(Icons.gallery),
-             ),
-           )
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Image.asset("assets/image/Gallery icon.webp",
+                          fit: BoxFit.cover),
+                    ),
+                    //child: Icon(Icons.gallery),
+                  ),
+                ),
+                SizedBox(width: 30,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "LOREM IPSUM",
+                      style:
+                          TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                    ),
+                    Text("Lorem ipsum dolor"),
+                    Text("sit amet"),
+                    Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 60,
+                          child: Center(
+                            child: Text(
+                              "BUY",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                              color: Colors.orange,
+                              borderRadius: BorderRadius.circular(13)),
+                        ),
+                        SizedBox(width: 60,),
+                        Text(
+                          "245",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            )
           ],
         ),
       ),
