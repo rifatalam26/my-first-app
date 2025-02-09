@@ -1,8 +1,9 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
-
+import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 class ShoppingUiDisigne extends StatefulWidget {
   const ShoppingUiDisigne({super.key});
 
@@ -11,10 +12,21 @@ class ShoppingUiDisigne extends StatefulWidget {
 }
 
 class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
+
+  CircularBottomNavigationController navigationController=
+  CircularBottomNavigationController(selectedPos);
+  List<TabItem> tabItems = List.of([
+    TabItem(Icons.home, "Home", Colors.orange, labelStyle: TextStyle(fontWeight: FontWeight.normal)),
+    TabItem(Icons.search, "Search", Colors.orange, labelStyle: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+    TabItem(Icons.layers, "Reports", Colors.red, circleStrokeColor: Colors.black),
+    TabItem(Icons.notifications, "Notifications", Colors.cyan),
+  ]);
+ 
   int index = 0;
   List<IconData> iconlist = [
     Icons.home,
     Icons.shopping_bag,
+    Icons.search,
     Icons.settings,
   ];
   List images = [
@@ -25,6 +37,10 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
     "assets/image/dresh image.jpg",
     "assets/image/sun glass image.png",
   ];
+
+  static int? get selectedPos => null;
+
+  //static int? get selectedPos => null;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -299,18 +315,25 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
             ),
           ),
         ),
-        bottomNavigationBar: AnimatedBottomNavigationBar(
-            inactiveColor: Colors.grey,
-            activeColor: Colors.orange,
-            backgroundColor: Colors.white,
-            gapLocation: GapLocation.none,
-            icons: iconlist,
-            activeIndex: index,
-            onTap: (i) {
-              setState(() {
-                index = i;
-              });
-            }),
+        // bottomNavigationBar: AnimatedBottomNavigationBar(
+        //     inactiveColor: Colors.grey,
+        //     activeColor: Colors.orange,
+        //     backgroundColor: Colors.white,
+        //     gapLocation: GapLocation.none,
+        //     icons: iconlist,
+        //     activeIndex: index,
+        //     onTap: (i) {
+        //       setState(() {
+        //         index = i;
+        //       });
+        //     }),
+        bottomNavigationBar:CircularBottomNavigation(
+            tabItems,
+         selectedCallback: (selectedPos) {
+           print("click on $selectedPos");
+         },
+         // controller: navigationController,
+        )
       ),
     );
   }
