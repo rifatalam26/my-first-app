@@ -214,6 +214,10 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
                         );
                       }),
                 ),
+                Text(
+                  "LOREM IPSUM DOLOR SIT",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
                 SizedBox(
                   height: 110,
                   child: ListView.builder(
@@ -229,87 +233,84 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
                         );
                       }),
                 ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Container(
-                          height: 100,
-                          width: 100,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15)),
-                          child: Column(
-                            children: [
-                              Image.asset("assets/image/shoes image.webp"),
-                              // Text("LOREM",style: TextStyle(fontWeight: FontWeight.bold),)
-                            ],
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Container(
-                        height: 100,
-                        width: 80,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          children: [
-                            Image.asset("assets/image/dresh image.jpg"),
-                            // Text("LOREM",style: TextStyle(fontWeight: FontWeight.bold),)
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Container(
-                        height: 100,
-                        width: 80,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          children: [
-                            Image.asset("assets/image/sun glass image.png"),
-                            // Text("LOREM",style: TextStyle(fontWeight: FontWeight.bold),)
-                          ],
-                        ),
-                      ),
-                    ),
-                    // AnimatedBottomNavigationBar(
-                    //     inactiveColor: Colors.white,
-                    //     activeColor: Colors.orange,
-                    //     icons: iconlist,
-                    //     activeIndex: index,
-                    //     onTap: (i){
-                    //       setState(() {
-                    //         index=i;
-                    //       });
-                    //     }
-                    // )
-                  ],
-                ),
-                Text(
-                  "LOREM IPSUM DOLOR SIT",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                )
+                // Row(
+                //   children: [
+                //     Padding(
+                //       padding: const EdgeInsets.all(15.0),
+                //       child: Container(
+                //           height: 100,
+                //           width: 100,
+                //           decoration: BoxDecoration(
+                //               color: Colors.white,
+                //               borderRadius: BorderRadius.circular(15)),
+                //           child: Column(
+                //             children: [
+                //               Image.asset("assets/image/shoes image.webp"),
+                //               // Text("LOREM",style: TextStyle(fontWeight: FontWeight.bold),)
+                //             ],
+                //           )),
+                //     ),
+                //     Padding(
+                //       padding: const EdgeInsets.all(15.0),
+                //       child: Container(
+                //         height: 100,
+                //         width: 80,
+                //         decoration: BoxDecoration(
+                //             color: Colors.white,
+                //             borderRadius: BorderRadius.circular(15)),
+                //         child: Column(
+                //           children: [
+                //             Image.asset("assets/image/dresh image.jpg"),
+                //             // Text("LOREM",style: TextStyle(fontWeight: FontWeight.bold),)
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //     Padding(
+                //       padding: const EdgeInsets.all(15.0),
+                //       child: Container(
+                //         height: 100,
+                //         width: 80,
+                //         decoration: BoxDecoration(
+                //             color: Colors.white,
+                //             borderRadius: BorderRadius.circular(15)),
+                //         child: Column(
+                //           children: [
+                //             Image.asset("assets/image/sun glass image.png"),
+                //             // Text("LOREM",style: TextStyle(fontWeight: FontWeight.bold),)
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //     // AnimatedBottomNavigationBar(
+                //     //     inactiveColor: Colors.white,
+                //     //     activeColor: Colors.orange,
+                //     //     icons: iconlist,
+                //     //     activeIndex: index,
+                //     //     onTap: (i){
+                //     //       setState(() {
+                //     //         index=i;
+                //     //       });
+                //     //     }
+                //     // )
+                //   ],
+                // ),
               ],
             ),
           ),
         ),
         bottomNavigationBar: AnimatedBottomNavigationBar(
-        inactiveColor: Colors.white,
-        activeColor: Colors.orange,
-        icons: iconlist,
-        activeIndex: index,
-        onTap: (i){
-          setState(() {
-            index=i;
-          });
-        }
-    ),
+            inactiveColor: Colors.grey,
+            activeColor: Colors.orange,
+            backgroundColor: Colors.white,
+            gapLocation: GapLocation.none,
+            icons: iconlist,
+            activeIndex: index,
+            onTap: (i) {
+              setState(() {
+                index = i;
+              });
+            }),
       ),
     );
   }
