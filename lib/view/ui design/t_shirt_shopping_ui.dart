@@ -96,7 +96,7 @@ class _TShartShoppingUiScreenState extends State<TShirtShoppingUiScreen> {
                           children: [
                             Image.asset("assets/image/t-shart_2-removebg-preview.png"),
                             Text("T-Shart polo"),
-                            Text("450",style: TextStyle(color: Colors.red),),
+                            Text("260",style: TextStyle(color: Colors.red),),
                             Container(
                               height: 25,
                               width: 70,
@@ -180,7 +180,7 @@ class _TShartShoppingUiScreenState extends State<TShirtShoppingUiScreen> {
                         children: [
                           Image.asset("assets/image/t-shart_3-removebg-preview.png"),
                           Text("T-Shart polo"),
-                          Text("450",style: TextStyle(color: Colors.red),),
+                          Text("300",style: TextStyle(color: Colors.red),),
                           Container(
                             height: 25,
                             width: 70,
@@ -206,7 +206,7 @@ class _TShartShoppingUiScreenState extends State<TShirtShoppingUiScreen> {
                           children: [
                             Image.asset("assets/image/Tshart7_-_Copy-removebg-preview.png"),
                             Text("T-Shart polo"),
-                            Text("450",style: TextStyle(color: Colors.red),),
+                            Text("400",style: TextStyle(color: Colors.red),),
                             Container(
                               height: 25,
                               width: 70,
