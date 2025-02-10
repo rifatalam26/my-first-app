@@ -1,9 +1,11 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
+
 class ShoppingUiDisigne extends StatefulWidget {
   const ShoppingUiDisigne({super.key});
 
@@ -12,17 +14,43 @@ class ShoppingUiDisigne extends StatefulWidget {
 }
 
 class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
+  var index = 2;
+  var items = <Widget>[
+    Icon(
+      Icons.home,
+      size: 30,
+    ),
+    Icon(
+      Icons.favorite,
+      size: 30,
+    ),
+    Icon(
+      Icons.account_circle,
+      size: 30,
+    ),
+    Icon(
+      Icons.settings,
+      size: 30,
+    ),
+    Icon(
+      Icons.search,
+      size: 30,
+    ),
+  ];
 
-  CircularBottomNavigationController navigationController=
-  CircularBottomNavigationController(selectedPos);
+  CircularBottomNavigationController navigationController =
+      CircularBottomNavigationController(selectedPos);
   List<TabItem> tabItems = List.of([
-    TabItem(Icons.home, "Home", Colors.orange, labelStyle: TextStyle(fontWeight: FontWeight.normal)),
-    TabItem(Icons.search, "Search", Colors.orange, labelStyle: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
-    TabItem(Icons.layers, "Reports", Colors.red, circleStrokeColor: Colors.black),
+    TabItem(Icons.home, "Home", Colors.orange,
+        labelStyle: TextStyle(fontWeight: FontWeight.normal)),
+    TabItem(Icons.search, "Search", Colors.orange,
+        labelStyle: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+    TabItem(Icons.layers, "Reports", Colors.red,
+        circleStrokeColor: Colors.black),
     TabItem(Icons.notifications, "Notifications", Colors.cyan),
   ]);
- 
-  int index = 0;
+
+  // int index = 0;
   List<IconData> iconlist = [
     Icons.home,
     Icons.shopping_bag,
@@ -327,13 +355,20 @@ class _ShoppingUiDisigneState extends State<ShoppingUiDisigne> {
         //         index = i;
         //       });
         //     }),
-        bottomNavigationBar:CircularBottomNavigation(
-            tabItems,
-         selectedCallback: (selectedPos) {
-           print("click on $selectedPos");
-         },
-         // controller: navigationController,
-        )
+        bottomNavigationBar: CurvedNavigationBar(
+          buttonBackgroundColor: Colors.orange,
+          color: Colors.white,
+          backgroundColor: Colors.transparent,
+          animationDuration: Duration(milliseconds: 300),
+          height: 60,
+          index: index,
+          items: items,
+          onTap: (i) {
+            setState(() {
+              index = i;
+            });
+          },
+        ),
       ),
     );
   }
