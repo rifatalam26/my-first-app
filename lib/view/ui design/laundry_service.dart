@@ -36,7 +36,7 @@ class _BusAppUiScreenState extends State<LoginScreen> {
             Text("One stop destination for all a laundry "),
             Text(" work such as washing,ironing and dry "),
             Text("cleaning"),
-            SizedBox(height: 100,),
+            SizedBox(height: 50,),
             Container(
               height: 35,
               width: 230,
