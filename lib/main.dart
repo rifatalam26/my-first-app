@@ -24,7 +24,7 @@ import 'package:my_app/view/notification/notification_screen.dart';
 import 'package:my_app/view/package/animated_text.dart';
 import 'package:my_app/view/package/image_picker.dart';
 import 'package:my_app/view/setings%20ui/settings_ui.dart';
-import 'package:my_app/view/ui%20design/bus_app_ui.dart';
+import 'package:my_app/view/ui%20design/laundry_service.dart';
 import 'package:my_app/view/ui%20design/first_ui.dart';
 import 'package:my_app/view/profile%20ui/profile.dart';
 import 'package:my_app/view/ui%20design/shopping_ui.dart';
