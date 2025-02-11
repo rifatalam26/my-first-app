@@ -25,10 +25,13 @@ class _BusAppUiScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-                height: 230,
-                width: 230,
-                child: Image.asset("assets/image/amico.png")),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                  height: 230,
+                  width: 230,
+                  child: Image.asset("assets/image/amico.png")),
+            ),
             Text(
               "Laundry Service",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
