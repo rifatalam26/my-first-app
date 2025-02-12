@@ -7,6 +7,7 @@ import 'package:my_app/view/Gridview/gridview.builder.dart';
 import 'package:my_app/view/Gridview/gridview.builder_ui.dart';
 import 'package:my_app/view/Gridview/gridview.count.dart';
 import 'package:my_app/view/Gridview/gridview.extent.dart';
+import 'package:my_app/view/Laundry%20service/sign_up_screen.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
 import 'package:my_app/view/List/practice.dart';
 import 'package:my_app/view/Slider/slider.dart';
@@ -24,7 +25,7 @@ import 'package:my_app/view/notification/notification_screen.dart';
 import 'package:my_app/view/package/animated_text.dart';
 import 'package:my_app/view/package/image_picker.dart';
 import 'package:my_app/view/setings%20ui/settings_ui.dart';
-import 'package:my_app/view/ui%20design/laundry_service.dart';
+import 'package:my_app/view/Laundry%20service/laundry_service.dart';
 import 'package:my_app/view/ui%20design/first_ui.dart';
 import 'package:my_app/view/profile%20ui/profile.dart';
 import 'package:my_app/view/ui%20design/shopping_ui.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen (),
+      home: SignUpScreen (),
     );
   }
 }
