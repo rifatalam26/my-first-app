@@ -14,7 +14,7 @@ class _BusAppUiScreenState extends State<LoginScreen> {
     return Scaffold(
       //backgroundColor: Colors.blue.shade200,
       body: Container(
-        height: 850,
+        height: 1000,
         width: 500,
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -25,21 +25,41 @@ class _BusAppUiScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Container(
-                  height: 230,
-                  width: 230,
-                  child: Image.asset("assets/image/amico.png")),
+            SizedBox(
+              height: 120,
             ),
+            Container(
+                height: 230,
+                width: 280,
+                child: Image.asset("assets/image/amico.png")),
             Text(
               "Laundry Service",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
             ),
-            Text("One stop destination for all a laundry "),
-            Text(" work such as washing,ironing and dry "),
-            Text("cleaning"),
-            SizedBox(height: 50,),
+            Text(
+              "One stop destination for all a laundry ",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              " work such as washing,ironing and dry ",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              "cleaning",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
             Container(
               height: 35,
               width: 230,
@@ -49,17 +69,30 @@ class _BusAppUiScreenState extends State<LoginScreen> {
               child: Center(
                 child: Text(
                   "Creat Account",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,color: Colors.white),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white),
                 ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Container(
               height: 35,
               width: 230,
-              child: Center(child: Text("Login",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18,color: Colors.blueAccent),)),
-              decoration: BoxDecoration( color: Colors.white,
-                  border: Border.all(color: Colors.blueAccent,width: 3),
+              child: Center(
+                  child: Text(
+                "Login",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.blueAccent),
+              )),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.blueAccent, width: 3),
                   borderRadius: BorderRadius.circular(20)),
             ),
           ],
