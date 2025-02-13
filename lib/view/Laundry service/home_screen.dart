@@ -69,6 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -136,10 +139,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            SizedBox(height: 20,),
+            Row(
               children: [
+                SizedBox(width: 5,),
                 Text(
                   "Category",
                   style: TextStyle(
@@ -147,7 +150,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.bold,
                       color: Colors.blueAccent),
                 ),
-                Container(
+              ],
+            ),
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: 3,
+                itemBuilder: (context,index){
+              return
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
                   height: 100,
                   width: 330,
                   decoration: BoxDecoration(
@@ -175,9 +187,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       )
                     ],
                   ),
-                ) ,
-              ],
-            )
+                ),
+              ) ;
+            })
           ],
         ),
       ),
