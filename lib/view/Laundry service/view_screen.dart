@@ -80,7 +80,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage(
-                                    "assets/image/Rectangle 66.png"))),
+                                    "assets/image/Dry t-shirt.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -201,8 +201,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             borderRadius: BorderRadius.circular(30),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage(
-                                    "assets/image/dress.png"))),
+                                image: AssetImage("assets/image/dress.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -285,8 +284,10 @@ class _ViewScreenState extends State<ViewScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.remove,
-                            color: Colors.white,),
+                          Icon(
+                            Icons.remove,
+                            color: Colors.white,
+                          ),
                           Text(
                             "1",
                             style: TextStyle(
@@ -325,8 +326,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             borderRadius: BorderRadius.circular(30),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage(
-                                    "assets/image/scrirs.png"))),
+                                image: AssetImage("assets/image/scrirs.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -447,8 +447,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             borderRadius: BorderRadius.circular(30),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage(
-                                    "assets/image/pants.png"))),
+                                image: AssetImage("assets/image/pants.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -569,8 +568,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             borderRadius: BorderRadius.circular(30),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage(
-                                    "assets/image/shirts.png"))),
+                                image: AssetImage("assets/image/shirts.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -668,6 +666,25 @@ class _ViewScreenState extends State<ViewScreen> {
                       ),
                     )
                   ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 40,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: Color(0xff0A51EB),
+                    borderRadius: BorderRadius.circular(25)),
+                child: Center(
+                  child: Text(
+                    "View Cart",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),

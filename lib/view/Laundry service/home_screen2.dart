@@ -168,7 +168,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   Container(
                       height: 100,
                       width: 100,
-                      child: Image(image: AssetImage("assets/image/Rectangle 66.png"))),
+                      child: Image(image: AssetImage("assets/image/Dry t-shirt.png"))),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

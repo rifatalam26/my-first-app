@@ -167,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(5)),
                   child: Row(
                     children: [
-                      Image(image: AssetImage("assets/image/Rectangle 66.png")),
+                      Image(image: AssetImage("assets/image/Dry t-shirt.png")),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

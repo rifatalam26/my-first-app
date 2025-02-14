@@ -10,7 +10,7 @@ class ViewScreen2 extends StatefulWidget {
 
 class _ViewScreen2State extends State<ViewScreen2> {
   List images=[
-    "assets/image/Rectangle 66.png",
+    "assets/image/Dry t-shirt.png",
     "assets/image/dress.png",
     "assets/image/scrirs.png",
     "assets/image/pants.png",
