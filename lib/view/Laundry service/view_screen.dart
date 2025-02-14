@@ -56,7 +56,7 @@ class _ViewScreenState extends State<ViewScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -326,7 +326,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage(
-                                    "assets/image/Rectangle 66.png"))),
+                                    "assets/image/scrirs.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -335,14 +335,14 @@ class _ViewScreenState extends State<ViewScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "T-Shirt",
+                          "Scirts",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: Colors.blueAccent),
                         ),
                         Text(
-                          "Rs.30",
+                          "Rs.40",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
@@ -448,7 +448,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage(
-                                    "assets/image/Rectangle 66.png"))),
+                                    "assets/image/pants.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -457,14 +457,14 @@ class _ViewScreenState extends State<ViewScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "T-Shirt",
+                          "Pants",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: Colors.blueAccent),
                         ),
                         Text(
-                          "Rs.30",
+                          "Rs.40",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
@@ -494,7 +494,7 @@ class _ViewScreenState extends State<ViewScreen> {
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          "assets/image/Star 1.png"))),
+                                          "assets/image/Star 2.png"))),
                               //child: Image(image: AssetImage("assets/image/Star 1.png")
                             ),
                             Container(
@@ -503,7 +503,7 @@ class _ViewScreenState extends State<ViewScreen> {
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          "assets/image/Star 1.png"))),
+                                          "assets/image/Star 2.png"))),
                               //child: Image(image: AssetImage("assets/image/Star 1.png")
                             ),
                             Container(
@@ -570,7 +570,7 @@ class _ViewScreenState extends State<ViewScreen> {
                             image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage(
-                                    "assets/image/Rectangle 66.png"))),
+                                    "assets/image/shirts.png"))),
                         //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
                       ),
                     ),
@@ -579,7 +579,7 @@ class _ViewScreenState extends State<ViewScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "T-Shirt",
+                          "Shirt",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
@@ -634,7 +634,7 @@ class _ViewScreenState extends State<ViewScreen> {
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          "assets/image/Star 2.png"))),
+                                          "assets/image/Star 1.png"))),
                               //child: Image(image: AssetImage("assets/image/Star 1.png")
                             ),
                           ],
