@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import 'home_screen2.dart';
 
 class LocationScreen extends StatefulWidget {
   const LocationScreen({super.key});
@@ -56,16 +60,23 @@ class _LocationScreenState extends State<LocationScreen> {
             SizedBox(
               height: 30,
             ),
-            Container(
-              height: 50,
-              width: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color: Colors.blueAccent
-              ),
-              child: Center(
-                child: Text("Add Address +",
-                  style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),),
+            GestureDetector(
+              onTap:(){
+                setState(() {
+                  Get.to(HomeScreen2());
+                });
+              },
+              child: Container(
+                height: 50,
+                width: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.blueAccent
+                ),
+                child: Center(
+                  child: Text("Add Address +",
+                    style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),),
+                ),
               ),
             )
           ],
