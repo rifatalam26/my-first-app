@@ -11,6 +11,7 @@ import 'package:my_app/view/Laundry%20service/home_screen.dart';
 import 'package:my_app/view/Laundry%20service/home_screen2.dart';
 import 'package:my_app/view/Laundry%20service/location_screen.dart';
 import 'package:my_app/view/Laundry%20service/orders_screen.dart';
+import 'package:my_app/view/Laundry%20service/orser_successful_screen.dart';
 import 'package:my_app/view/Laundry%20service/sign_in_screen.dart';
 import 'package:my_app/view/Laundry%20service/sign_up_screen.dart';
 import 'package:my_app/view/Laundry%20service/view_screen.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OrdersScreen (),
+      home: OrserSuccessfulScreen (),
     );
   }
 }
