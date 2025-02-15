@@ -19,7 +19,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                 image: AssetImage("assets/image/background image7.png"))),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -49,13 +49,15 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent),
+                      color: Color(0xff0A51EB),),
                 ),
               ],
             ),
             Row(
               children: [
-                SizedBox(width: 16,),
+                SizedBox(
+                  width: 16,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Container(
@@ -79,18 +81,20 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent),
+                          color:  Color(0xff0A51EB),),
                     ),
                     Text(
                       "Rs.30",
                       style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          ),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(width: 100,),
+                SizedBox(
+                  width: 100,
+                ),
                 Container(
                   height: 30,
                   width: 80,
@@ -119,10 +123,12 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   ),
                 )
               ],
-            ),  // 1
+            ), // 1
             Row(
               children: [
-                SizedBox(width: 16,),
+                SizedBox(
+                  width: 16,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Container(
@@ -146,7 +152,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent),
+                          color:  Color(0xff0A51EB),),
                     ),
                     Text(
                       "Rs.60",
@@ -157,7 +163,9 @@ class _OrdersScreenState extends State<OrdersScreen> {
                     ),
                   ],
                 ),
-                SizedBox(width: 100,),
+                SizedBox(
+                  width: 100,
+                ),
                 Container(
                   height: 30,
                   width: 80,
@@ -172,7 +180,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                         color: Colors.white,
                       ),
                       Text(
-                        "1",
+                        "2",
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -186,208 +194,151 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   ),
                 )
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                height: 40,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(width: 2, color: Colors.blueAccent)),
+                child: Center(
+                  child: Text(
+                    "Total     Rs.110",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff0A51EB)),
+                  ),
+                ),
+              ),
             ),
             Row(
               children: [
-                SizedBox(width: 16,),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Container(
-                    height: 70,
-                    width: 70,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/image/scrirs.png"))),
-                    //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
-                  ),
+                SizedBox(
+                  width: 23,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Scirts",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent),
-                    ),
-                    Text(
-                      "Rs.40",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+                Text(
+                  "Instarction",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Color(0xff0A51EB),),
                 ),
-                SizedBox(width: 100,),
-                Container(
-                  height: 30,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      color: Color(0xff0A51EB),
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.remove,
-                        color: Colors.white,
-                      ),
-                      Text(
-                        "1",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      )
-                    ],
-                  ),
-                )
               ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 50,
+              width: 300,
+              child: TextFormField(
+                decoration: InputDecoration(
+                    hintText: "Add Instraction",
+                    hintStyle: TextStyle(color: Colors.grey.shade400),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide:
+                            BorderSide(width: 2, color: Colors.blueAccent)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide:
+                            BorderSide(width: 2, color: Colors.blueAccent))),
+              ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Row(
               children: [
-                SizedBox(width: 16,),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Container(
-                    height: 70,
-                    width: 70,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/image/pants.png"))),
-                    //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
-                  ),
+                SizedBox(
+                  width: 23,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Pants",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent),
-                    ),
-                    Text(
-                      "Rs.40",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+                Text(
+                  "Picup",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color:  Color(0xff0A51EB),),
                 ),
-                SizedBox(width: 100,),
-                Container(
-                  height: 30,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      color: Color(0xff0A51EB),
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.remove,
-                        color: Colors.white,
-                      ),
-                      Text(
-                        "1",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      )
-                    ],
-                  ),
-                )
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(width: 16,),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Container(
-                    height: 70,
-                    width: 70,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/image/shirts.png"))),
-                    //  child: Image(image: AssetImage("assets/image/Rectangle 66.png"))
-                  ),
+                Text(
+                  "Nov,13,2019",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Shirts",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent),
-                    ),
-                    Text(
-                      "Rs.40",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+                SizedBox(
+                  width: 110,
                 ),
-                SizedBox(width: 100,),
-                Container(
-                  height: 30,
-                  width: 80,
-                  decoration: BoxDecoration(
-                      color: Color(0xff0A51EB),
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.remove,
-                        color: Colors.white,
-                      ),
-                      Text(
-                        "1",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      )
-                    ],
-                  ),
-                )
+                Text(
+                  "5:00 to 6:00pm",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent),
+                ),
               ],
             ),
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 23,
+                ),
+                Text(
+                  "Delivered by",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color:  Color(0xff0A51EB),),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Nov,13,2019",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blueAccent),
+                ),
+                SizedBox(
+                  width: 220,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              height: 40,
+              width: 150,
+              child: Center(
+                child: Text(
+                  "Pleace Order",
+                  style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ),
+              decoration: BoxDecoration(
+                  color: Color(0xff0A51EB),
+                  borderRadius: BorderRadius.circular(30)),
+            )
           ],
         ),
       ),
