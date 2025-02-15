@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:my_app/view/Laundry%20service/sign_up_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -60,19 +63,25 @@ class _BusAppUiScreenState extends State<LoginScreen> {
             SizedBox(
               height: 50,
             ),
-            Container(
-              height: 35,
-              width: 230,
-              decoration: BoxDecoration(
-                  color: CupertinoColors.link,
-                  borderRadius: BorderRadius.circular(20)),
-              child: Center(
-                child: Text(
-                  "Creat Account",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.white),
+            GestureDetector(
+              onTap: () {setState(() {
+                Get.to(SignUpScreen());
+              });
+              },
+              child: Container(
+                height: 35,
+                width: 230,
+                decoration: BoxDecoration(
+                    color: CupertinoColors.link,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Center(
+                  child: Text(
+                    "Creat Account",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),
