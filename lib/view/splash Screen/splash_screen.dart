@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
   }
   Future goscreen()async{
-    Future.delayed(Duration(seconds: 5)).then((Value){
+    Future.delayed(Duration(seconds: 10)).then((Value){
     Get.to(LoginScreen());
        });
   }
@@ -29,11 +29,16 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
-          child: CircularProgressIndicator(
-        color: Colors.blue,
-        backgroundColor: Colors.teal,
-        strokeWidth: 5,
-      )),
+        child: SizedBox(
+            height: 100,
+            width: 100,
+            child: Image.network("https://global.discourse-cdn.com/sitepoint/original/3X/e/3/e352b26bbfa8b233050087d6cb32667da3ff809c.gif")),
+      //     child: CircularProgressIndicator(
+      //   color: Colors.blue,
+      //   backgroundColor: Colors.teal,
+      //   strokeWidth: 5,
+      // )
+        ),
     );
   }
 }
