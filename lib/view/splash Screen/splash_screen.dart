@@ -14,31 +14,59 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  int i=0;
   @override
   void initState() {
     goscreen();
     super.initState();
   }
   Future goscreen()async{
-    Future.delayed(Duration(seconds: 10)).then((Value){
-    Get.to(LoginScreen());
+    Future.delayed(Duration(seconds: 1)).then((Value){
+      setState(() {
+        i++;
+        if(i==5){
+          i=0;
+          Get.to(LoginScreen());
+        }else{
+          goscreen();
+        }
+      });
+    //
        });
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
-      body: Center(
-        child: SizedBox(
-            height: 100,
-            width: 100,
-            child: Image.network("https://global.discourse-cdn.com/sitepoint/original/3X/e/3/e352b26bbfa8b233050087d6cb32667da3ff809c.gif")),
-      //     child: CircularProgressIndicator(
-      //   color: Colors.blue,
-      //   backgroundColor: Colors.teal,
-      //   strokeWidth: 5,
-      // )
-        ),
+      body:Center(
+        child:SizedBox(
+          height: 100,
+          width: 100,
+          child:  Card(
+
+            color: Colors.white ,
+            child: Center(
+              child: Text("$i",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35
+                ),),
+            ),
+          ),
+        )
+      )
+        
+      // Center(
+      //   child: SizedBox(
+      //       height: 100,
+      //       width: 100,
+      //       child: Image.network("https://global.discourse-cdn.com/sitepoint/original/3X/e/3/e352b26bbfa8b233050087d6cb32667da3ff809c.gif")),
+      // //     child: CircularProgressIndicator(
+      // //   color: Colors.blue,
+      // //   backgroundColor: Colors.teal,
+      // //   strokeWidth: 5,
+      // // )
+      //   ),
     );
   }
 }
