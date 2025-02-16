@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../Laundry service/home_screen2.dart';
+import '../Laundry service/laundry_service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   Future goscreen()async{
     Future.delayed(Duration(seconds: 5)).then((Value){
-    Get.to(HomeScreen2());
+    Get.to(LoginScreen());
        });
   }
   @override
