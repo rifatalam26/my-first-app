@@ -30,6 +30,16 @@ class _FormWidgetState extends State<FormWidget> {
     }
     return null;
   }
+
+  String? validetePhoneNumber(value){
+    if(value!.isEmpty){
+      return "please inter a phone number";
+    }if(value.length!=11){
+      return "please inter 11 dist nnumber";
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,6 +116,7 @@ class _FormWidgetState extends State<FormWidget> {
                       borderRadius: BorderRadius.circular(30),
                       borderSide: BorderSide(
                           width: 3, color: CupertinoColors.activeBlue))),
+              validator: validetePhoneNumber,
             ),
           ),
         ),
