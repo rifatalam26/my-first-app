@@ -24,7 +24,7 @@ class _FormWidgetState extends State<FormWidget> {
     if(value!.isEmpty){
       return "please enter an email";
     }
-    RegExp emailRegExp=RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+    RegExp emailRegExp=RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$');
     if(!emailRegExp.hasMatch(value)){
       return "please enter a valid email";
     }
