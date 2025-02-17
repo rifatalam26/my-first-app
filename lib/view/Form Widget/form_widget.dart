@@ -53,6 +53,7 @@ class _FormWidgetState extends State<FormWidget> {
             height: 40,
             width: 260,
             child: TextFormField(
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                   hintText: "username''",
                   hintStyle: TextStyle(color: Colors.grey),
@@ -80,6 +81,7 @@ class _FormWidgetState extends State<FormWidget> {
             height: 40,
             width: 260,
             child: TextFormField(
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                   hintText: "e-mail''",
                   hintStyle: TextStyle(color: Colors.grey),
@@ -103,6 +105,7 @@ class _FormWidgetState extends State<FormWidget> {
             height: 40,
             width: 260,
             child: TextFormField(
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               decoration: InputDecoration(
                   hintText: "password''",
                   hintStyle: TextStyle(color: Colors.grey),
