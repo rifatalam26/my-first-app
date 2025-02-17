@@ -14,11 +14,12 @@ class LoginScreen extends StatefulWidget {
 class _BusAppUiScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Scaffold(
       //backgroundColor: Colors.blue.shade200,
       body: Container(
-        height: 1000,
-        width: 500,
+        height: size.height,
+        width: size.width,
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
