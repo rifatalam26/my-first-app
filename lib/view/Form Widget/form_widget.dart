@@ -36,8 +36,8 @@ class _FormWidgetState extends State<FormWidget> {
     if (value!.isEmpty) {
       return "please inter a phone number";
     }
-    if (value.length != 11) {
-      return "please inter 11 dist nnumber";
+    if (value.length != 10) {
+      return "please inter 10 dist nnumber";
     }
     return null;
   }
