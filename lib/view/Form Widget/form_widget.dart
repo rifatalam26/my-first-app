@@ -13,28 +13,30 @@ class FormWidget extends StatefulWidget {
 }
 
 class _FormWidgetState extends State<FormWidget> {
-
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
-  void submitForm(){
-    if(formkey.currentState!.validate()){}
+  bool securetext = true;
+
+  void submitForm() {
+    if (formkey.currentState!.validate()) {}
   }
 
-  String? validateEmail(value){
-    if(value!.isEmpty){
+  String? validateEmail(value) {
+    if (value!.isEmpty) {
       return "please enter an email";
     }
-    RegExp emailRegExp=RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$');
-    if(!emailRegExp.hasMatch(value)){
+    RegExp emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$');
+    if (!emailRegExp.hasMatch(value)) {
       return "please enter a valid email";
     }
     return null;
   }
 
-  String? validetePhoneNumber(value){
-    if(value!.isEmpty){
+  String? validetePhoneNumber(value) {
+    if (value!.isEmpty) {
       return "please inter a phone number";
-    }if(value.length!=11){
+    }
+    if (value.length != 11) {
       return "please inter 11 dist nnumber";
     }
     return null;
@@ -42,107 +44,142 @@ class _FormWidgetState extends State<FormWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Form(
-          key: formkey,
-            child: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(40.0),
-          child: SizedBox(
-            height: 40,
-            width: 260,
-            child: TextFormField(
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-              decoration: InputDecoration(
-                  hintText: "username''",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  fillColor: Colors.white,
-                  filled: true,
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                          width: 3, color: CupertinoColors.activeBlue)),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                          width: 3, color: CupertinoColors.activeBlue))),
-              validator: (value){
-                if(value!.isEmpty){
-                  return "please enter a username";
-                }return null;
-              },
+    return SafeArea(
+      child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.blueAccent,
+            title: Text(
+              "FormWidget",
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
+            // centerTitle: true,
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(40.0),
-          child: SizedBox(
-            height: 40,
-            width: 260,
-            child: TextFormField(
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-              decoration: InputDecoration(
-                  hintText: "e-mail''",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  fillColor: Colors.white,
-                  filled: true,
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                          width: 3, color: CupertinoColors.activeBlue)),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                          width: 3, color: CupertinoColors.activeBlue))),
-              validator: validateEmail,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(40.0),
-          child: SizedBox(
-            height: 40,
-            width: 260,
-            child: TextFormField(
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-              decoration: InputDecoration(
-                  hintText: "password''",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  fillColor: Colors.white,
-                  filled: true,
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                          width: 3, color: CupertinoColors.activeBlue)),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(
-                          width: 3, color: CupertinoColors.activeBlue))),
-              validator: validetePhoneNumber,
-            ),
-          ),
-        ),
-        GestureDetector(
-          onTap: submitForm,
-          child: Container(
-            height: 40,
-            width: 250,
-            child: Center(
-              child: Text(
-                "Log in",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
-            ),
-            decoration: BoxDecoration(
-                color: CupertinoColors.activeBlue,
-                borderRadius: BorderRadius.circular(30)),
-          ),
-        ),
-      ],
-    )));
+          body: Form(
+              key: formkey,
+              child: Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 40,
+                      width: 300,
+                      child: TextFormField(
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        decoration: InputDecoration(
+                            hintText: "username''",
+                            hintStyle: TextStyle(color: Colors.grey),
+                            fillColor: Colors.white,
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide(
+                                    width: 3,
+                                    color: CupertinoColors.activeBlue)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide(
+                                    width: 3,
+                                    color: CupertinoColors.activeBlue))),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return "please enter a username";
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      height: 40,
+                      width: 300,
+                      child: TextFormField(
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        decoration: InputDecoration(
+                            hintText: "e-mail''",
+                            hintStyle: TextStyle(color: Colors.grey),
+                            fillColor: Colors.white,
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide(
+                                    width: 3,
+                                    color: CupertinoColors.activeBlue)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide(
+                                    width: 3,
+                                    color: CupertinoColors.activeBlue))),
+                        validator: validateEmail,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      height: 40,
+                      width: 300,
+                      child: TextFormField(
+                        obscureText: securetext,
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        decoration: InputDecoration(
+                            hintText: "password''",
+                            hintStyle: TextStyle(color: Colors.grey),
+                            fillColor: Colors.white,
+                            filled: true,
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    securetext = !securetext;
+                                  });
+                                },
+                                icon: Icon(
+                                  securetext
+                                      ? Icons.remove_red_eye_outlined
+                                      : Icons.remove_red_eye,
+                                  color: Colors.blueAccent,
+                                )),
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide(
+                                    width: 3,
+                                    color: CupertinoColors.activeBlue)),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide(
+                                    width: 3,
+                                    color: CupertinoColors.activeBlue))),
+                        validator: validetePhoneNumber,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    GestureDetector(
+                      onTap: submitForm,
+                      child: Container(
+                        height: 40,
+                        width: 250,
+                        child: Center(
+                          child: Text(
+                            "Log in",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            color: CupertinoColors.activeBlue,
+                            borderRadius: BorderRadius.circular(30)),
+                      ),
+                    ),
+                  ],
+                ),
+              ))),
+    );
   }
 }
