@@ -60,7 +60,7 @@ class _FormWidgetState extends State<FormWidget> {
                 padding: const EdgeInsets.all(30.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                 // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
                       height: 40,
