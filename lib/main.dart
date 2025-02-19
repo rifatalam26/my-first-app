@@ -20,6 +20,7 @@ import 'package:my_app/view/Laundry%20service/view_screen.dart';
 import 'package:my_app/view/Laundry%20service/view_screen2.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
 import 'package:my_app/view/List/practice.dart';
+import 'package:my_app/view/Quize%20App/quize_app.dart';
 import 'package:my_app/view/Slider/slider.dart';
 import 'package:my_app/view/Stack/stack.dart';
 import 'package:my_app/view/botom%20nav%20bar/bottom_nav_bar.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FormWidget (),
+      home: QuizeApp (),
     );
   }
 }
