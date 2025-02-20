@@ -94,7 +94,7 @@ class _QuizeAppState extends State<QuizeApp> {
                   ),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 60,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
