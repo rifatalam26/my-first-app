@@ -9,13 +9,11 @@ class HomeScreenQ extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreenQ> {
-  List<String> cardname=[
-    "সৃষ্টিকর্তা","নবী-রাসুল","ঈমান","নামাজ","হজ"
-  ];
+  List<String> cardname = ["সৃষ্টিকর্তা", "নবী-রাসুল", "ঈমান", "নামাজ", "হজ"];
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child:
-    Scaffold(
+    return SafeArea(
+        child: Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -37,7 +35,7 @@ class _HomeScreenState extends State<HomeScreenQ> {
                       child: CircleAvatar(
                         radius: 35,
                         backgroundImage:
-                        AssetImage("assets/image/flower pic.jpeg"),
+                            AssetImage("assets/image/flower pic.jpeg"),
                       ),
                     ),
                     Column(
@@ -69,10 +67,9 @@ class _HomeScreenState extends State<HomeScreenQ> {
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Center(
                                     child: Text(
-                                      "সব স্কোর দেখুন!",
-                                      style:
-                                      TextStyle(fontWeight: FontWeight.bold),
-                                    )),
+                                  "সব স্কোর দেখুন!",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                )),
                               ),
                             ),
                             Container(
@@ -83,9 +80,9 @@ class _HomeScreenState extends State<HomeScreenQ> {
                                   borderRadius: BorderRadius.circular(20)),
                               child: Center(
                                   child: Text(
-                                    "রেটিং দিন!",
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                  )),
+                                "রেটিং দিন!",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )),
                             )
                           ],
                         )
@@ -99,13 +96,12 @@ class _HomeScreenState extends State<HomeScreenQ> {
               height: 40,
             ),
             GridView.builder(
-                gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount:2
-                ),
-                itemBuilder: (context,index){
+              itemCount: 20,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     child: Card(
                       elevation: 10,
                       shadowColor: Colors.black,
@@ -122,7 +118,7 @@ class _HomeScreenState extends State<HomeScreenQ> {
                               radius: 50,
                               // backgroundColor: Colors.blueGrey,
                               backgroundImage:
-                              AssetImage("assets/image/i love allah.jpeg"),
+                                  AssetImage("assets/image/i love allah.jpeg"),
                             ),
                             Text(
                               "সৃষ্টিকর্তা",
@@ -133,9 +129,8 @@ class _HomeScreenState extends State<HomeScreenQ> {
                         ),
                       ),
                     ),
-                  ) ;
+                  );
                 })
-
           ],
         ),
       ),
