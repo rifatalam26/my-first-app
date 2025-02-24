@@ -98,36 +98,44 @@ class _HomeScreenState extends State<HomeScreenQ> {
             SizedBox(
               height: 40,
             ),
-            InkWell(
-              onTap: (){},
-              child: Card(
-                elevation: 10,
-                shadowColor: Colors.black,
-                child: Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CircleAvatar(
-                        radius: 50,
-                        // backgroundColor: Colors.blueGrey,
-                        backgroundImage:
-                        AssetImage("assets/image/i love allah.jpeg"),
-                      ),
-                      Text(
-                        "সৃষ্টিকর্তা",
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
+            GridView.builder(
+                gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount:2
                 ),
-              ),
-            ),
+                itemBuilder: (context,index){
+                  return InkWell(
+                    onTap: (){},
+                    child: Card(
+                      elevation: 10,
+                      shadowColor: Colors.black,
+                      child: Container(
+                        height: 150,
+                        width: 150,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            CircleAvatar(
+                              radius: 50,
+                              // backgroundColor: Colors.blueGrey,
+                              backgroundImage:
+                              AssetImage("assets/image/i love allah.jpeg"),
+                            ),
+                            Text(
+                              "সৃষ্টিকর্তা",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ) ;
+                })
+
           ],
         ),
       ),
