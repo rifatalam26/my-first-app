@@ -20,6 +20,7 @@ import 'package:my_app/view/Laundry%20service/view_screen.dart';
 import 'package:my_app/view/Laundry%20service/view_screen2.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
 import 'package:my_app/view/List/practice.dart';
+import 'package:my_app/view/Quize%20App/home_screen.dart';
 import 'package:my_app/view/Quize%20App/quize_app.dart';
 import 'package:my_app/view/Slider/slider.dart';
 import 'package:my_app/view/Stack/stack.dart';
@@ -38,6 +39,7 @@ import 'package:my_app/view/package/image_picker.dart';
 import 'package:my_app/view/setings%20ui/settings_ui.dart';
 import 'package:my_app/view/Laundry%20service/laundry_service.dart';
 import 'package:my_app/view/splash%20Screen/splash_screen.dart';
+import 'package:my_app/view/splash%20Screen/splash_screen2.dart';
 import 'package:my_app/view/ui%20design/Quize%20ui%20design/quize_ui.dart';
 import 'package:my_app/view/ui%20design/first_ui.dart';
 import 'package:my_app/view/profile%20ui/profile.dart';
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: QuizeApp (),
+      home: HomeScreenQ (),
     );
   }
 }
