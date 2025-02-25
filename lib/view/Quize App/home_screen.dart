@@ -107,6 +107,8 @@ class _HomeScreenState extends State<HomeScreenQ> {
                 shrinkWrap: true,
                 itemCount: 5,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    mainAxisSpacing: 5,
+                      crossAxisSpacing: 5,
                       crossAxisCount: 2),
                   itemBuilder: (context, index) {
                     return InkWell(
