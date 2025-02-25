@@ -10,6 +10,13 @@ class HomeScreenQ extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreenQ> {
   List<String> cardname = ["সৃষ্টিকর্তা", "নবী-রাসুল", "ঈমান", "নামাজ", "হজ"];
+  List images=[
+    "assets/image/i love allah.jpeg",
+    "assets/image/madina.jpeg",
+    "assets/image/iman image.jpeg",
+    "assets/image/namg image.jpeg",
+    "assets/image/allah image 2.png"
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -120,7 +127,7 @@ class _HomeScreenState extends State<HomeScreenQ> {
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
                                 backgroundImage:
-                                    AssetImage("assets/image/i love allah.jpeg"),
+                                    AssetImage(images[index]),
                               ),
                               Text(
                                 "${cardname[index]}",
