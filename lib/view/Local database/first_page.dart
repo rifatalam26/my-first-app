@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/view/Local%20database/second_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -44,17 +45,23 @@ class _FirstPageState extends State<FirstPage> {
               SizedBox(
                 height: 10,
               ),
-              Container(
-                height: 40,
-                width: 200,
-                color: Colors.blue,
-                child: Center(
-                  child: Text(
-                    "Log In",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SecondPage(),));
+                },
+                child: Container(
+                  height: 40,
+                  width: 200,
+                  color: Colors.blue,
+                  child: Center(
+                    child: Text(
+                      "Log In",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20),
+                    ),
                   ),
                 ),
               )

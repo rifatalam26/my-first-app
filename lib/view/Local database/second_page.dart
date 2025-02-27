@@ -21,14 +21,23 @@ class _SecondPageState extends State<SecondPage> {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child:Card(color: Colors.green,
-            child: Column(
-              children: [
-                Text("My name:........"),
-                SizedBox(height: 10,),
-                Text("My pass:........"),
-              ],
-            )),
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Card(color: Colors.green,
+                child: Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("My name:........"),
+                      SizedBox(height: 10,),
+                      Text("My pass:........"),
+                    ],
+                  ),
+                )),
+          ],
+        ),
       ),
     );
   }
