@@ -59,7 +59,7 @@ class _FirstPageState extends State<FirstPage> {
                     nameController.clear();
                     passwordController.clear();
                   } else {
-                    print(" Please Enter Something");
+                    print(" Please Enter Name or Password");
                   }
                 },
                 child: Container(
