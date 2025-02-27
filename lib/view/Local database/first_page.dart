@@ -56,6 +56,8 @@ class _FirstPageState extends State<FirstPage> {
                             pass: passwordController.text,
                           ),
                         ));
+                    nameController.clear();
+                    passwordController.clear();
                   } else {
                     print(" Please Enter Something");
                   }
