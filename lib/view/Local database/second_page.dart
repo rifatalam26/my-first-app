@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatefulWidget {
-  const SecondPage({super.key});
+  final name;
+  final pass;
+  const SecondPage({super.key,required this.name,required this.pass});
 
   @override
   State<SecondPage> createState() => _SecondPageState();
@@ -30,9 +32,9 @@ class _SecondPageState extends State<SecondPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("My name:........"),
+                      Text("name:${widget.name}"),
                       SizedBox(height: 10,),
-                      Text("My pass:........"),
+                      Text("pass:${widget.pass}"),
                     ],
                   ),
                 )),

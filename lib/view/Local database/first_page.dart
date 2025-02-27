@@ -10,8 +10,8 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
-  TextEditingController nameController=TextEditingController();
-  TextEditingController passwordController=TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,6 @@ class _FirstPageState extends State<FirstPage> {
               ),
               SizedBox(
                 height: 10,
-
               ),
               TextFormField(
                 controller: passwordController,
@@ -46,9 +45,20 @@ class _FirstPageState extends State<FirstPage> {
                 height: 10,
               ),
               InkWell(
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SecondPage(),));
+                onTap: () {
+                  if (nameController.text.isNotEmpty &&
+                      passwordController.text.isNotEmpty) {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SecondPage(
+                            name: nameController.text,
+                            pass: passwordController.text,
+                          ),
+                        ));
+                  } else {
+                    print(" Please Enter Something");
+                  }
                 },
                 child: Container(
                   height: 40,
