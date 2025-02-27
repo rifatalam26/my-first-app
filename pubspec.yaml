@@ -43,6 +43,7 @@ dependencies:
   flutter_floating_bottom_bar: ^1.2.1+1
   circular_bottom_navigation: ^2.4.0
   curved_navigation_bar: ^1.0.6
+  shared_preferences: ^2.5.2
 
 
 dev_dependencies:
