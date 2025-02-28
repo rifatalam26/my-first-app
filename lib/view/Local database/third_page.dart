@@ -10,16 +10,22 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
-  String myName="alam";
-  String myPass="246";
-  Future<void> getData()async{
-    SharedPreferences p= await SharedPreferences.getInstance();
-    myName=(p.getString('name'))!;
-    myPass=(p.getString('pass'))!;
+  String myName = "alam";
+  String myPass = "246";
+  Future<void> getData() async {
+    SharedPreferences p = await SharedPreferences.getInstance();
+    myName = (p.getString('name'))!;
+    myPass = (p.getString('pass'))!;
     setState(() {
-      
+      print("My name: $myName   My pass: $myPass");
     });
   }
+  @override
+  void initState() {
+    getData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,21 +38,28 @@ class _ThirdPageState extends State<ThirdPage> {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child:Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Card(color: Colors.green,
+            Card(
+                color: Colors.green,
                 child: Padding(
                   padding: const EdgeInsets.all(40.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("name:"),
-                      SizedBox(height: 10,),
-                      Text("pass:"),
+                      Text("name:$myName"),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text("pass:$myPass"),
                     ],
                   ),
                 )),
+            ElevatedButton(onPressed: () async {
+              await getData();
+            },
+                child: Text("data"))
           ],
         ),
       ),
