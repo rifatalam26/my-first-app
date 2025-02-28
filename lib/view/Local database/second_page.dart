@@ -27,6 +27,7 @@ class _SecondPageState extends State<SecondPage> {
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             Card(color: Colors.green,
                 child: Padding(
                   padding: const EdgeInsets.all(40.0),
