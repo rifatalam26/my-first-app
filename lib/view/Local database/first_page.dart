@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/view/Local%20database/second_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -45,9 +46,13 @@ class _FirstPageState extends State<FirstPage> {
                 height: 10,
               ),
               InkWell(
-                onTap: () {
+                onTap: () async {
+                  SharedPreferences p = await SharedPreferences.getInstance();
                   if (nameController.text.isNotEmpty &&
                       passwordController.text.isNotEmpty) {
+                    await p.setString("name", nameController.text.toString());
+                    await p.setString(
+                        "pass", passwordController.text.toString());
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -56,8 +61,6 @@ class _FirstPageState extends State<FirstPage> {
                             pass: passwordController.text,
                           ),
                         ));
-                    nameController.clear();
-                    passwordController.clear();
                   } else {
                     print(" Please Enter Name or Password");
                   }

@@ -1,23 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/view/Local%20database/third_page.dart';
 
-class SecondPage extends StatefulWidget {
-  final name;
-  final pass;
-  const SecondPage({super.key,required this.name,required this.pass});
+class ThirdPage extends StatefulWidget {
+  const ThirdPage({super.key});
 
   @override
-  State<SecondPage> createState() => _SecondPageState();
+  State<ThirdPage> createState() => _ThirdPageState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Data show",
+          "Third Page",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         centerTitle: true,
@@ -33,16 +30,12 @@ class _SecondPageState extends State<SecondPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("name:${widget.name}"),
+                      Text("name:"),
                       SizedBox(height: 10,),
-                      Text("pass:${widget.pass}"),
+                      Text("pass:"),
                     ],
                   ),
                 )),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context)=> ThirdPage()));
-            }, child: Text("Next"))
           ],
         ),
       ),
