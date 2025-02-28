@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({super.key});
@@ -9,6 +10,16 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
+  String myName="alam";
+  String myPass="246";
+  Future<void> getData()async{
+    SharedPreferences p= await SharedPreferences.getInstance();
+    myName=(p.getString('name'))!;
+    myPass=(p.getString('pass'))!;
+    setState(() {
+      
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
