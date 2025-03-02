@@ -56,10 +56,10 @@ class _ThirdPageState extends State<ThirdPage> {
                     ],
                   ),
                 )),
-            ElevatedButton(onPressed: () async {
-              await getData();
-            },
-                child: Text("data"))
+            // ElevatedButton(onPressed: () async {
+            //   await getData();
+            // },
+            //     child: Text("data"))
           ],
         ),
       ),
