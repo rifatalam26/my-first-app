@@ -26,6 +26,7 @@ import 'package:my_app/view/Quize%20App/home_screen.dart';
 import 'package:my_app/view/Quize%20App/quize_app.dart';
 import 'package:my_app/view/Slider/slider.dart';
 import 'package:my_app/view/Stack/stack.dart';
+import 'package:my_app/view/Willpopp%20scope/login_screen2.dart';
 import 'package:my_app/view/botom%20nav%20bar/bottom_nav_bar.dart';
 import 'package:my_app/view/bottom%20nav%20bar/bottom_nav_bar.dart';
 import 'package:my_app/view/bottom%20nav%20bar/curved_bottom_nav_bar.dart';
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash (),
+      home: LoginScreen2 (),
     );
   }
 }

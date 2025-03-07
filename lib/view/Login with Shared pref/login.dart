@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/view/Login%20with%20Shared%20pref/home.dart';
+
+import 'package:my_app/view/Login%20with%20Shared%20pref/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'home.dart';
+import 'login.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -32,7 +37,10 @@ class _LoginState extends State<Login> {
               height: 10,
             ),
             ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
+                  var sharedPref=await SharedPreferences.getInstance();
+                 // sharedPref.setBool(, true);
+
                   Navigator.push(
                       context, MaterialPageRoute(builder: (context) => Home()));
                 },
@@ -46,3 +54,13 @@ class _LoginState extends State<Login> {
     );
   }
 }
+
+class SplashState {
+}
+
+class KEYLOGIN {
+}
+
+
+
+
