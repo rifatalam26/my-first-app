@@ -12,25 +12,30 @@ class _LoginScreen2State extends State<LoginScreen2> {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-    canPop: false,
-      onPopInvokedWithResult:(didPop, result) async {
-      return(await showDialog(
-          context: context,
-          builder: (context){
-            return AlertDialog(
-              title: Text("Confirmation!"),
-              content: Text("Are sure to exit this app??"),
-              actions: [
-                ElevatedButton(onPressed: (){}, child: Text("Cancel")),
-                ElevatedButton(onPressed: (){}, child: Text("Ok")),
-              ],
-            );
-          }));
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        return (await showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                title: Text("Confirmation!"),
+                content: Text("Are sure to exit this app??"),
+                actions: [
+                  ElevatedButton(onPressed: () {
+                    Navigator.pop(context,false);
+                  }, child: Text("Cancel")),
+                  ElevatedButton(onPressed: () {
+                    Navigator.pop(context,true);
+                  }, child: Text("Ok")),
+                ],
+              );
+            }));
       },
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(30.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
                 decoration: InputDecoration(
@@ -47,7 +52,7 @@ class _LoginScreen2State extends State<LoginScreen2> {
                 height: 10,
               ),
               ElevatedButton(
-                  onPressed: (){},
+                  onPressed: () {},
                   child: Text(
                     "Login",
                     style: TextStyle(fontWeight: FontWeight.bold),
