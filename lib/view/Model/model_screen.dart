@@ -10,10 +10,11 @@ class ModelScreen extends StatefulWidget {
 }
 
 class _ModelScreenState extends State<ModelScreen> {
+  TextEditingController textController = TextEditingController();
   List<DataModel> l = [];
   void data() {
     l.add(DataModel(
-        name: "Rifat",
+        name: "${textController.text.toString()}",
         roll: 10,
         dep: "${DateTime.now().toString().substring(10, 19)}"));
     setState(() {});
@@ -23,6 +24,7 @@ class _ModelScreenState extends State<ModelScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
         centerTitle: true,
         backgroundColor: Colors.blue,
         title: Text(
@@ -38,18 +40,25 @@ class _ModelScreenState extends State<ModelScreen> {
                   onPressed: () {
                     data();
                   },
-                  child: Text("add data",style: TextStyle(fontWeight: FontWeight.bold),)),
-              Card(
-                margin: EdgeInsets.all(10),
-                elevation: 5,
-                shadowColor: Colors.black,
-                color: Colors.blueGrey,
-                child: ListView.builder(
-                    physics: ScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: l.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
+                  child: Text(
+                    "add data",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  controller: textController,
+                  decoration: InputDecoration(border: OutlineInputBorder()),
+                ),
+              ),
+              ListView.builder(
+                  physics: ScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: l.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      color: Colors.blueGrey,
+                      child: ListTile(
                         onLongPress: () {
                           l.removeAt(index);
                           setState(() {});
@@ -64,9 +73,9 @@ class _ModelScreenState extends State<ModelScreen> {
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         leading: Text("${l[index].roll}"),
-                      );
-                    }),
-              )
+                      ),
+                    );
+                  })
             ],
           ),
         ),
