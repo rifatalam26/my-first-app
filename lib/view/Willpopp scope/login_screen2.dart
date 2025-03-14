@@ -12,6 +12,7 @@ class LoginScreen2 extends StatefulWidget {
 class _LoginScreen2State extends State<LoginScreen2> {
   Future<bool> _onWillPop() async {
     bool shouldExit = await showDialog(
+      barrierDismissible: false,
       context: context,
       builder: (context) {
         return AlertDialog(
