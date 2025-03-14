@@ -13,6 +13,9 @@ class _ModelScreenState extends State<ModelScreen> {
   List<DataModel> l = [];
   void data() {
     l.add(DataModel(name: "Rifat", roll: 10, dep: "CST"));
+    setState(() {
+
+    });
   }
 
   @override
@@ -25,9 +28,30 @@ class _ModelScreenState extends State<ModelScreen> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [ElevatedButton(onPressed: () {}, child: Text("add data"))],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              ElevatedButton(onPressed: () {
+               data();
+              },
+                  child: Text("add data")),
+              Card(
+                color: Colors.blueGrey,
+                child: ListView.builder(
+                  physics: ScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: l.length,
+                    itemBuilder: (context,index){
+                  return ListTile(
+                    title: Text("${l[index].name}"),
+                    subtitle: Text("${l[index].dep}"),
+                    leading: Text("${l[index].roll}"),
+                  );
+                }),
+              )
+            ],
+          ),
         ),
       ),
     );
