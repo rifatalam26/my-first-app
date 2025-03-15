@@ -6,6 +6,6 @@ class ModelPRAC {
   int? roll;
   String? semis;
 
-  ModelPRAC({required,this.name, this.dip, this.roll, this.semis});
+  ModelPRAC({required this.name,required this.dip,required this.roll,required this.semis});
 
 }
