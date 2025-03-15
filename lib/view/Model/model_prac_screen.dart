@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_common/get_reset.dart';
 import 'package:my_app/view/Model/model_pac.dart';
 
 class ModelPracScreen extends StatefulWidget {
@@ -15,7 +16,8 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
   List<ModelPRAC> l = [];
 
   void data() {
-    l.add(ModelPRAC(name: "${nameController.text}", dip: "${dipController.text}", roll: 26, semis: "second"));
+    l.add(ModelPRAC(name: "${nameController.text}",
+        dip: "${dipController.text}", roll: 26, semis: "second"));
   }
 
   @override
@@ -44,7 +46,11 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    data();
+                   if (nameController.text.isNotEmpty){
+                     data();
+                   }else{
+                     print("please  enter your name");
+                   }
                     setState(() {});
                   },
                   child: Text("add name")),
@@ -58,7 +64,11 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    data();
+                    if(dipController.text.isNotEmpty){
+                      data();
+                    }else{
+                      print("please enter yor dip");
+                    }
                     setState(() {});
                   },
                   child: Text("add name")),
