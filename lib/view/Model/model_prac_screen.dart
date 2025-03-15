@@ -11,10 +11,11 @@ class ModelPracScreen extends StatefulWidget {
 
 class _ModelPracScreenState extends State<ModelPracScreen> {
   TextEditingController nameController=TextEditingController();
+  TextEditingController dipController=TextEditingController();
   List<ModelPRAC> l = [];
 
   void data() {
-    l.add(ModelPRAC(name: "${nameController.text}", dip: "CST", roll: 26, semis: "second"));
+    l.add(ModelPRAC(name: "${nameController.text}", dip: "${dipController.text}", roll: 26, semis: "second"));
   }
 
   @override
@@ -39,6 +40,20 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
                   controller: nameController,
                   decoration: InputDecoration(
                       hintText: "name", border: OutlineInputBorder()),
+                ),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    data();
+                    setState(() {});
+                  },
+                  child: Text("add name")),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                  controller: dipController,
+                  decoration: InputDecoration(
+                      hintText: "dip", border: OutlineInputBorder()),
                 ),
               ),
               ElevatedButton(
