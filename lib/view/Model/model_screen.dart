@@ -10,16 +10,16 @@ class ModelScreen extends StatefulWidget {
 }
 
 class _ModelScreenState extends State<ModelScreen> {
-  TextEditingController textController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+
   List<DataModel> l = [];
   void data() {
     l.add(DataModel(
-        name: "${textController.text.toString()}",
+        name: "${nameController.text.toString()}",
         roll: 10,
         dep: "${DateTime.now().toString().substring(10, 19)}"));
     setState(() {});
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +47,9 @@ class _ModelScreenState extends State<ModelScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  controller: textController,
-                  decoration: InputDecoration(border: OutlineInputBorder()),
+                  controller: nameController,
+                  decoration: InputDecoration(
+                      hintText: "Enter name", border: OutlineInputBorder()),
                 ),
               ),
               ListView.builder(
