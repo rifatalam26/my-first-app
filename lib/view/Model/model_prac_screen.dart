@@ -10,10 +10,11 @@ class ModelPracScreen extends StatefulWidget {
 }
 
 class _ModelPracScreenState extends State<ModelPracScreen> {
+  TextEditingController nameController=TextEditingController();
   List<ModelPRAC> l = [];
 
   void data() {
-    l.add(ModelPRAC(name: "Rifat", dip: "CST", roll: 26, semis: "second"));
+    l.add(ModelPRAC(name: "${nameController.text}", dip: "CST", roll: 26, semis: "second"));
   }
 
   @override
@@ -24,7 +25,7 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
         centerTitle: true,
         backgroundColor: Colors.blue,
         title: Text(
-          "Model Prack Screen",
+          "Model Practice Screen",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
@@ -35,6 +36,7 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  controller: nameController,
                   decoration: InputDecoration(
                       hintText: "name", border: OutlineInputBorder()),
                 ),
@@ -53,10 +55,16 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
                     return Card(
                       color: Colors.blueGrey,
                       child: ListTile(
-                        leading: Text(""),
-                        title: Text(""),
-                        subtitle: Text(""),
-                        trailing: Text(""),
+                        onLongPress: (){
+                          l.removeAt(index);
+                          setState(() {
+
+                          });
+                        },
+                        leading: Text("${l[index].roll}"),
+                        title: Text("${l[index].name}"),
+                        subtitle: Text("${l[index].dip}"),
+                        trailing: Text("${l[index].semis}"),
                       ),
                     );
                   })
