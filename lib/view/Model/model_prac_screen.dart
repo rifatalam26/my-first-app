@@ -11,13 +11,16 @@ class ModelPracScreen extends StatefulWidget {
 }
 
 class _ModelPracScreenState extends State<ModelPracScreen> {
-  TextEditingController nameController=TextEditingController();
-  TextEditingController dipController=TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController dipController = TextEditingController();
   List<ModelPRAC> l = [];
 
   void data() {
-    l.add(ModelPRAC(name: "${nameController.text}",
-        dip: "${dipController.text}", roll: 26, semis: "second"));
+    l.add(ModelPRAC(
+        name: "${nameController.text}",
+        dip: "${dipController.text}",
+        roll: 26,
+        semis: "second"));
   }
 
   @override
@@ -44,16 +47,7 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
                       hintText: "name", border: OutlineInputBorder()),
                 ),
               ),
-              ElevatedButton(
-                  onPressed: () {
-                   if (nameController.text.isNotEmpty){
-                     data();
-                   }else{
-                     print("please  enter your name");
-                   }
-                    setState(() {});
-                  },
-                  child: Text("add name")),
+             
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
@@ -64,10 +58,11 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    if(dipController.text.isNotEmpty){
+                    if (nameController.text.isNotEmpty &&
+                        dipController.text.isNotEmpty) {
                       data();
-                    }else{
-                      print("please enter yor dip");
+                    } else {
+                      print("please  enter your name and dip");
                     }
                     setState(() {});
                   },
@@ -80,11 +75,9 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
                     return Card(
                       color: Colors.blueGrey,
                       child: ListTile(
-                        onLongPress: (){
+                        onLongPress: () {
                           l.removeAt(index);
-                          setState(() {
-
-                          });
+                          setState(() {});
                         },
                         leading: Text("${l[index].roll}"),
                         title: Text("${l[index].name}"),
