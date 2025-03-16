@@ -75,6 +75,7 @@ class _ModelPracScreenState extends State<ModelPracScreen> {
                     return Card(
                       color: Colors.blueGrey,
                       child: ListTile(
+
                         onLongPress: () {
                           l.removeAt(index);
                           setState(() {});
