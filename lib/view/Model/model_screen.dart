@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/view/Model/data_model.dart';
+import 'package:my_app/view/Model/model_screen2.dart';
 
 class ModelScreen extends StatefulWidget {
   const ModelScreen({super.key});
@@ -42,6 +43,15 @@ class _ModelScreenState extends State<ModelScreen> {
                   },
                   child: Text(
                     "add data",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=>ModelScreen2()));
+                  },
+                  child: Text(
+                    "next page",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),
               Padding(
