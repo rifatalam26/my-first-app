@@ -15,6 +15,11 @@ class recuired {
 
 class _ModelScreen2State extends State<ModelScreen2> {
   @override
+  void initState() {
+    print("List_______: ${widget.list!.length ?? []}");
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
