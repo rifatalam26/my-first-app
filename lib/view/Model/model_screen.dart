@@ -48,7 +48,7 @@ class _ModelScreenState extends State<ModelScreen> {
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context)=>ModelScreen2(list: [],)));
+                        MaterialPageRoute(builder: (context)=>ModelScreen2(list: l,)));
                   },
                   child: Text(
                     "next page",
