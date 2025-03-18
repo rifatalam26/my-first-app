@@ -45,6 +45,7 @@ class _ModelScreenState extends State<ModelScreen> {
                     "add data",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),
+              SizedBox(height: 10,),
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
