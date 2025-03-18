@@ -31,6 +31,19 @@ class _ModelScreen2State extends State<ModelScreen2> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
+      body: Center(child: Column(children: [
+        ListView.builder(
+            itemBuilder: (context,index){
+              return Card(
+                color: Colors.lightGreen,
+                child: ListTile(
+                  title: Text(""),
+                  subtitle: Text(""),
+                  leading: Text(""),
+                ),
+              );
+            })
+      ],),),
     );
   }
 }
