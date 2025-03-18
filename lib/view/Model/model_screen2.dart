@@ -37,9 +37,9 @@ class _ModelScreen2State extends State<ModelScreen2> {
               return Card(
                 color: Colors.lightGreen,
                 child: ListTile(
-                  title: Text(""),
-                  subtitle: Text(""),
-                  leading: Text(""),
+                  title: Text("${widget.list![index].name}"),
+                  subtitle: Text("${widget.list![index].dep}"),
+                  leading: Text("${widget.list![index].roll}"),
                 ),
               );
             })
