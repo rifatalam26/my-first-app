@@ -31,19 +31,19 @@ class _ModelScreen2State extends State<ModelScreen2> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: Center(child: Column(children: [
-        ListView.builder(
-            itemBuilder: (context,index){
-              return Card(
-                color: Colors.lightGreen,
-                child: ListTile(
-                  title: Text("${widget.list![index].name}"),
-                  subtitle: Text("${widget.list![index].dep}"),
-                  leading: Text("${widget.list![index].roll}"),
-                ),
-              );
-            })
-      ],),),
+      body: ListView.builder(
+        itemCount: widget.list!.length,
+          itemBuilder: (context,index){
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                tileColor: Colors.greenAccent,
+                title: Text("${widget.list![index].name}"),
+                subtitle: Text("${widget.list![index].dep}"),
+                leading: Text("${widget.list![index].roll}"),
+              ),
+            );
+          }),
     );
   }
 }
