@@ -39,12 +39,6 @@ class _ModelScreen2State extends State<ModelScreen2> {
     );
   }
 }
-
-
-
-
-
-
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/material.dart';
 //
