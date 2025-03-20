@@ -27,8 +27,14 @@ class _ModelScreen2State extends State<ModelScreen2> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
-      body: ListView.builder(itemBuilder: (context,index){
-        return ListTile();
+      body: ListView.builder(
+          itemCount: widget.list?.length,
+          itemBuilder: (context,index){
+        return ListTile(
+          leading: Text("${widget.list?[index].name}"),
+          title: Text("${widget.list?[index].dep}"),
+          subtitle: Text("${widget.list?[index].roll}"),
+        );
       }),
     );
   }
