@@ -46,15 +46,15 @@ class _ModelScreenState extends State<ModelScreen> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),
               SizedBox(height: 10,),
-              // ElevatedButton(
-              //     onPressed: () {
-              //       Navigator.push(context,
-              //           MaterialPageRoute(builder: (context)=>ModelScreen2(list: l,)));
-              //     },
-              //     child: Text(
-              //       "next page",
-              //       style: TextStyle(fontWeight: FontWeight.bold),
-              //     )),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=>ModelScreen2(list: l,)));
+                  },
+                  child: Text(
+                    "next page",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
