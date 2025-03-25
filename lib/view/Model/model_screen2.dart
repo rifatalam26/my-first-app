@@ -30,10 +30,14 @@ class _ModelScreen2State extends State<ModelScreen2> {
       body: ListView.builder(
           itemCount: widget.list?.length,
           itemBuilder: (context,index){
-        return ListTile(
-          leading: Text("${widget.list?[index].name}"),
-          title: Text("${widget.list?[index].dep}"),
-          subtitle: Text("${widget.list?[index].roll}"),
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListTile(
+            tileColor: Colors.lightGreen,
+            leading: Text("${widget.list?[index].name}"),
+            title: Text("${widget.list?[index].dep}"),
+            subtitle: Text("${widget.list?[index].roll}"),
+          ),
         );
       }),
     );
