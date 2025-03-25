@@ -11,10 +11,10 @@ class ModelScreen2 extends StatefulWidget {
 
 class _ModelScreen2State extends State<ModelScreen2> {
   @override
-  void initState() {
-   print("list------------------: ${widget.list?.length}");
-    super.initState();
-  }
+  // void initState() {
+  //  print("list------------------: ${widget.list?.length}");
+  //   super.initState();
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
