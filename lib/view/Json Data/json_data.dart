@@ -8,12 +8,15 @@ class JsonData extends StatefulWidget {
 }
 
 class _JsonDataState extends State<JsonData> {
-  Map<String,Map<String,dynamic>> map ={
-    "employ": {
-      "name" :"Rifat",
-      "roll" :122,
-      "city" :"dhaka"
-    }
+  // Map<String,Map<String,dynamic>> map ={
+  //   "employ": {
+  //     "name" :"Rifat",
+  //     "roll" :122,
+  //     "city" :"dhaka"
+  //   }
+  // };
+  Map<String,List> m={
+    "employ" :["jon","anna","purity"]
   };
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,8 @@ class _JsonDataState extends State<JsonData> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
       ),
-      body: Text("${map["employ"]?["city"]}"),
+      body: Text("${m["employ"]?[1]}"),
+      // body: Text("${map["employ"]?["city"]}"),
     );
   }
 }
