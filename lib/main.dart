@@ -9,6 +9,7 @@ import 'package:my_app/view/Gridview/gridview.builder.dart';
 import 'package:my_app/view/Gridview/gridview.builder_ui.dart';
 import 'package:my_app/view/Gridview/gridview.count.dart';
 import 'package:my_app/view/Gridview/gridview.extent.dart';
+import 'package:my_app/view/Json%20Data/json_data.dart';
 import 'package:my_app/view/Laundry%20service/home_screen.dart';
 import 'package:my_app/view/Laundry%20service/home_screen2.dart';
 import 'package:my_app/view/Laundry%20service/location_screen.dart';
@@ -63,7 +64,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ModelScreen (),
+      home: JsonData (),
     );
   }
 }
