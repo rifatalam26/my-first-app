@@ -18,8 +18,10 @@ class _JsonDataState extends State<JsonData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(), 
-      body: Text("$map"),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+      ),
+      body: Text("${map["employ"]?["city"]}"),
     );
   }
 }
