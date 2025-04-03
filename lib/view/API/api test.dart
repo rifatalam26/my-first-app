@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/view/API/api_call.dart';
 
 class ApiTest extends StatefulWidget {
   const ApiTest({super.key});
@@ -20,7 +21,9 @@ class _ApiTestState extends State<ApiTest> {
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              ApiCall().countryData();
+            },
             child: const Text(
               "Get Data",
               style: TextStyle(fontWeight: FontWeight.bold),
