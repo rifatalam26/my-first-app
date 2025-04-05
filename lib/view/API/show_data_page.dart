@@ -13,7 +13,7 @@ class _ShowDataPageState extends State<ShowDataPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text("Show Data Page"),
+        title: Text("Show Data Page", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
       ),
     );
   }

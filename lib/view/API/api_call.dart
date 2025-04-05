@@ -12,7 +12,7 @@ class ApiCall {
     var data = decodedata["country"];
     if (response.statusCode == 200) {
       for (int i = 0; i < data.length; i++) {
-        print("Data : ${data[i]["probability"]}");
+        // print("Data : ${data[i]["probability"]}");
       }
     }
   }
