@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/view/API/api_call.dart';
+import 'package:my_app/view/API/show_data_page.dart';
 
 class ApiTest extends StatefulWidget {
   const ApiTest({super.key});
@@ -22,7 +23,9 @@ class _ApiTestState extends State<ApiTest> {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              ApiCall().countryData();
+              ApiCall().joksData();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>ShowDataPage()));
             },
             child: const Text(
               "Get Data",
