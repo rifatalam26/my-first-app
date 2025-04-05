@@ -22,10 +22,10 @@ class _ApiTestState extends State<ApiTest> {
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {
-              ApiCall().joksData();
+            onPressed: ()async {
+             await ApiCall().joksData();
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context)=>ShowDataPage()));
+                  MaterialPageRoute(builder: (context)=>const ShowDataPage()));
             },
             child: const Text(
               "Get Data",
