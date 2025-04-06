@@ -24,24 +24,23 @@ class _ShowDataPageState extends State<ShowDataPage> {
           child: FutureBuilder(
         future: ApiCall().joksData(),
         builder: (context, snapshots) {
-
+          List<JoksModel>? l = snapshots.data?.toList();
           if (snapshots.hasData) {
-            List<JoksModel>? l=snapshots.data?.toList();
             return ListView.builder(
                 itemCount: l?.length,
-                itemBuilder: (context,index){
-              return Card(
-                color: Colors.blueGrey,
-                child: Column(
-                  children: [
-                    Text(l![index].type.toString()),
-                    Text(l[index].setup.toString()),
-                    Text(l[index].punchline.toString()),
-                    Text(l[index].id.toString()),
-                  ],
-                ),
-              );
-            });
+                itemBuilder: (context, index) {
+                  return Card(
+                    color: Colors.blueGrey,
+                    child: Column(
+                      children: [
+                        Text(l![index].type.toString()),
+                        Text(l[index].setup.toString()),
+                        Text(l[index].punchline.toString()),
+                        Text(l[index].id.toString()),
+                      ],
+                    ),
+                  );
+                });
           } else if (snapshots.hasError) {
             return const Text("Has Error");
           } else {
