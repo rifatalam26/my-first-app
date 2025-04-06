@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/view/API/api_call.dart';
+import 'package:my_app/view/API/joksmodel.dart';
 
 class ShowDataPage extends StatefulWidget {
   const ShowDataPage({super.key});
@@ -20,18 +21,33 @@ class _ShowDataPageState extends State<ShowDataPage> {
         ),
       ),
       body: Center(
-        child:FutureBuilder(
-          future: ApiCall().joksData(),
-          builder: (context,snapshots){
-          if(snapshots.hasData){
-            return const Text("data");
-          }else if(snapshots.hasError){
+          child: FutureBuilder(
+        future: ApiCall().joksData(),
+        builder: (context, snapshots) {
+          List<JoksModel>? l=snapshots.data?.toList();
+          if (snapshots.hasData) {
+            return ListView.builder(
+                itemCount: l?.length,
+                itemBuilder: (context,index){
+              return Card(
+                color: Colors.blueGrey,
+                child: Column(
+                  children: [
+                    Text(l![index].type.toString()),
+                    Text(l[index].setup.toString()),
+                    Text(l[index].punchline.toString()),
+                    Text(l[index].id.toString()),
+                  ],
+                ),
+              );
+            });
+          } else if (snapshots.hasError) {
             return const Text("Has Error");
-          }else{
+          } else {
             return const CircularProgressIndicator();
           }
-        }, )
-      ),
+        },
+      )),
     );
   }
 }

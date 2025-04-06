@@ -1,19 +1,22 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:my_app/view/API/joksmodel.dart';
 
 class ApiCall {
-  Future joksData() async {
-
-    String url = "https://api.nationalize.io/?name=alam";
+  Future<List<JoksModel>> joksData() async {
+    List<JoksModel> m = [];
+    String url = "https://official-joke-api.appspot.com/random_joke";
     var response = await http.get(Uri.parse(url));
-    // print("Responce : ${response.statusCode}");
     var decodedata = jsonDecode(response.body);
-    var data = decodedata["country"];
+
     if (response.statusCode == 200) {
-      for (int i = 0; i < data.length; i++) {
-        // print("Data : ${data[i]["probability"]}");
-      }
+      m.add(JoksModel(
+          type: decodedata["type"],
+          setup: decodedata["setup"],
+          punchline: decodedata["punchline"],
+          id: decodedata["id"]));
     }
+    return m;
   }
 }
