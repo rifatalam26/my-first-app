@@ -29,16 +29,57 @@ class _ShowDataPageState extends State<ShowDataPage> {
             return ListView.builder(
                 itemCount: l?.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    color: Colors.blueGrey,
-                    child: Column(
-                      children: [
-                        Text(l![index].type.toString()),
-                        Text(l[index].setup.toString()),
-                        Text(l[index].punchline.toString()),
-                        Text(l[index].id.toString()),
-                      ],
-                    ),
+                  return Column(
+                    children: [
+                      Card(
+                        elevation: 15,
+                        shadowColor: Colors.black,
+                        child: Container(
+                            height: 50,
+                            width: 350,
+                            decoration: BoxDecoration(
+                                color: Colors.blueGrey,
+                                borderRadius: BorderRadius.circular(12)),
+                            child:
+                                Center(child: Text(l![index].type.toString()))),
+                      ),
+                      Card(
+                        elevation: 15,
+                        shadowColor: Colors.black,
+                        child: Container(
+                            height: 50,
+                            width: 350,
+                            decoration: BoxDecoration(
+                                color: Colors.blueGrey,
+                                borderRadius: BorderRadius.circular(12)),
+                            child:
+                                Center(child: Text(l[index].setup.toString()))),
+                      ),
+                      Card(
+                        elevation: 15,
+                        shadowColor: Colors.black,
+                        child: Container(
+                            height: 50,
+                            width: 350,
+                            decoration: BoxDecoration(
+                                color: Colors.blueGrey,
+                                borderRadius: BorderRadius.circular(12)),
+                            child:
+                            Center(child: Text(l[index].punchline.toString()))),
+                      ),
+                      Card(
+                        elevation: 15,
+                        shadowColor: Colors.black,
+                        child: Container(
+                            height: 50,
+                            width: 350,
+                            decoration: BoxDecoration(
+                                color: Colors.blueGrey,
+                                borderRadius: BorderRadius.circular(12)),
+                            child:
+                            Center(child: Text(l[index].id.toString()))),
+                      ),
+                    ],
                   );
                 });
           } else if (snapshots.hasError) {
