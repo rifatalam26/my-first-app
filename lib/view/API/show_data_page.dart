@@ -24,8 +24,9 @@ class _ShowDataPageState extends State<ShowDataPage> {
           child: FutureBuilder(
         future: ApiCall().joksData(),
         builder: (context, snapshots) {
-          List<JoksModel>? l=snapshots.data?.toList();
+
           if (snapshots.hasData) {
+            List<JoksModel>? l=snapshots.data?.toList();
             return ListView.builder(
                 itemCount: l?.length,
                 itemBuilder: (context,index){
