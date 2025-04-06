@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/view/API/api_call.dart';
 
 class ShowDataPage extends StatefulWidget {
   const ShowDataPage({super.key});
@@ -19,10 +20,17 @@ class _ShowDataPageState extends State<ShowDataPage> {
         ),
       ),
       body: Center(
-        child: Text(
-          "",
-          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-        ),
+        child:FutureBuilder(
+          future: ApiCall().joksData(),
+          builder: (context,snapshots){
+          if(snapshots.hasData){
+            return const Text("data");
+          }else if(snapshots.hasError){
+            return const Text("Has Error");
+          }else{
+            return const CircularProgressIndicator();
+          }
+        }, )
       ),
     );
   }
