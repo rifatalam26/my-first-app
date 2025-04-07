@@ -18,6 +18,14 @@ class _TestState extends State<Test> {
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
+      body: Center(
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              "Get Data",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )),
+      ),
     );
   }
 }
