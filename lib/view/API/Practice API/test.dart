@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/view/API/Practice%20API/class_page.dart';
 
 class Test extends StatefulWidget {
   const Test({super.key});
@@ -20,7 +21,9 @@ class _TestState extends State<Test> {
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () async {
+              api().Data();
+            },
             child: Text(
               "Get Data",
               style: TextStyle(fontWeight: FontWeight.bold),
