@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/view/API/Practice%20API/class_page.dart';
+import 'package:my_app/view/API/Practice%20API/data_shaw.dart';
 
 class Test extends StatefulWidget {
   const Test({super.key});
@@ -23,6 +24,8 @@ class _TestState extends State<Test> {
         child: ElevatedButton(
             onPressed: () async {
               api().Data();
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => DataShaw()));
             },
             child: Text(
               "Get Data",

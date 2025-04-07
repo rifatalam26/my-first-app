@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/view/API/Practice%20API/class_page.dart';
 
 class DataShaw extends StatefulWidget {
   const DataShaw({super.key});
@@ -13,7 +14,23 @@ class _DataShawState extends State<DataShaw> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text("Data Show",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+        title: const Text(
+          "Data Show",
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+      ),
+      body: Center(
+        child: FutureBuilder(
+            future: api().Data(),
+            builder: (context, snapshots) {
+              if (snapshots.hasData) {
+                return Text("ggggfgggg");
+              } else if (snapshots.hasError) {
+                return Text("Error");
+              } else {
+                return CircularProgressIndicator();
+              }
+            }),
       ),
     );
   }
