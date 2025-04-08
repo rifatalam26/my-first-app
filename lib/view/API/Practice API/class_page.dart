@@ -2,16 +2,16 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-class api {
-  Future Data() async {
-    String url = "https://ipinfo.io/161.185.160.93/geo";
-    var responce = await http.get(Uri.parse(url));
-    var decodedata = jsonDecode(responce.body);
+class Api {
+  Future data() async {
+    String url = "https://official-joke-api.appspot.com/random_joke";
+    var response = await http.get(Uri.parse(url));
+    var decodedata = jsonDecode(response.body);
 
-    if (responce.statusCode == 200) {
-      print("${decodedata["city"]}");
-      print("${decodedata["ip"]}");
-      print("${decodedata["region"]}");
+    if (response.statusCode == 200) {
+      print("${decodedata["type"]}");
+      print("${decodedata["setup"]}");
+      print("${decodedata["punchline"]}");
     }
   }
 }

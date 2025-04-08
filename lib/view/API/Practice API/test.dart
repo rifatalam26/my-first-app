@@ -15,7 +15,7 @@ class _TestState extends State<Test> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text(
+        title: const Text(
           "API Practice",
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
@@ -23,11 +23,11 @@ class _TestState extends State<Test> {
       body: Center(
         child: ElevatedButton(
             onPressed: () async {
-              api().Data();
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => DataShaw()));
+              Api().data();
+             await Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => const DataShaw()));
             },
-            child: Text(
+            child: const Text(
               "Get Data",
               style: TextStyle(fontWeight: FontWeight.bold),
             )),

@@ -20,18 +20,18 @@ class _DataShawState extends State<DataShaw> {
         ),
       ),
       body: Center(
-        child: FutureBuilder(
-            future: api().Data(),
-            builder: (context, snapshots) {
-              if (snapshots.hasData) {
-                return Text("ggggfgggg");
-              } else if (snapshots.hasError) {
-                return Text("Error");
-              } else {
-                return CircularProgressIndicator();
-              }
-            }),
-      ),
+          child: FutureBuilder(
+        future: Api().data(),
+        builder: (context, snapshots) {
+          if (snapshots.hasData) {
+            return const Text("ggggfgggg");
+          } else if (snapshots.hasError) {
+            return const Text("Error");
+          } else {
+            return const CircularProgressIndicator();
+          }
+        },
+      )),
     );
   }
 }
