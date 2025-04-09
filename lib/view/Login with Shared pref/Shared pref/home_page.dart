@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -8,6 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  TextEditingController nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,17 +29,29 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.all(18.0),
             child: TextFormField(
+              controller: TextEditingController(),
               decoration: InputDecoration(
+                  labelText: "Name",
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30))),
             ),
           ),
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                var name = nameController.text.toString();
+
+                var prefs = await SharedPreferences.getInstance();
+                prefs.setString("name", nameController.text.toString());
+              },
               child: const Text(
                 "Save",
                 style: TextStyle(fontWeight: FontWeight.bold),
-              ))
+              )),
+          SizedBox(height: 15,),
+          Text(
+            "Saved Value",
+            style: TextStyle(fontSize: 20),
+          )
         ],
       ),
     );
