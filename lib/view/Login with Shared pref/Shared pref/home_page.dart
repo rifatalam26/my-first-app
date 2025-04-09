@@ -11,6 +11,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   TextEditingController nameController = TextEditingController();
 
+  var nameValue="No Saved Value";
+  @override
+  void initState() {
+    getValue();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,13 +54,26 @@ class _HomePageState extends State<HomePage> {
                 "Save",
                 style: TextStyle(fontWeight: FontWeight.bold),
               )),
-          SizedBox(height: 15,),
-          Text(
-            "Saved Value",
-            style: TextStyle(fontSize: 20),
+          const SizedBox(height: 15,),
+           Text(
+            nameValue,
+            style: const TextStyle(fontSize: 20),
           )
         ],
       ),
     );
+  }
+
+  void getValue()async {
+
+    var prefs = await SharedPreferences.getInstance();
+
+   var getName= prefs.getString("name");
+
+   nameValue=getName!;
+
+   setState(() {
+
+   });
   }
 }
