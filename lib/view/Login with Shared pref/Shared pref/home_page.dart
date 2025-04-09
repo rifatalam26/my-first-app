@@ -70,10 +70,10 @@ class _HomePageState extends State<HomePage> {
 
    var getName= prefs.getString("name");
 
-   nameValue=getName!;
+
 
    setState(() {
-
+     nameValue=getName!;
    });
   }
 }

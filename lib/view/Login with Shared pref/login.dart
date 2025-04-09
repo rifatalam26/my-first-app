@@ -26,14 +26,14 @@ class _LoginState extends State<Login> {
               decoration: InputDecoration(
                   hintText: "Enter name", border: OutlineInputBorder()),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextFormField(
               decoration: InputDecoration(
                   hintText: "Enter password", border: OutlineInputBorder()),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                   Navigator.push(
                       context, MaterialPageRoute(builder: (context) => Home()));
                 },
-                child: Text(
+                child: const Text(
                   "Login",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ))
