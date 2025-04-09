@@ -24,6 +24,7 @@ import 'package:my_app/view/Laundry%20service/view_screen2.dart';
 import 'package:my_app/view/List/Add_item_to_list.dart';
 import 'package:my_app/view/List/practice.dart';
 import 'package:my_app/view/Local%20database/first_page.dart';
+import 'package:my_app/view/Login%20with%20Shared%20pref/Shared%20pref/home_page.dart';
 import 'package:my_app/view/Login%20with%20Shared%20pref/splash.dart';
 import 'package:my_app/view/Model/data_model.dart';
 import 'package:my_app/view/Model/model_prac_screen.dart';
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Test (),
+      home: HomePage(),
     );
   }
 }
