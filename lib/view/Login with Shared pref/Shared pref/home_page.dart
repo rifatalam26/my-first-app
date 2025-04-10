@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/view/Login%20with%20Shared%20pref/Shared%20pref/show_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,7 +55,10 @@ class _HomePageState extends State<HomePage> {
 
                 var prefs = await SharedPreferences.getInstance();
                 prefs.setString("name", nameController.text);
+                prefs.setString("password", passwordController.text);
 
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>const ShowData()));
               },
               child: const Text(
                 "Save",
