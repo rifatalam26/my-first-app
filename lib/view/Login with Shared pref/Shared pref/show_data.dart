@@ -9,20 +9,24 @@ class ShowData extends StatefulWidget {
 }
 
 class _ShowDataState extends State<ShowData> {
-  
-  String name="";
-  String password="";
-  
-  getData()async{
+  String name = "";
+  String password = "";
 
-    var sp =await SharedPreferences.getInstance();
-    
+  getData() async {
+    var sp = await SharedPreferences.getInstance();
+
     setState(() {
       name = sp.getString("name").toString();
       password = sp.getString("password").toString();
     });
-
   }
+
+  @override
+  void initState() {
+    getData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,11 +38,19 @@ class _ShowDataState extends State<ShowData> {
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-      body:  Center(
-        child: Column(children: [
-          Text(name,style: const TextStyle(fontSize: 30),),
-          Text(password,style: const TextStyle(fontSize: 30),),
-        ],),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              name,
+              style: const TextStyle(fontSize: 30),
+            ),
+            Text(
+              password,
+              style: const TextStyle(fontSize: 30),
+            ),
+          ],
+        ),
       ),
     );
   }
