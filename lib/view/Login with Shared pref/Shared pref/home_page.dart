@@ -53,9 +53,9 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
               onPressed: () async {
 
-                var prefs = await SharedPreferences.getInstance();
-                prefs.setString("name", nameController.text);
-                prefs.setString("password", passwordController.text);
+                // var prefs = await SharedPreferences.getInstance();
+                // prefs.setString("name", nameController.text);
+                // prefs.setString("password", passwordController.text);
 
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context)=>const ShowData()));
