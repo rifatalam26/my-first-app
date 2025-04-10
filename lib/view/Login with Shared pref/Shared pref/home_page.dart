@@ -10,13 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   TextEditingController nameController = TextEditingController();
-
-  var nameValue="No Saved Value";
-  @override
-  void initState() {
-    getValue();
-    super.initState();
-  }
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,46 +28,40 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.all(18.0),
+            padding: const EdgeInsets.only(left: 50,right: 50),
             child: TextFormField(
-              controller: TextEditingController(),
+              controller: nameController,
               decoration: InputDecoration(
                   labelText: "Name",
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30))),
             ),
           ),
+          const SizedBox(height: 20,),
+          Padding(
+            padding:  EdgeInsets.only(left: 50,right: 50),
+            child: TextFormField(
+              controller: passwordController,
+              decoration: InputDecoration(
+                  labelText: "Password",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30))),
+            ),
+          ),
+          const SizedBox(height: 20,),
           ElevatedButton(
               onPressed: () async {
-                var name = nameController.text.toString();
 
                 var prefs = await SharedPreferences.getInstance();
-                prefs.setString("name", nameController.text.toString());
+                prefs.setString("name", nameController.text);
+
               },
               child: const Text(
                 "Save",
                 style: TextStyle(fontWeight: FontWeight.bold),
               )),
-          const SizedBox(height: 15,),
-           Text(
-            nameValue,
-            style: const TextStyle(fontSize: 20),
-          )
         ],
       ),
     );
-  }
-
-  void getValue()async {
-
-    var prefs = await SharedPreferences.getInstance();
-
-   var getName= prefs.getString("name");
-
-
-
-   setState(() {
-     nameValue=getName!;
-   });
   }
 }
