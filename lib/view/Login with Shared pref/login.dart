@@ -48,8 +48,8 @@ class _LoginState extends State<Login> {
                   pref.setString("name", nameController.text);
                  // pref.setString("password", passwordController.text);
 
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Home()));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => const Home()));
                 },
                 child: const Text(
                   "Login",
