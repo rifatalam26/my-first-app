@@ -46,7 +46,7 @@ class _LoginState extends State<Login> {
                 onPressed: () async {
                   var pref = await SharedPreferences.getInstance();
                   pref.setString("name", nameController.text);
-                  pref.setString("password", passwordController.text);
+                 // pref.setString("password", passwordController.text);
 
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Home()));
