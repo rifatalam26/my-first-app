@@ -14,31 +14,35 @@ class _SplashScreen2State extends State<Splash> {
   late String finalEmail;
   @override
   void initState() {
-    getData().whenComplete(() async {
-      goScreen();
-    });
+    Timer(
+        const Duration(seconds: 2),
+        () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const Login())));
+    // getData().whenComplete(() async {
+    //   goScreen();
+    // });
     super.initState();
   }
 
-  Future goScreen() async {
-    Future.delayed(const Duration(seconds: 2)).then((Value) {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  finalEmail == null ? const Login() : const Home()));
-    });
-  }
-
-  Future getData() async {
-    var pref = await SharedPreferences.getInstance();
-    var obtainedEmail = pref.getString("name").toString();
-    // pref.getString("password").toString();
-    setState(() {
-      finalEmail = obtainedEmail;
-    });
-    print(finalEmail);
-  }
+  // Future goScreen() async {
+  //   Future.delayed(const Duration(seconds: 2)).then((Value) {
+  //     Navigator.push(
+  //         context,
+  //         MaterialPageRoute(
+  //             builder: (context) =>
+  //                 finalEmail == null ? const Login() : const Home()));
+  //   });
+  // }
+  //
+  // Future getData() async {
+  //   var pref = await SharedPreferences.getInstance();
+  //   var obtainedEmail = pref.getString("name").toString();
+  //   // pref.getString("password").toString();
+  //   setState(() {
+  //     finalEmail = obtainedEmail;
+  //   });
+  //   print(finalEmail);
+  // }
 
   @override
   Widget build(BuildContext context) {
