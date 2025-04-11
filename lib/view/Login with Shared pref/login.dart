@@ -1,48 +1,55 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:my_app/view/Login%20with%20Shared%20pref/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'home.dart';
-import 'login.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
-
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(30.0),
+      body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: "Enter name", border: OutlineInputBorder()),
+            Padding(
+              padding: const EdgeInsets.only(left: 50, right: 50),
+              child: TextFormField(
+                controller: nameController,
+                decoration: const InputDecoration(
+                    hintText: "Enter name", border: OutlineInputBorder()),
+              ),
             ),
             const SizedBox(
               height: 10,
             ),
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: "Enter password", border: OutlineInputBorder()),
+            Padding(
+              padding: const EdgeInsets.only(left: 50, right: 50),
+              child: TextFormField(
+                controller: passwordController,
+                decoration: const InputDecoration(
+                    hintText: "Enter password", border: OutlineInputBorder()),
+              ),
             ),
             const SizedBox(
               height: 10,
             ),
             ElevatedButton(
                 onPressed: () async {
-                  var sharedPref=await SharedPreferences.getInstance();
-                 // sharedPref.setBool(, true);
+                  var pref = await SharedPreferences.getInstance();
+                  pref.setString("name", nameController.text);
+                  pref.setString("password", passwordController.text);
 
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Home()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Home()));
                 },
                 child: const Text(
                   "Login",
@@ -55,12 +62,6 @@ class _LoginState extends State<Login> {
   }
 }
 
-class SplashState {
-}
+class SplashState {}
 
-class KEYLOGIN {
-}
-
-
-
-
+class KEYLOGIN {}

@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const SizedBox(height: 20,),
           Padding(
-            padding:  EdgeInsets.only(left: 50,right: 50),
+            padding:  const EdgeInsets.only(left: 50,right: 50),
             child: TextFormField(
               controller: passwordController,
               decoration: InputDecoration(
@@ -53,9 +53,9 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
               onPressed: () async {
 
-                // var prefs = await SharedPreferences.getInstance();
-                // prefs.setString("name", nameController.text);
-                // prefs.setString("password", passwordController.text);
+                var prefs = await SharedPreferences.getInstance();
+                prefs.setString("name", nameController.text);
+                prefs.setString("password", passwordController.text);
 
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context)=>const ShowData()));
@@ -64,6 +64,10 @@ class _HomePageState extends State<HomePage> {
                 "Save",
                 style: TextStyle(fontWeight: FontWeight.bold),
               )),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context)=>ShowData()));
+          }, child: const Text("next page"))
         ],
       ),
     );

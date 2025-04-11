@@ -13,11 +13,11 @@ class _ShowDataState extends State<ShowData> {
   String password = "";
 
   getData() async {
-    var sp = await SharedPreferences.getInstance();
+    var prefs = await SharedPreferences.getInstance();
 
     setState(() {
-      name = sp.getString("name").toString();
-      password = sp.getString("password").toString();
+      name = prefs.getString("name").toString();
+      password = prefs.getString("password").toString();
     });
   }
 

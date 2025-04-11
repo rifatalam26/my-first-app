@@ -2,61 +2,51 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:my_app/view/Login%20with%20Shared%20pref/home.dart';
+import 'package:my_app/view/Login%20with%20Shared%20pref/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'login.dart';
+import '../Quize App/quize_app.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<Splash> createState() => _SplashScreen2State();
 }
 
-class _SplashState extends State<Splash> {
-  static const String KEYLOGIN ="login";
+class _SplashScreen2State extends State<Splash> {
   @override
   void initState() {
-    super.initState();
+    goScreen();
 
-    whereToGo();
+    super.initState();
+  }
+
+  Future goScreen() async {
+    Future.delayed(const Duration(seconds: 2)).then((Value) {
+       Navigator.push(
+           context, MaterialPageRoute(builder: (context) => Login()));
+    });
+  }
+  Future getData()async{
+
+    var pref = await SharedPreferences.getInstance();
+    pref.getString("name").toString();
+    pref.getString("password").toString();
+
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.blue,
-        child: Center(
-          child: Icon(
-            Icons.account_circle,
-            color: Colors.white,
-            size: 50,
-          ),
-        ),
+    return const Scaffold(
+      body: Center(
+        child: SizedBox(
+            child: CircularProgressIndicator(
+              color: Colors.blue,
+              backgroundColor: Colors.grey,
+              strokeWidth: 3,
+            )),
       ),
     );
-  }
-
-  Future<void> whereToGo() async {
-    var sharedPref = await SharedPreferences.getInstance();
-   var isLoggedIn= sharedPref.getBool(KEYLOGIN);
-
-    Timer(Duration(seconds: 3), () {
-      if(isLoggedIn!=null){
-        if(isLoggedIn){
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => Home()));
-        }else{
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => Login()));
-        }
-      }else{
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Login()));
-      }
-    });
   }
 }
