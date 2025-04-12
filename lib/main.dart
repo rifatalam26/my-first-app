@@ -25,6 +25,7 @@ import 'package:my_app/view/List/Add_item_to_list.dart';
 import 'package:my_app/view/List/practice.dart';
 import 'package:my_app/view/Local%20database/first_page.dart';
 import 'package:my_app/view/Login%20with%20Shared%20pref/Shared%20pref/home_page.dart';
+import 'package:my_app/view/Login%20with%20Shared%20pref/chat%20GPT%20code/splash_screen_gpt.dart';
 import 'package:my_app/view/Login%20with%20Shared%20pref/home.dart';
 import 'package:my_app/view/Login%20with%20Shared%20pref/login.dart';
 import 'package:my_app/view/Login%20with%20Shared%20pref/splash.dart';
@@ -69,7 +70,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: SplashScreenGpt(),
     );
   }
 }
