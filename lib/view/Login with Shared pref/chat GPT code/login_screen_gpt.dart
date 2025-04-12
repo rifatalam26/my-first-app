@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/view/Login%20with%20Shared%20pref/chat%20GPT%20code/home_screen_gpt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../Laundry service/home_screen.dart';
@@ -18,11 +19,11 @@ class LoginScreenGpt extends StatelessWidget {
       await prefs.setBool('loggedIn', true);
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => const HomeScreenGpt()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Invalid credentials')),
+        const SnackBar(content: Text('Invalid credentials')),
       );
     }
   }

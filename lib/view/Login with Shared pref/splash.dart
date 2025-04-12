@@ -10,7 +10,7 @@ class Splash extends StatefulWidget {
   State<Splash> createState() => _SplashScreen2State();
 }
 class _SplashScreen2State extends State<Splash> {
-  String name = "";
+  bool isLoggedIn=false;
   @override
   void initState() {
     getData();
@@ -18,21 +18,18 @@ class _SplashScreen2State extends State<Splash> {
   }
   getData() async {
     var pref = await SharedPreferences.getInstance();
-    setState(() {
-      var name = pref.getString("name").toString();
-      Timer(const Duration(seconds: 2), () {
-        if (name == null) {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const Login()));
-        } else if (name != null) {
+
+      bool? loggedIn = pref.getBool("loggedIn").toString() as bool?;
+
+        if (loggedIn != null && loggedIn) {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => const Home()));
-        } else {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Login()));
+        }  else {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => const Login()));
         }
-      });
-    });
+
+
   }
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/view/Login%20with%20Shared%20pref/chat%20GPT%20code/login_screen_gpt.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../Laundry service/laundry_service.dart';
+
 
 class HomeScreenGpt extends StatelessWidget {
   const HomeScreenGpt({super.key});
@@ -12,7 +13,7 @@ class HomeScreenGpt extends StatelessWidget {
     await prefs.setBool('loggedIn', false);
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginScreen()),
+      MaterialPageRoute(builder: (context) => LoginScreenGpt()),
     );
   }
 

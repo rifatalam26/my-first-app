@@ -44,9 +44,9 @@ class _LoginState extends State<Login> {
             ElevatedButton(
                 onPressed: () async {
                   var pref = await SharedPreferences.getInstance();
-                  pref.setString("name", nameController.text);
+                 // pref.setString("name", nameController.text);
                  // pref.setString("password", passwordController.text);
-
+                  pref.setBool("loggedIn", true);
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Home()));
                 },

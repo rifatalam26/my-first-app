@@ -38,6 +38,6 @@ class _SplashScreenState extends State<SplashScreenGpt> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: CircularProgressIndicator()));
+    return const Scaffold(body: Center(child: CircularProgressIndicator()));
   }
 }
