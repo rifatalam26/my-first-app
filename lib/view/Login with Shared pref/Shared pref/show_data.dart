@@ -12,6 +12,11 @@ class _ShowDataState extends State<ShowData> {
   String name = "";
   String password = "";
 
+  @override
+  void initState() {
+    getData();
+    super.initState();
+  }
   getData() async {
     var prefs = await SharedPreferences.getInstance();
 
@@ -20,13 +25,6 @@ class _ShowDataState extends State<ShowData> {
       password = prefs.getString("password").toString();
     });
   }
-
-  @override
-  void initState() {
-    getData();
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

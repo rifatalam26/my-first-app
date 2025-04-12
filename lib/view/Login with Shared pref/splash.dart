@@ -11,44 +11,39 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashScreen2State extends State<Splash> {
-  late String finalEmail;
+String name="";
+
   @override
   void initState() {
-    Timer(
-        const Duration(seconds: 2),
-        () => Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const Login())));
-    // getData().whenComplete(() async {
-    //   goScreen();
-    // });
+    getData();
     super.initState();
   }
 
-  // Future goScreen() async {
-  //   Future.delayed(const Duration(seconds: 2)).then((Value) {
-  //     Navigator.push(
-  //         context,
-  //         MaterialPageRoute(
-  //             builder: (context) =>
-  //                 finalEmail == null ? const Login() : const Home()));
-  //   });
-  // }
-  //
-  // Future getData() async {
-  //   var pref = await SharedPreferences.getInstance();
-  //   var obtainedEmail = pref.getString("name").toString();
-  //   // pref.getString("password").toString();
-  //   setState(() {
-  //     finalEmail = obtainedEmail;
-  //   });
-  //   print(finalEmail);
-  // }
+  getData() async {
+    var pref = await SharedPreferences.getInstance();
+
+   setState(() {
+
+     var name=pref.getString("name").toString();
+      Timer(const Duration(seconds: 2), () {
+        if(name==null){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context)=>const Login()));
+        }else if(name!=null){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context)=>const Home()));
+        }
+      });
+   });
+
+  }
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: SizedBox(
+        child:
+        SizedBox(
             child: CircularProgressIndicator(
           color: Colors.blue,
           backgroundColor: Colors.grey,

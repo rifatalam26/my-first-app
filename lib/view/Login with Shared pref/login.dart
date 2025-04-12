@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home.dart';
@@ -48,8 +47,8 @@ class _LoginState extends State<Login> {
                   pref.setString("name", nameController.text);
                  // pref.setString("password", passwordController.text);
 
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => const Home()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Home()));
                 },
                 child: const Text(
                   "Login",
@@ -62,6 +61,4 @@ class _LoginState extends State<Login> {
   }
 }
 
-class SplashState {}
 
-class KEYLOGIN {}
