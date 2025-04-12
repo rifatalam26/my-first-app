@@ -9,41 +9,36 @@ class Splash extends StatefulWidget {
   @override
   State<Splash> createState() => _SplashScreen2State();
 }
-
 class _SplashScreen2State extends State<Splash> {
-String name="";
-
+  String name = "";
   @override
   void initState() {
     getData();
     super.initState();
   }
-
   getData() async {
     var pref = await SharedPreferences.getInstance();
-
-   setState(() {
-
-     var name=pref.getString("name").toString();
+    setState(() {
+      var name = pref.getString("name").toString();
       Timer(const Duration(seconds: 2), () {
-        if(name==null){
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context)=>const Login()));
-        }else if(name!=null){
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context)=>const Home()));
+        if (name == null) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const Login()));
+        } else if (name != null) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const Home()));
+        } else {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Login()));
         }
       });
-   });
-
+    });
   }
-
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child:
-        SizedBox(
+        child: SizedBox(
             child: CircularProgressIndicator(
           color: Colors.blue,
           backgroundColor: Colors.grey,
