@@ -18,15 +18,16 @@ class _SplashScreen2State extends State<Splash> {
   }
   getData() async {
     var pref = await SharedPreferences.getInstance();
-
-      bool? loggedIn = pref.getBool("loggedIn").toString() as bool?;
+    bool? loggedIn = pref.getBool("loggedIn");
     Timer(const Duration(seconds: 2), () {
       if (loggedIn != null && loggedIn) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const Home()));
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const Home()));
       } else {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => const Login()));
+            context,
+            MaterialPageRoute(builder: (context) => const Login()));
       }
     });
   }
