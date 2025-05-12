@@ -16,20 +16,20 @@ class _LoginScreen2State extends State<LoginScreen2> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text("Confirmation"),
-          content: Text("Are you sure! you want to exit this app?"),
+          title: const Text("Confirmation"),
+          content: const Text("Are you sure! you want to exit this app?"),
           actions: [
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context, false); // Stay in app
               },
-              child: Text("Cancel"),
+              child: const Text("Cancel"),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context, true); // Exit app
               },
-              child: Text("OK"),
+              child: const Text("OK"),
             ),
           ],
         );
