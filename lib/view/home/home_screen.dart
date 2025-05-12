@@ -30,17 +30,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                     labelText: "Email",
                     hintText: "abcd.@gmail.com",
-                    suffixIcon: Icon(Icons.email),
+                    suffixIcon: const Icon(Icons.email),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: Colors.lightBlue, width: 3),
+                      borderSide: const BorderSide(color: Colors.lightBlue, width: 3),
                     ),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                            BorderSide(color: Colors.blueGrey, width: 3))),
+                            const BorderSide(color: Colors.blueGrey, width: 3))),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               TextField(
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                     labelText: "Password",
                     hintText: "********",
-                    suffixIcon: Icon(Icons.remove_red_eye),
+                    suffixIcon: const Icon(Icons.remove_red_eye),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(color: Colors.lightBlue, width: 3),
