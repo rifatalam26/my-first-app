@@ -17,8 +17,10 @@ class _StuckScreenState extends State<StackScreen> {
         centerTitle: true,
         title: Text("Stack"),
       ),
-      body: Center(
-        child: Stack(clipBehavior:Clip.none,alignment: Alignment.topRight,
+      body: const Center(
+        child: Stack(
+          clipBehavior: Clip.none,
+          alignment: Alignment.topRight,
           children: [
             CircleAvatar(
               radius: 100,

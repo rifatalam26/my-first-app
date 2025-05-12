@@ -63,14 +63,14 @@ class _LoginScreen2State extends State<LoginScreen2> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Enter name",
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Enter password",
                   border: OutlineInputBorder(),
                 ),

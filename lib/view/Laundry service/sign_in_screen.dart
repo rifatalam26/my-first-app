@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import 'location_screen.dart';
 
@@ -37,7 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Name",
                     style: TextStyle(
                         fontSize: 20,

@@ -27,11 +27,11 @@ class _CheckBoxState extends State<CheckBox> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Are you a student",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -47,10 +47,10 @@ class _CheckBoxState extends State<CheckBox> {
                       check = c!;
                       setState(() {});
                     }),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Text(
+                const Text(
                   "Yes",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 )

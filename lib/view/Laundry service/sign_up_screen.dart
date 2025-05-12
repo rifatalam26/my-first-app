@@ -12,7 +12,7 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  TextEditingController passwordcontroller=TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
   bool _securetext = true;
   //late String passwordError;
   @override
@@ -118,7 +118,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: TextFormField(
                       decoration: InputDecoration(
                           hintText: "Password",
-                         // errorText: passwordError,
+                          // errorText: passwordError,
                           fillColor: Colors.white,
                           filled: true,
                           suffixIcon: IconButton(

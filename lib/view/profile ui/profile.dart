@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> {
         leading: IconButton(onPressed: (){
           Get.to(practice());
         }, icon: Icon(Icons.arrow_back_ios_new_outlined)),
-        title: Text(
+        title: const Text(
           "Md Rifat Alam",
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
@@ -36,13 +36,13 @@ class _ProfileState extends State<Profile> {
               children: [
                 Container(
                   height: 200,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Colors.transparent,
                       image: DecorationImage(
                           image: AssetImage("assets/image/FB_IMG_cover.jpg"),
                           fit: BoxFit.fill)),
                 ),
-                Positioned(
+                const Positioned(
                   bottom: -35,
                   child: CircleAvatar(
                     radius: 80,
@@ -51,7 +51,7 @@ class _ProfileState extends State<Profile> {
                     //  backgroundColor: Colors.purple,
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   bottom: 13,
                   right: 20,
                   child: CircleAvatar(
@@ -77,11 +77,11 @@ class _ProfileState extends State<Profile> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 "Md Rifat AlaM",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
