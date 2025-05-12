@@ -75,10 +75,10 @@ class _LoginScreen2State extends State<LoginScreen2> {
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Login",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
