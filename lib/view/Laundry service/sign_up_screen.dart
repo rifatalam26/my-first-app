@@ -22,7 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Container(
           height: 900,
           width: 500,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image:
@@ -30,14 +30,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Sign Up",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Column(
@@ -105,7 +105,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Password",
                     style: TextStyle(
                         fontSize: 23,
@@ -124,18 +124,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           suffixIcon: IconButton(
                               onPressed: () {
                                 setState(() {
-                                  _securetext = !_securetext;
+                                  _securetext =! _securetext;
                                 });
                               },
                               icon: Icon(
                                 _securetext
-                                    ? Icons.remove_red_eye_outlined
-                                    : Icons.remove_red_eye,
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
                                 color: Colors.blueAccent,
                               )),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                   width: 3, color: CupertinoColors.activeBlue)),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
@@ -147,11 +147,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 18),
+              const SizedBox(height: 18),
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    Get.to(SignInScreen());
+                    Get.to(const SignInScreen());
                   });
                 },
                 child: Container(
@@ -171,7 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(30)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Row(
@@ -197,11 +197,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ],
               ),
-              Container(
+              const SizedBox(
                   height: 70,
                   width: 230,
                   child: Image(image: AssetImage("assets/image/image 5.png"))),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -230,11 +230,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ],
               ),
-              Container(
+              const SizedBox(
                   height: 170,
                   width: 230,
                   child: Image(image: AssetImage("assets/image/amico.png"))),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
