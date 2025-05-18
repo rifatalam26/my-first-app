@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-class ProfilePage1 extends StatefulWidget {
-  const ProfilePage1({super.key});
+class BottomSheet extends StatefulWidget {
+  const BottomSheet({super.key});
 
   @override
-  State<ProfilePage1> createState() => _ProfilePage1State();
+  State<BottomSheet> createState() => _ProfilePage1State();
 }
 
-class _ProfilePage1State extends State<ProfilePage1> {
+class _ProfilePage1State extends State<BottomSheet> {
   _showBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -88,7 +88,7 @@ class _ProfilePage1State extends State<ProfilePage1> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 50,
+                height: 100,
               ),
               Row(
                 children: [
