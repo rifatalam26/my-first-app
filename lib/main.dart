@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:my_app/view/API/Practice%20API/test.dart';
 import 'package:my_app/view/API/api%20test.dart';
+import 'package:my_app/view/Bottom%20Sheet/bottom_sheet_screen.dart';
 import 'package:my_app/view/Form%20Widget/form_widget.dart';
 import 'package:my_app/view/Form%20Widget/form_widget_with_validator.dart';
 import 'package:my_app/view/Gridview/gridview.builder.dart';
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: BottomSheetScreen(),
     );
   }
 }
