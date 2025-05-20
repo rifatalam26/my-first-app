@@ -121,7 +121,7 @@ class _AlertDialogScreenState extends State<AlertDialogScreen> {
                   child: Text(
                     "Save",
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
