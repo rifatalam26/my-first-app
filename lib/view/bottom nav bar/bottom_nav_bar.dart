@@ -23,10 +23,10 @@ class _BotomNavBarState extends State<BottomNavBar> {
     Icons.notifications_active_outlined,
   ];
   List <dynamic> screenlist=[
-    HomeScreen(),
-    Profile(),
-    FirstUi(),
-    NotificationScreen(),
+    const HomeScreen(),
+    const Profile(),
+    const FirstUi(),
+    const NotificationScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _BotomNavBarState extends State<BottomNavBar> {
         foregroundColor: Colors.white,
         backgroundColor: Colors.blue,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Bottom Navigation Bar",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
